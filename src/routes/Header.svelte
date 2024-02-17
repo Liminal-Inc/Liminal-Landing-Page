@@ -1,15 +1,22 @@
 <script>
 	import { page } from '$app/stores';
+
+	import { Navbar, NavBrand } from 'flowbite-svelte';
+
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
 </script>
 
 <header>
-	<div class="corner">
+	<!-- <div class="corner">
 		<a href="https://kit.svelte.dev">
 			<img src={logo} alt="SvelteKit" />
 		</a>
-	</div>
+	</div> -->
+
+	<Navbar>
+
+	</Navbar>
 
 	<nav>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
