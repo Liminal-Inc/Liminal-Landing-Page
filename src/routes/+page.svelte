@@ -21,7 +21,6 @@
 </svelte:head>
 
 <section>
-	<SpecialAlert />
 	<div class="flex justify-between items-center">
 		<div class="image-wrapper">
 		  <img src={liminalLogo} class="w-64 h-64" alt="">
