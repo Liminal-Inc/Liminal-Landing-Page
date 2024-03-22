@@ -47,7 +47,6 @@
 				The DAta NEtwork is an application providing a connected data and knowledge ecosystem 
 				for academic life science laboratories. Our fundamental goal aims to help labs exceed recording 
 				guidelines and standards by comprehensively addressing major aspects of the lab.
-				we want it to be fun.
 			</center>
 			<br>
 			
