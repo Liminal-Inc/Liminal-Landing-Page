@@ -1,6 +1,7 @@
 <script>
 	import Counter from './Counter.svelte';
 	import liminalLogo from '$lib/images/liminal_logo.jpeg'
+	import datanetworkLogo from '$lib/images/simple-logo.png'
 	import notebookLogo from '$lib/images/notebook.jpeg'
 	import inventoryLogo from '$lib/images/inventory.jpeg'
 	import protocolLogo from '$lib/images/protocols.jpeg'
@@ -35,24 +36,34 @@
 		<!-- Top div with flexbox --> 
 	</div>
 	<div class="flex justify-between items-center">
-		<p class="text-4xl text-black font-extrabold">
-			<center>The DAta NEtwork</center>
+		<p class="text-4xl text-teal-500 font-extrabold">
+			<center>The Data Network</center>
 		</p>
 		<!-- Top div with flexbox -->
 	</div>
-	<div class="flex justify-between items-center mt-4">
+	<div class="flex justify-between items-center mt-4 bg-gray-500">
 		<p class="text-lg text-black ">
-			<center>
+			<center class="mb-2">
 				The DAta NEtwork is an application providing a connected data and knowledge ecosystem 
 				for academic life science laboratories. Our fundamental goal aims to help labs exceed recording 
-				guidelines and standards by comprehensively addressing all major aspects of the lab. <br>Oh, and
+				guidelines and standards by comprehensively addressing major aspects of the lab.
 				we want it to be fun.
 			</center>
+			<center class="font-extrabold underline text-4xl text-blue-400 mb-4">Releasing Fall 2024</center>
+			<center class="mb-2">More information coming soon</center>
 		</p>
+		
 		<!-- Top div with flexbox -->
 	</div>
+	<div>
+		<img src={datanetworkLogo} class="spinner" alt="Spinning Data Network Logo">
+		<div class="gradient-overlay"></div>
+	</div>
+	<div class="mt-2">
+		Email support@liminalbios.com for inquiries
+	</div>
 	  
-	<div class="mt-4 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+	<!-- <div class="mt-4 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> -->
 	<!-- Middle div with 2 columns -->
 		<!-- <div class="grid grid-cols-2 gap-4">
 			<div class="bg-black p-4 text-white">
@@ -66,7 +77,7 @@
 		</div> -->
 	
 	<!-- Bottom div with 3 columns -->
-		<div class="grid grid-cols-3 gap-4 mt-8 gradient-div">
+		<!-- <div class="grid grid-cols-3 gap-4 mt-8 gradient-div">
 			<div class="col-span-3">
 				<p class="text-lg py-4 px-4 text-white">
 					<center>
@@ -120,7 +131,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	
 </section>
 
@@ -177,5 +188,20 @@
     height: 1px;
     background-color: white; /* Change to whatever color you prefer */
     margin: 20px 0; /* Adjust margin as needed */
+  }
+
+  .spinner {
+    width: 400px; /* or the size you want */
+    height: 400px; /* or the size you want */
+    animation: spin 10s infinite linear; /* Adjust the duration as needed */
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 </style>

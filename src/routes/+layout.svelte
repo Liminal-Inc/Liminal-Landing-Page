@@ -21,7 +21,7 @@
 
 <div class="app">
 	<!-- <Header /> -->
-	<LiminalNavbar/>
+	<!-- <LiminalNavbar/> -->
 
 	<main>
 		<slot />
