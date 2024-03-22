@@ -50,11 +50,21 @@
 				we want it to be fun.
 			</center>
 			<br>
-			<center class="font-extrabold underline text-4xl text-blue-400">Releasing Fall 2024</center>
-			<br>
-			<center class="mb-2">More information coming soon</center>
+			
 		</p>
 		
+		<!-- Top div with flexbox -->
+	</div>
+	<div class="flex justify-between items-center">
+		<p>
+			<center class="mb-2">More information coming soon</center>
+		</p>
+	<!-- Top div with flexbox -->
+	</div>
+	<div class="flex justify-between items-center">
+			<p>
+				<center class="font-extrabold underline text-4xl text-blue-400">Releasing Fall 2024</center>
+			</p>
 		<!-- Top div with flexbox -->
 	</div>
 	<div>
