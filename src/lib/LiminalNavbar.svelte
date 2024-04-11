@@ -4,6 +4,7 @@
 	import { page } from '$app/stores';
 	import {
 		Avatar,
+        Button,
 		DarkMode,
 		Dropdown,
 		DropdownItem,
@@ -15,54 +16,36 @@
 		NavUl,
 		NavHamburger,
 	} from 'flowbite-svelte';
-    import { ChevronDownOutline } from 'flowbite-svelte-icons';
+    import { ChevronDownSolid } from 'flowbite-svelte-icons';
 	import logoURL from '$lib/images/simple-logo.png';
     import cyberPanda from '$lib/images/CyberPanda.jpeg'
 
 	import { goto } from '$app/navigation';
 
     let activeClass = 'text-purple-600 underline font-extrabold'
+    let isOpen = false;
+    function toggleDropdown() {
+        isOpen = !isOpen;
+    }
     $: activeUrl = $page.url.pathname;
     $: console.log(activeUrl)
 </script>
 
-
-<div>
-    <Navbar color="pink" let:hidden let:toggle>
-        <NavBrand href="/">
-            <img src={logoURL} class="mr-3 h-6 sm:h-12" alt="DAtaNEtwork Logo" />
-            <span class="text-purple-600 self-center whitespace-nowrap text-xl font-semibold dark:text-white">LiMINal</span>
-        </NavBrand>
-        <div class="flex items-center md:order-2">
-            <Avatar size="lg" id="avatar-menu" src={cyberPanda} />
-            <NavHamburger on:click={toggle} class1="w-full md:flex md:w-auto md:order-1" />
-        </div>
-        <!-- <Dropdown placement="bottom" triggeredBy="#avatar-menu">
-            <DropdownHeader>
-                <span class="block text-sm">Liminal LLC 2024</span>
-            </DropdownHeader>
-            <DropdownItem href="/about">About</DropdownItem>
-            <DropdownItem href="/team">Team</DropdownItem>
-            <DropdownDivider />
-        </Dropdown> -->
-        <NavUl {hidden} {activeClass} activeUrl={activeUrl}>
-            <NavLi class="text-lg" href="/">Hub</NavLi>
-            <NavLi class="text-lg" href="/team/">The Team</NavLi>
-            <!-- <NavLi class="text-lg" href="/research">Research</NavLi> -->
-            <!-- <NavLi class="text-lg" href="/blog">CyberChronicles</NavLi> -->
-            <!-- <NavLi id="nav-dm-menu1" class="cursor-pointer">
-            Data
-            <ChevronDownOutline class="w-3 h-3 ms-2 text-primary-800 dark:text-white inline" /> -->
-        <!-- </NavLi> -->
-        <!-- <Dropdown triggeredBy="#nav-dm-menu1" class="w-44 z-20">
-            <DropdownItem>Amplicon</DropdownItem>
-            <DropdownItem>Chromatography</DropdownItem>
-            <DropdownItem>Gas</DropdownItem>
-            <DropdownItem>Gel</DropdownItem>
-            <DropdownDivider />
-            <DropdownItem>View</DropdownItem>
-        </Dropdown> -->
-        </NavUl>
-        <!-- <DarkMode /> -->
-    </Navbar>
-</div>
+<Navbar class="bg-purple-300 px-4 py-2.5 retro-font">
+    <div class="container mx-auto flex flex-wrap justify-between items-center">
+      <a href="/" class="flex items-center">
+        <img src={logoURL} class="mr-3 h-6 sm:h-9" alt="Logo" />
+        <span class="self-center text-xl font-semibold whitespace-nowrap text-black hover:text-purple">Liminal Inc</span>
+      </a>
+      <div class="flex md:order-2">
+        <a href="/details">
+            <span class="text-black text-md md:text-base whitespace-nowrap font-bold">App Details</span>
+        </a>
+      </div>
+      <div class="flex gap-3">
+        <a href="/team" class="text-black hover:text-gray-300 outline-dashed outline-offset-2 mr-1">Team</a>
+        <a href="/news" class="text-black hover:text-gray-300 outline-dashed outline-offset-2 mr-1">News</a>
+        <a href="/research" class="text-black hover:text-gray-300 outline-dashed outline-offset-2">Research</a>
+      </div>
+    </div>
+  </Navbar>

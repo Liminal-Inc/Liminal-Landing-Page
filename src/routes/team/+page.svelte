@@ -2,7 +2,7 @@
     import DigitalRain from "./DigitalRain.svelte";
 </script>
 
-<div class="grid grid-cols-2 gap-4 mt-8 gradient-div">
+<div class="grid grid-cols-2 gap-4 mt-8 gradient-div retro-font">
     <div class="col-span-2">
         <p class="text-2xl py-4 px-4 text-white">
             <center>
@@ -39,3 +39,5 @@
         </div>
     </div>
 </div>
+
+<DigitalRain/>

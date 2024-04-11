@@ -5,6 +5,7 @@
 	import LiminalNavbar from '$lib/LiminalNavbar.svelte';
 	import { webVitals } from '$lib/vitals';
 	import Header from './Header.svelte';
+	import Footer from './Footer.svelte';
 	import './styles.css';
 
 	/** @type {import('./$types').LayoutServerData} */
@@ -21,15 +22,15 @@
 
 <div class="app">
 	<!-- <Header /> -->
-	<!-- <LiminalNavbar/> -->
+	<LiminalNavbar/>
 
 	<main>
 		<slot />
 	</main>
-
-	<footer>
+	<Footer />
+	<!-- <footer>
 		<p class="text-xl font-extrabold">Liminal Inc. 2024</p>
-	</footer>
+	</footer> -->
 </div>
 
 <style>
