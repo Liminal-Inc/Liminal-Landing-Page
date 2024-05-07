@@ -21,9 +21,8 @@
     </div>
     <h2 class="text-green-600 font-extrabold mt-4 text-center text-xl">TL/DR</h2>
     <p class="tldr-summary">
-        Academic life-science needs a generalizable toolset that can be used across all labs. This toolset
+        Academic life-science needs a generalizable software toolkit that can be used across all labs. This toolkit
         should be open-source and allow for easy integration for users to customize for their own lab needs.
-        <span class="underline">lab state</span>.
     </p>
     <h2 class="text-red-500 text-center text-xl font-extrabold">Full Content</h2>
     <div class="content">
