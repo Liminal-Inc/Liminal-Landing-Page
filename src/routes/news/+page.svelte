@@ -10,5 +10,9 @@
     <p class="mt-2 mb-2">May 2024:
         <Button color="primary" size="sm" outline href="/news/generaltools"><span class="text-green-600">General Tools</span></Button>
     </p>
+    <p class="mt-2 mb-2">June 2024:
+        <Button color="primary" size="sm" outline href="/news/labknowledge"><span class="text-green-600">Lab Knowledge</span></Button>
+    </p>
+    
     <p>Next Up: <span class="text-orange-500">Pending</span></p>
 </div>
