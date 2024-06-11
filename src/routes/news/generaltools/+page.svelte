@@ -1,9 +1,11 @@
 <!-- src/BlogPost.svelte -->
 <script>
+    import { Button } from "flowbite-svelte";
+    import { ArrowLeftOutline } from 'flowbite-svelte-icons';
     // You can add any JavaScript or Svelte-specific logic here.
     // For example, to handle the thumbs up/down voting:
-    let thumbsUp = 0;
-    let thumbsDown = 0;
+    let thumbsUp = 44;
+    let thumbsDown = 1;
 
     function handleThumbsUp() {
         thumbsUp += 1;
@@ -14,7 +16,13 @@
     }
 </script>
 
+<svelte:head>
+	<title>GeneralTools</title>
+	<meta name="description" content="General toolset for academic life science laboratories" />
+</svelte:head>
+<body>
 <div class="blog-post">
+    <Button class="text-black font-bold bg-purple-300 hover:bg-gray-700" href="/"><ArrowLeftOutline/>Home</Button>
     <h1 class="text-purple-600 mb-4 text-4xl">General Life Science Toolset</h1>
     <div class="keywords">
         <span>software</span>, <span>tools</span>, <span>open-source</span>
@@ -60,11 +68,14 @@
     </div>
     <div class="text-purple-600 italic">-Dane</div>
     <div class="feedback">
-        <!-- <button class="thumbs-up" on:click={handleThumbsUp}>👍 {thumbsUp}</button>
-        <button class="thumbs-down" on:click={handleThumbsDown}>👎 {thumbsDown}</button> -->
+        Email me at dane@liminalbios.com if you have any thoughts on this post.
+    </div>
+    <div class="feedback">
+        <button class="thumbs-up" on:click={handleThumbsUp}>👍 {thumbsUp}</button>
+        <button class="thumbs-down" on:click={handleThumbsDown}>👎 {thumbsDown}</button>
     </div>
 </div>
-
+</body>
 <style>
     .blog-post {
         background: white;
