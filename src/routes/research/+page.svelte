@@ -10,6 +10,14 @@
     <div class="text-center text-white text-2xl">Relevant Links & Content</div>
     <div class="flex flex-wrap -mx-2">
         <div class="w-full sm:w-1/2 lg:w-1/3 p-2">
+            <div class="bg-blue-200 p-4">
+                <DaneLink
+                    title="Article: The difference between math and science"
+                    link="https://undsci.berkeley.edu/the-science-checklist-applied-mathematics/#:~:text=Math%20doesn't%20rely%20on,different%20observations%20supporting%20the%20idea."
+                    blurb="How due math and science philosophically differ" />
+            </div>
+            </div>
+        <div class="w-full sm:w-1/2 lg:w-1/3 p-2">
         <div class="bg-blue-200 p-4">
             <DaneLink
                 title="Paper: Data, Information, Evidence, Knowledge"
