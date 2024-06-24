@@ -14,6 +14,9 @@
     <hr>
         <h1 class="text-white text-lg mt-2">Blogs Only</h1>
         <p class="mt-2 mb-2">June 2024:
+            <Button color="primary" size="sm" outline href="labnotebooks"><span class="text-green-600">Lab Notebooks</span></Button>
+        </p>
+        <p class="mt-2 mb-2">June 2024:
             <Button color="primary" size="sm" outline href="labknowledge"><span class="text-green-600">Lab Knowledge</span></Button>
         </p>
         <p class="mt-2 mb-2">May 2024:

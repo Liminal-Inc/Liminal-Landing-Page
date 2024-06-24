@@ -12,6 +12,12 @@
   </style>
 
 <Timeline>
+  <TimelineItem >
+    <h3 class="text-white">June 23, 2024</h3>
+    <h3 class="text-purple-300 font-bold">[Blog Post]</h3>
+    <p class="mb-4 text-base font-normal timeline-header text-gray-500 dark:text-gray-400">Why Lab Notebooks Are Failing</p>
+    <Button href="news/labnotebooks" color="alternative">Full Post<ArrowRightOutline class="ms-2 w-5 h-5" /></Button>
+  </TimelineItem>
     <TimelineItem >
         <h3 class="text-white">June 10, 2024</h3>
         <h3 class="text-purple-300 font-bold">[Blog Post]</h3>
