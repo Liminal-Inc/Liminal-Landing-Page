@@ -12,7 +12,7 @@
       </div>
       <div class="flex space-x-4">
         <a href="https://github.com/ddeemerpurdue/" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:text-white">GitHub</a>
-        <a href="https://www.linkedin.com/in/dane-deemer-054350100/" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:text-white">LinkedIn</a>
+        <a href="https://www.linkedin.com/company/liminaldatanetwork/" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:text-white">LinkedIn</a>
         <!-- <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:text-white">Twitter</a> -->
       </div>
     </div>
