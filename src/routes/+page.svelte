@@ -19,13 +19,13 @@
 	</div>
 	<div class="flex justify-between items-center">
 		<p class="text-lg text-purple-500">
-			<center>Presents</center>
+			<center class="text-white text-lg">Presents</center>
 		</p>
 		<!-- Top div with flexbox --> 
 	</div>
 	<div class="flex justify-between items-center">
 		<p class="text-6xl text-white font-extrabold">			
-			<center class="text-white">The DAta NEtwork</center>
+			<center class="text-white text-6xl">The DAta NEtwork</center>
 		</p>
 		<!-- Top div with flexbox -->
 	</div>
