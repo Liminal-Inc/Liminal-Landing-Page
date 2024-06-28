@@ -25,7 +25,7 @@
 	</div>
 	<div class="flex justify-between items-center">
 		<p class="text-6xl text-white font-extrabold">			
-			<center>The DAta NEtwork</center>
+			<center class="text-white">The DAta NEtwork</center>
 		</p>
 		<!-- Top div with flexbox -->
 	</div>
