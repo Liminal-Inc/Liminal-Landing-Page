@@ -84,6 +84,24 @@ pre {
 	margin: 0 auto;
 }
 
+
+.dane-header {
+	@apply text-3xl font-bold text-black text-center bg-purple-300 p-4
+}
+
+.dane-floating-header {
+	@apply text-3xl font-bold text-white p-4
+}
+
+.dane-body-lg {
+	@apply bg-purple-300 p-2 text-3xl rounded-b-lg
+}
+
+.dane-link {
+	@apply text-blue-500 underline
+}
+
+
 input,
 button {
 	font-size: inherit;
@@ -111,3 +129,11 @@ button:focus:not(:focus-visible) {
 	width: 1px;
 	white-space: nowrap;
 }
+
+.pixel-divider {
+    width: 100%;
+    height: 10px; /* Adjust the height to your preference */
+    background: linear-gradient(90deg, white 10%, transparent 10%, transparent 90%, white 90%);
+    background-size: 20px 10px; /* This sets the size of each 'pixel' block */
+    background-repeat: repeat;
+  }
