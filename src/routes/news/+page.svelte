@@ -7,9 +7,9 @@
 	<meta name="description" content="News for the Data Network application created by Liminal Inc" />
 </svelte:head>
 <body>
-    <div class="retro-font text-white">
-        <h1 class="text-white">News Feed</h1>
-        <NewsFeed view="comprehensive"/>
+    <div class="text-white text-2xl">
+        <h1 class="text-white p-4">News Feed</h1>
+        <NewsFeed view="normal"/>
         
     <hr>
         <h1 class="text-white text-lg mt-2">Blogs Only</h1>

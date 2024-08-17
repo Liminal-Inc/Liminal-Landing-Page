@@ -1,28 +1,15 @@
 <script>
 	import '../app.postcss';
-    import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	import {
-		Avatar,
-        Button,
-		DarkMode,
-		Dropdown,
-		DropdownItem,
-		DropdownHeader,
-		DropdownDivider,
-		Navbar,
-		NavBrand,
-		NavLi,
-		NavUl,
-		NavHamburger,
-	} from 'flowbite-svelte';
-    import { ChevronDownSolid } from 'flowbite-svelte-icons';
-	import logoURL from '$lib/images/simple-logo.png';
-    import cyberPanda from '$lib/images/CyberPanda.jpeg'
+	import { Navbar, NavBrand, NavHamburger, NavLi, NavUl } from 'flowbite-svelte';
+	// import logoURL from '$lib/images/simple-logo.png';
+  import logoURL from '$lib/images/Logo-24Jul2024.png'
+  // import cyberPanda from '$lib/images/CyberPanda.jpeg'
 
 	import { goto } from '$app/navigation';
 
-    let activeClass = 'text-purple-600 underline font-extrabold'
+  let activeClass = 'text-white bg-white md:bg-transparent md:text-white md:dark:text-white dark:bg-green-600 md:dark:bg-transparent';
+  let nonActiveClass = 'text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent';
     let isOpen = false;
     function toggleDropdown() {
         isOpen = !isOpen;
@@ -31,23 +18,19 @@
     $: console.log(activeUrl)
 </script>
 
-<Navbar class="bg-purple-300 px-4 py-2.5 retro-font">
-    <div class="container mx-auto flex flex-wrap justify-between items-center">
-      <div class="flex">
-        <a href="/" class="flex items-center">
-          <img src={logoURL} class="mr-3 h-6 sm:h-9" alt="Logo" />
-          <span class="self-center text-xl font-semibold whitespace-nowrap text-black hover:text-purple">Liminal Inc</span>
-        </a>
-      </div>
-      <div class="flex gap-3 justify-center">
-        <a href="/team" class="text-black hover:text-gray-300 outline-dashed outline-offset-2 mr-1">Team</a>
-        <a href="/news" class="text-black hover:text-gray-300 outline-dashed outline-offset-2 mr-1">News</a>
-        <a href="/research" class="text-black hover:text-gray-300 outline-dashed outline-offset-2">Research</a>
-        </div>
-      <div class="flex">
-        <a href="/details">
-            <span class="text-black text-md md:text-base whitespace-nowrap font-bold">App Details</span>
-        </a>
-      </div>
-    </div>
+
+  <Navbar let:NavContainer class="bg-purple-300 px-4 py-2.5 retro-font">
+    <NavContainer class="px-5 py-2 rounded-lg dark:bg-gray-600">
+      <NavBrand href="/">
+        <img src={logoURL} class="me-3 h-12 sm:h-20" alt="Flowbite Logo" />
+        <span class="self-center whitespace-nowrap text-xl font-semibold">Liminal Inc</span>
+      </NavBrand>
+      <NavHamburger />
+      <NavUl {activeUrl} {activeClass} {nonActiveClass}>
+        <NavLi class="text-lg" href="/team">Team</NavLi>
+        <NavLi class="text-lg" href="/news">News</NavLi>
+        <NavLi class="text-lg" href="/research">Research</NavLi>
+        <NavLi class="text-lg" href="/details">Details</NavLi>
+      </NavUl>
+    </NavContainer>
   </Navbar>
