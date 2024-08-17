@@ -1,8 +1,9 @@
 <script lang="ts">
 	import DaneLink from './DaneLink.svelte';
-	import type { DaneLinkProps } from '$lib/types';
+	// import type { DaneLinkProps } from '$lib/types';
 
-	const daneLinks: DaneLinkProps[] = [
+	// const daneLinks: DaneLinkProps[] = [
+	const daneLinks = [
 		{
 			title: 'Article: The difference between math and science',
 			link: "https://undsci.berkeley.edu/the-science-checklist-applied-mathematics/#:~:text=Math%20doesn't%20rely%20on,different%20observations%20supporting%20the%20idea.",
