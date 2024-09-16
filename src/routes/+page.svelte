@@ -23,7 +23,7 @@
 <section>
 	
 	<div class="grid grid-cols-5 gap-1 justify-evenly">
-		<!-- <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="liminalbios" data-description="Support me on Buy me a coffee!" data-message="" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script> -->
+		<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="liminalbios" data-description="Support me on Buy me a coffee!" data-message="" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 		<!-- Left Logo -->
 		<div class="bg-slate-300 col-span-2">
 			<img src={logoURL} class="w-42 h-42" alt="Liminal Logo">

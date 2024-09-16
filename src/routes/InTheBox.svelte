@@ -2,7 +2,7 @@
     import { Modal } from 'flowbite-svelte';
     import notebookscreenshot from '$lib/images/NotebookScreenshot.png'
     import findingscreenshot from '$lib/images/FindingsScreenshot.png'
-    import inventoryscreenshot from '$lib/images/InventoryScreenshot.png'
+    import inventoryscreenshot from '$lib/images/InventoryScreenShot.png'
     import missionscreenshot from '$lib/images/MissionScreenshot.png'
     import papersscreenshot from '$lib/images/Papersscreenshot.png'
 	import { 
