@@ -1,6 +1,4 @@
 <script lang="ts">
-	import liminalLogo from '$lib/images/liminal_logo.jpeg'
-	import datanetworkLogo from '$lib/images/simple-logo.png'
 	import logoURL from '$lib/images/Logo-24Jul2024.png'
 	import NewsFeed from './NewsFeed.svelte';
 	import InTheBox from './InTheBox.svelte';
@@ -23,22 +21,24 @@
 </svelte:head>
 
 <section>
+	
 	<div class="grid grid-cols-5 gap-1 justify-evenly">
+		<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="liminalbios" data-description="Support me on Buy me a coffee!" data-message="" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 		<!-- Left Logo -->
 		<div class="bg-slate-300 col-span-2">
 			<img src={logoURL} class="w-42 h-42" alt="Liminal Logo">
 		</div>
 		<div class="col-span-3 flex flex-col justify-center items-center mt-4 text-center">
 			<p class="text-6xl text-white font-extrabold">Liminal</p>
-			<p class="mt-2 text-xl text-white">Research Platform for Academic Scientists</p>
-			<p class="text-purple-300 text-2xl mt-8">
-				Get Early Access to Liminal
+			<p class="mt-2 text-2xl text-white">The Comprehensive Digital Lab Companion for Academics</p>
+			<p class="text-white text-2xl mt-8">
+				Like What We're Doing?
 			</p>
-			<p class="text-blue-300 text-2xl underline">
+			<p class="text-purple-300 text-2xl hover:underline">
 				<a
 					target="_blank"
 					href="https://docs.google.com/forms/d/e/1FAIpQLSd2gtATL3ifoL3cg_IBaxFpP96MhLZY2uy9zVTxOUwRiPcXwQ/viewform?usp=sf_link">
-					Join the Beta
+					Join Our Community
 				</a>
 			</p>
 		</div>
@@ -67,8 +67,8 @@
 
 	<div class="grid grid-cols-5 gap-2 w-full">
 		<div class="mt-4 bg-black rounded-lg col-span-1">
-			<div class="text-white">
-				Our Timeline
+			<div class="text-white text-2xl">
+				News
 			</div>
 			<div class="m-2">
 				<NewsFeed/>
@@ -79,24 +79,26 @@
 			<div>
 				<InTheBox/>
 				<div class="pixel-divider my-8"></div>
+					<div class="text-white text-2xl mt-8 text-center">
+						<p>Interested in supporting us?</p>
+						<a class="text-purple-300" target="_blank" href="https://buymeacoffee.com/liminalbios">Buy our developers a cup of coffee</a>
+				
+					</div>
 					<div class="mb-4 mt-4">
 						<p>
-							<center class="font-extrabold underline text-4xl aqua-dog">Releasing Fall 2024</center>
+							<center class="font-extrabold text-2xl liminal-purple">Releasing 2025</center>
 						</p>
 					</div>
-					<div class="rounded-lg">
-						<center>
-							<!-- <img src={datanetworkLogo} class="spinner rounded-full" alt="Spinning Data Network Logo"> -->
-							</center>
-							<!-- <div class="gradient-overlay"></div> -->
-							</div>
 					<div class="mb-4 mt-4">
 						<p>
-							<center class="mt-2 text-white">Email support@liminalbios.com for inquiries</center>
+							<center class="mt-2 text-white text-2xl">Email 
+								<a href="mailto:support@liminalbios.com" class="text-purple-300">support@liminalbios.com</a>
+								for inquiries</center>
 						</p>
 					</div>
 			</div>
 		</div>
+		
 	</div>
 	
 <Modal bind:open={whatIsLiminal} autoclose outsideclose>
@@ -107,9 +109,11 @@
 	  </div>
 	  <div class="text-xl">
 			<ul class="list-disc list-inside">
-				<li>A software application made specifically for academic scientists, by academic scientists</li>
+				<li>A one-stop shop for working on and consuming science</li>
+				<li>A complete digital lab companion for your research needs</li>
 				<li>A place to record the science and activity required for a lab to function.</li>
 				<li>A place to communicate the science and activity to the whole lab.</li>
+				<li>A software application made specifically for academic scientists, by academic scientists</li>
 			</ul>
 	  </div>
 	  <div slot="footer">
@@ -227,10 +231,10 @@
 	background-color: white;
   }
 
-  .aqua-dog {
+  /* .aqua-dog {
       font-weight: bold;
       color: aqua;
-    }
+    } */
 
   @keyframes spin {
     from {

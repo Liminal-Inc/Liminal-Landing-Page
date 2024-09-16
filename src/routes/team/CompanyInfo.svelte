@@ -3,11 +3,9 @@
 </script>
 
 <!-- Mission -->
-<div class="col-span-4 bg-slate-300 rounded-lg">
-    <p class="text-3xl font-bold py-4 px-4 text-black text-center bg-purple-300">Our Mission</p>
-        <p class="text-center text-2xl">Simplify the academic lab</p>
-        <p class="text-center text-2xl">by providing 1 piece of software</p>
-        <p class="text-center mb-2 text-2xl">to connect the whole research ecosystem</p>
+<div class="col-span-4 bg-slate-300 rounded-lg text-xl">
+    <p class="text-2xl font-bold py-4 px-4 text-black text-center bg-purple-300">Our Mission</p>
+        <p class="text-center p-4">Reduce the amount of friction in academic science. We aim to make research more connected, reproducible, and easier to disseminate through our Liminal application. We are devoted to simplifying the academic lab by providing 1 piece of software to connect the whole research ecosystem.</p>
 </div>
 
 <div class="pixel-divider col-span-4 my-10"></div>
@@ -16,7 +14,7 @@
 <div class="col-span-4 bg-slate-300 rounded-lg">
     <div class="grid grid-cols-3">
         <div class="col-span-3">
-            <p class="text-3xl font-bold py-4 px-4 text-black text-center bg-purple-300">Our Values</p>
+            <p class="text-2xl font-bold py-4 px-4 text-black text-center bg-purple-300">Our Values</p>
         </div>
         <div class="col-span-1 p-2 text-xl">
             <p class="font-bold text-2xl mb-4">Communication</p>

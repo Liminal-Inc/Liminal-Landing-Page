@@ -14,7 +14,7 @@
                 Market Analysis
             </p>
         </div>
-        <div class="bg-slate-300 p-4 text-xl rounded-t-lg col-span-3">
+        <div class="bg-slate-300 p-4 text-2xl rounded-t-lg col-span-3">
             <Accordion multiple>
             <AccordionItem bind:open={items[0]}>
                 <span slot="header" class="text-lg font-bold text-black">Academic research requires a lot of money</span>

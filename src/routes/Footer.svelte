@@ -10,7 +10,7 @@
         <p>Locale: Lafayette, IN</p>
         <p>Locale: Mariposa, CA</p>
       </div>
-      <div class="flex space-x-4">
+      <div class="flex space-x-4 pr-12">
         <a href="https://github.com/ddeemerpurdue/" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:text-white">GitHub</a>
         <a href="https://www.linkedin.com/company/liminaldatanetwork/" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:text-white">LinkedIn</a>
         <!-- <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:text-white">Twitter</a> -->

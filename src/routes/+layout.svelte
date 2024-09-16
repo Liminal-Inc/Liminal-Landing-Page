@@ -4,9 +4,9 @@
 	import { page } from '$app/stores';
 	import LiminalNavbar from '$lib/LiminalNavbar.svelte';
 	import { webVitals } from '$lib/vitals';
-	import Header from './Header.svelte';
 	import Footer from './Footer.svelte';
 	import './styles.css';
+	import '../global.css'
 
 	/** @type {import('./$types').LayoutServerData} */
 	export let data;
