@@ -1,6 +1,5 @@
 <script>
     import { Button, Card } from "flowbite-svelte";
-    import { ArrowRightOutline } from "flowbite-svelte-icons";
     export let title = "";
     export let link = "";
     export let blurb = "";

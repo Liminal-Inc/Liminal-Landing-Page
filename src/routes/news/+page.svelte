@@ -6,7 +6,7 @@
 	<title>News</title>
 	<meta name="description" content="News for the Data Network application created by Liminal Inc" />
 </svelte:head>
-<body>
+<div>
     <div class="text-white text-2xl">
         <h1 class="text-white p-4">News Feed</h1>
         <NewsFeed view="normal"/>
@@ -27,4 +27,4 @@
         </p>
         <p>Next Up: <span class="text-orange-500">Pending</span></p>
     </div>
-</body>
+</div>

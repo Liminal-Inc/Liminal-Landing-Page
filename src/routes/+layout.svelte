@@ -1,12 +1,8 @@
 <script>
-	import '../app.postcss';
+	import '../app.css';
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
-	import LiminalNavbar from '$lib/LiminalNavbar.svelte';
 	import { webVitals } from '$lib/vitals';
-	import Footer from './Footer.svelte';
-	import './styles.css';
-	import '../global.css'
 
 	/** @type {import('./$types').LayoutServerData} */
 	export let data;
@@ -20,52 +16,32 @@
 	}
 </script>
 
-<div class="app">
-	<!-- <Header /> -->
-	<LiminalNavbar/>
+<div class="min-h-screen flex flex-col">
+	<header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+		<nav class="container mx-auto px-4 py-4">
+		  <div class="flex justify-between items-center">
+			<a href="/" class="text-2xl font-heading font-bold text-primary flex items-center">
+			  <img src="/logo.svg" alt="Liminal Logo" class="h-8 mr-2">
+			  Liminal
+			</a>
+			<ul class="flex space-x-8">
+			  <li><a href="/" class="text-text hover:text-primary transition-colors duration-300">Home</a></li>
+			  <li><a href="/features" class="text-text hover:text-primary transition-colors duration-300">Features</a></li>
+			  <li><a href="/about" class="text-text hover:text-primary transition-colors duration-300">About</a></li>
+			  <li><a href="/blog" class="text-text hover:text-primary transition-colors duration-300">Blog</a></li>
+			  <li><a href="/contact" class="btn">Join the Waitlist</a></li>
+			</ul>
+		  </div>
+		</nav>
+	  </header>
 
-	<main>
+	<main class="flex-grow">
 		<slot />
 	</main>
-	<Footer />
-	<!-- <footer>
-		<p class="text-xl font-extrabold">Liminal Inc. 2024</p>
-	</footer> -->
+	<footer class="bg-surface mt-12">
+		<div class="container mx-auto px-4 py-8">
+		  <p class="text-center text-sm text-gray-500">&copy; 2024 Liminal. All rights reserved.</p>
+		</div>
+	  </footer>
 </div>
 
-<style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
-</style>
