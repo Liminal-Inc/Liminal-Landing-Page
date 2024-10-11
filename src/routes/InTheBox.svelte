@@ -21,34 +21,52 @@
     let social = false;
 </script>
 
-<div class="bg-slate-300 rounded-lg">
+<div class="text-white rounded-lg">
     <div>
         <center>
-            <div class="p-4">
-                <p class="text-2xl text-black">				
-                    <!-- The DAta NEtwork is an application providing a connected data and knowledge ecosystem 
-                    for academic life science laboratories. Our fundamental goal aims to help labs exceed recording 
-                    guidelines and standards by comprehensively addressing major aspects of the lab. -->
+            <div class="mb-8">
+                <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl">				
                     What's in the box?
                 </p>
             </div>
-            <!-- <p class="text-lg text-black">
-
-                Use our platform to connect your data, knowledge, and resources to the world.
-            </p> -->
-            <div class="outline outline-black p-4">
-                <div class="grid grid-cols-2 grid-rows-3 gap-2 p-4 text-white ">
-                    <button on:click={() => (notebook = true)} class="bg-black rounded-lg hover:bg-gray-700 p-2 flex flex-col items-center justify-center"><NewspapperSolid size="xl" class="text-purple-300"/><div class="mt-2 mb-2 text-xl">Electronic Notebook</div></button>
-                    <button on:click={() => (findings = true)} class="bg-black rounded-lg hover:bg-gray-700 p-2 flex flex-col items-center justify-center"><DatabaseSolid size="xl"/><div class="mt-2 mb-2 text-lg ">Experimental Results</div></button>
-                    <button on:click={() => (samples = true)} class="bg-black rounded-lg hover:bg-gray-700 p-2 flex flex-col items-center justify-center"><CirclePlusSolid size="xl"/><div class="mt-2 mb-2 text-lg ">Sample Management</div></button>
-                    <button on:click={() => (inventory = true)} class="bg-black rounded-lg hover:bg-gray-700 p-2 flex flex-col items-center justify-center"><FolderArrowRightOutline size="xl" class="text-purple-300"/><div class="mt-2 mb-2 text-lg ">Inventory</div></button>
-                    <button on:click={() => (tasks = true)} class="bg-black rounded-lg hover:bg-gray-700 p-2 flex flex-col items-center justify-center"><ClipboardCheckSolid class="text-purple-300"/><div class="mt-2 mb-2 text-lg ">Task Manager</div></button>
-                    <button on:click={() => (papers = true)} class="bg-black rounded-lg hover:bg-gray-700 p-2 flex flex-col items-center justify-center"><PenSolid size="xl"/><div class="mt-2 mb-2 text-lg ">Paper and Reviews</div></button>
-                    <button on:click={() => (knowledge = true)} class="bg-black rounded-lg hover:bg-gray-700 p-2 flex flex-col items-center justify-center"><BookOpenSolid size="xl"/><div class="mt-2 mb-2 text-lg ">Knowledge</div></button>
-                    <button on:click={() => (social = true)} class="bg-black rounded-lg hover:bg-gray-700 p-2 flex flex-col items-center justify-center"><UserSolid size="xl" class="text-purple-300"/><div class="mt-2 mb-2 text-lg ">Social Hub</div></button>
+            <div class="p-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 p-4 text-white text-lg sm:text-md md:text-lg lg:text-lg">
+                    <button on:click={() => (notebook = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                        <NewspapperSolid size="xl"/>
+                        <div class="mt-2 mb-2">Lab Notebook</div>
+                    </button>
+                    <button on:click={() => (findings = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                        <DatabaseSolid size="xl"/>
+                        <div class="mt-2 mb-2">Experimental Results</div>
+                    </button>
+                    <button on:click={() => (samples = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                        <CirclePlusSolid size="xl"/>
+                        <div class="mt-2 mb-2">Sample Management</div>
+                    </button>
+                    <button on:click={() => (inventory = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                        <FolderArrowRightOutline size="xl"/>
+                        <div class="mt-2 mb-2">Inventory</div>
+                    </button>
+                    <button on:click={() => (tasks = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                        <ClipboardCheckSolid/>
+                        <div class="mt-2 mb-2">Task Manager</div>
+                    </button>
+                    <button on:click={() => (papers = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                        <PenSolid size="xl"/>
+                        <div class="mt-2 mb-2">Paper and Reviews</div>
+                    </button>
+                    <button on:click={() => (knowledge = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                        <BookOpenSolid size="xl"/>
+                        <div class="mt-2 mb-2">Knowledge</div>
+                    </button>
+                    <button on:click={() => (social = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                        <UserSolid size="xl"/>
+                        <div class="mt-2 mb-2">Social Hub</div>
+                    </button>
                 </div>
             </div>
-            <div class="text-2xl">
+            
+            <div class="text-lg sm:text-xl md:text-2xl lg:text-2xl">
                 <p class="font-extrabold">
                     Plus!
                 </p>
@@ -57,12 +75,19 @@
                     <li>Badges, Levels, Streaks</li>
                     <li>Custom toolkits</li>
                     <li>Reports & Summaries</li>
-                    <li>And more!</li>
+                    <li class="text-blue-600 mt-2">
+                        <a href="/roadmap">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            View our roadmap
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </a>
+                    </li>
             </div>
         </center>
 
     </div>
 </div>
+
 
 
 <Modal bind:open={notebook} autoclose outsideclose class="text-black bg-slate-300">

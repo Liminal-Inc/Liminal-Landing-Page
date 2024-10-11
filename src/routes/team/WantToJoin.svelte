@@ -8,14 +8,13 @@
 
 </script>
 
-<div class="col-span-4">
-    <div class="grid grid-cols-4">
-        <div class="col-span-2"></div>
-        <div class="col-span-2 rounded-t-lg bg-purple-300">
-            <p class="text-3xl font-bold py-4 px-4 text-black text-center">
+<div class="">
+    <div class="">
+        <div class="bg-purple-300">
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold pt-4 pb-2 px-4 text-black text-center">
                 Want to join Liminal?
             </p>
-            <p class="text-3xl font-bold mb-2 text-black text-center">
+            <p class="pb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-black text-center">
                 <a class="text-blue-500 underline" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSc1MCwMkBH8VnWTX3xvfYJ95HQQ5VsGdn2C7zAL0Z9huxLF8Q/viewform?usp=sf_link">Apply Here</a>
             </p>
         </div>
@@ -27,8 +26,9 @@
                 <AccordionItem bind:open={items[0]}>
                     <span slot="header" class="text-lg font-bold text-black">Open Positions</span>
                     <ul class="list-disc list-inside">
-                        <li>Full Stack Software Developer (Senior/Equity)</li>
-                        <li>Full Stack Software Developer (Intermediate)</li>
+                        <li>Full Stack Software Developer</li>
+                        <!-- <li>Full Stack Software Developer (Senior/Equity)</li> -->
+                        <!-- <li>Full Stack Software Developer (Intermediate)</li> -->
                         <li>Software Development Intern (Junior/Temp)</li>
                         <li>Bioinformatics Intern (Junior/Temp)</li>
                     </ul>
@@ -48,7 +48,11 @@
                 </AccordionItem>
                 <AccordionItem bind:open={items[2]}>
                     <span slot="header" class="text-lg font-bold text-black">Our Hiring Process</span>
-                    <p class="font-bold underline text-black">Main steps involved<sup>i</sup></p>
+                    <p class="text-black">
+                        Right now, our hiring process is fluid and subject to change as our company grows from a small
+                        team to a larger one. We are looking for individuals who are willing to learn and grow with us.
+                    </p>
+                    <!-- <p class="font-bold underline text-black">Main steps involved<sup>i</sup></p>
                     <ol class="list-decimal list-inside text-black">
                         <li>15-20 minute screen call. This is not a technical call.</li>
                         <li>60 minute technical interview. We do not ask what people would consider <span class="italic">hard</span> questions. Rather, we are more interested in learning how our applicants think about problems and go about solving challenges presented to them.</li>
@@ -62,7 +66,7 @@
                         <span class="font-bold underline">What do we think makes a strong candidate?</span> The candidate shows a history of projects they've contributed to and/or created.
                         We are also looking for movitated individuals who are willing to learn and grow with us, not needing a ton of guidance to get started.
                         Technical skills must be at a minimum, but the ability to problem solve and work with a team is a must.
-                    </p>
+                    </p> -->
             
                 </AccordionItem>
                 <!-- <AccordionItem bind:open={items[2]}>
