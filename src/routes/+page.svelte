@@ -206,48 +206,4 @@
 		align-items: center;
 		flex: 0.6;
 	}
-
-	.image-wrapper {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-
-
-	/* ul {
-		color: white;
-	}
-	li {
-		color: black;
-		font-weight: bold;
-	} */
-
-  .spinner {
-    width: 400px; /* or the size you want */
-    height: 400px; /* or the size you want */
-    animation: spin 10s infinite linear; /* Adjust the duration as needed */
-	background-color: white;
-  }
-
-  /* .aqua-dog {
-      font-weight: bold;
-      color: aqua;
-    } */
-
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  .pixel-hr {
-    border: none;
-    height: 10px; /* Adjust the height to control the thickness */
-    background: linear-gradient(90deg, white 10%, transparent 10%, transparent 90%, white 90%);
-    background-size: 20px 10px; /* Adjust the size of the 'pixels' */
-    background-repeat: repeat;
-  }
 </style>

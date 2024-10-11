@@ -159,10 +159,6 @@
         color: #333;
     }
 
-    .title {
-        font-size: 24px;
-    }
-
     .keywords {
         margin-top: 10px;
         font-style: italic;

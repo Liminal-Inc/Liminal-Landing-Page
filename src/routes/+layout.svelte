@@ -6,7 +6,7 @@
 	import { webVitals } from '$lib/vitals';
 	import Footer from '$lib/Footer.svelte';
 	import './styles.css';
-	import '../global.css'
+	import '../global.css';
 
 	/** @type {import('./$types').LayoutServerData} */
 	export let data;
@@ -21,16 +21,11 @@
 </script>
 
 <div class="app">
-	<!-- <Header /> -->
-	<LiminalNavbar/>
-
+	<LiminalNavbar />
 	<main>
 		<slot />
 	</main>
 	<Footer />
-	<!-- <footer>
-		<p class="text-xl font-extrabold">Liminal Inc. 2024</p>
-	</footer> -->
 </div>
 
 <style>
@@ -49,23 +44,5 @@
 		max-width: 64rem;
 		margin: 0 auto;
 		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
 	}
 </style>
