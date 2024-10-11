@@ -2,9 +2,9 @@
 	import '../app.postcss';
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
-	import LiminalNavbar from '$lib/LiminalNavbar.svelte';
+	import LiminalNavbar from '$lib/Navbar.svelte';
 	import { webVitals } from '$lib/vitals';
-	import Footer from './Footer.svelte';
+	import Footer from '$lib/Footer.svelte';
 	import './styles.css';
 	import '../global.css'
 

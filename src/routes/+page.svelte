@@ -2,17 +2,17 @@
 	import logoURL from '$lib/images/Logo-24Jul2024.png'
 	import NewsFeed from './NewsFeed.svelte';
 	import InTheBox from './InTheBox.svelte';
-	import { Modal } from 'flowbite-svelte';
-	import { 
-		BookOpenSolid, CirclePlusSolid, ClipboardCheckSolid, DatabaseSolid,
-		FaceGrinSolid, FileCirclePlusSolid, FolderArrowRightOutline, NewspapperSolid,
-		PenSolid, UserSolid
-	} from 'flowbite-svelte-icons';
+	import TheProblem from './TheProblem.svelte';
+	import { Modal, Video } from 'flowbite-svelte';
+	import { BookOpenSolid } from 'flowbite-svelte-icons';
 
-	let whatIsLiminal = false;
 	let whatDoesLiminal = false;
-	let whatIsDifferent = false;
-	let canITry = false;
+
+	import videoUrl from '$lib/videos/demo_2.mp4'
+	// let raw_url = "https://drive.google.com/file/d/152c9auQFIoIoQhENT_n3zl_gCtwsBIw9/view?usp=drive_link"
+	// let link_url = "https://drive.google.com/uc?export=download&id=FILE_ID"
+
+	import posterUrl from '$lib/images/demo-screenshot.jpg'
 </script>
 
 <svelte:head>
@@ -20,108 +20,158 @@
 	<meta name="description" content="Liminalbios Data Network application for academic life science research" />
 </svelte:head>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 <section>
 	
-	<div class="grid grid-cols-5 gap-1 justify-evenly">
-		<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="liminalbios" data-description="Support me on Buy me a coffee!" data-message="" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
-		<!-- Left Logo -->
-		<div class="bg-slate-300 col-span-2">
-			<img src={logoURL} class="w-42 h-42" alt="Liminal Logo">
-		</div>
-		<div class="col-span-3 flex flex-col justify-center items-center mt-4 text-center">
-			<p class="text-6xl text-white font-extrabold">Liminal</p>
-			<p class="mt-2 text-2xl text-white">The Comprehensive Digital Lab Companion for Academics</p>
-			<p class="text-white text-2xl mt-8">
-				Like What We're Doing?
-			</p>
-			<p class="text-purple-300 text-2xl hover:underline">
-				<a
-					target="_blank"
-					href="https://docs.google.com/forms/d/e/1FAIpQLSd2gtATL3ifoL3cg_IBaxFpP96MhLZY2uy9zVTxOUwRiPcXwQ/viewform?usp=sf_link">
-					Join Our Community
-				</a>
-			</p>
-		</div>
-	</div>
-	<!-- Major divider -->
-	<div class="pixel-divider my-8"></div>
-
-	<div class="flex bg-slate-300 rounded-lg w-full m-2 p-2">
-		<div class="grid grid-cols-2 gap-2 w-full justify-evenly">
-			<button on:click={() => (whatIsLiminal = true)} class="col-span-1 rounded-lg outline-dashed hover:bg-purple-300">
-				<p class="text-2xl text-center text-black cursor-pointer">What is Liminal?</p>
-			</button>
-			<button on:click={() => (whatDoesLiminal = true)} class="col-span-1 rounded-lg outline-dashed hover:bg-purple-300">
-				<p class="text-2xl text-center text-black cursor-pointer">What does Liminal do for me?</p>
-			</button>
-			<button on:click={() => (whatIsDifferent = true)} class="col-span-1 rounded-lg outline-dashed hover:bg-purple-300">
-				<p class="text-2xl text-center text-black cursor-pointer">How is Liminal different?</p>
-			</button>
-			<button on:click={() => (canITry = true)} class="col-span-1 rounded-lg outline-dashed hover:bg-purple-300">
-				<p class="text-2xl text-center text-black cursor-pointer">How can I try Liminal?</p>
-			</button>
-		</div>
-	</div>
-	<!-- Some sort of break here -->
-	<div class="pixel-divider my-8"></div>
-
-	<div class="grid grid-cols-5 gap-2 w-full">
-		<div class="mt-4 bg-black rounded-lg col-span-1">
-			<div class="text-white text-2xl">
-				News
-			</div>
-			<div class="m-2">
-				<NewsFeed/>
-			</div>
-		</div>
-		<!-- Right side -->
-		<div class="justify-between mt-4 bg-black col-span-4 w-full">
-			<div>
-				<InTheBox/>
-				<div class="pixel-divider my-8"></div>
-					<div class="text-white text-2xl mt-8 text-center">
-						<p>Interested in supporting us?</p>
-						<a class="text-purple-300" target="_blank" href="https://buymeacoffee.com/liminalbios">Buy our developers a cup of coffee</a>
-				
-					</div>
-					<div class="mb-4 mt-4">
-						<p>
-							<center class="font-extrabold text-2xl liminal-purple">Releasing 2025</center>
-						</p>
-					</div>
-					<div class="mb-4 mt-4">
-						<p>
-							<center class="mt-2 text-white text-2xl">Email 
-								<a href="mailto:support@liminalbios.com" class="text-purple-300">support@liminalbios.com</a>
-								for inquiries</center>
-						</p>
-					</div>
-			</div>
-		</div>
+<div class="grid grid-cols-5 gap-1 justify-evenly">
+	<div class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2">
+		<!-- <p class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold">Liminal</p> -->
 		
+		<p class="mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+			Organize all your research in one place
+		</p>
+		
+		<p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+			Better lab records, deeper insights, less work for students and PIs
+		</p>
 	</div>
-	
-<Modal bind:open={whatIsLiminal} autoclose outsideclose>
-	<div slot="header">
-		<h3 class="text-xl font-semibold text-black dark:text-white">
-		  What is Liminal?
-		</h3>
-	  </div>
-	  <div class="text-xl">
-			<ul class="list-disc list-inside">
-				<li>A one-stop shop for working on and consuming science</li>
-				<li>A complete digital lab companion for your research needs</li>
-				<li>A place to record the science and activity required for a lab to function.</li>
-				<li>A place to communicate the science and activity to the whole lab.</li>
-				<li>A software application made specifically for academic scientists, by academic scientists</li>
-			</ul>
-	  </div>
-	  <div slot="footer">
-		<button on:click={() => (whatIsLiminal = !whatIsLiminal)} class="btn btn-primary bg-purple-300 rounded-lg py-2 px-4 outline">
-		  Close
-		</button>
-	  </div>
-</Modal>
+</div>
+<!-- Major divider -->
+<div class="pixel-divider my-16"></div>
+<div class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2">
+	<Video class="w-full h-auto" controls poster={posterUrl}>
+		<source src={videoUrl} type="video/mp4" />
+		Video not supported
+	</Video>
+	<p class="text-white mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+		<i class="fas fa-star text-yellow-400"></i> We are looking for early adopters! <i class="fas fa-star text-yellow-400"></i>
+	</p>
+	<p class="w-full outline outline-white rounded-lg text-blue-600 hover:bg-purple-300 hover:underline p-4 transition-all duration-100 transform hover:-translate-y-1 cursor-pointer mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+		<a
+			class="block"
+			target="_blank"
+			href="https://docs.google.com/forms/d/e/1FAIpQLSd2gtATL3ifoL3cg_IBaxFpP96MhLZY2uy9zVTxOUwRiPcXwQ/viewform?usp=sf_link">
+			Get early access to Liminal
+		</a>
+	</p>
+	<p class="w-full outline outline-white rounded-lg text-blue-600 hover:bg-purple-300 hover:underline p-4 transition-all duration-100 transform hover:-translate-y-1 cursor-pointer mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+		<a
+			class="block"
+			target="_blank"
+			href="https://discord.gg/NHYzApB3jj">
+			Join our Discord community
+		</a>
+	</p>
+</div>
+
+<div class="pixel-divider my-16" id="liminal-features"></div>
+
+<!-- <div class="grid grid-cols-5 gap-2 w-full">
+	<div class="justify-between m-2 col-span-5 w-full">
+		<TheProblem/>
+	</div>
+</div>
+<div class="pixel-divider my-16"></div> -->
+
+
+<div class="grid grid-cols-5 gap-2 w-full">
+	<!-- Right side -->
+	<div class="justify-between bg-black col-span-5 w-full">
+		<div>
+			<InTheBox/>
+			<div class="pixel-divider my-16"></div>
+			<TheProblem/>
+			<div class="pixel-divider my-16"></div>
+			<div class="flex rounded-lg w-full m-2 p-2 text-white">
+				<div class="grid grid-cols-1 sm:grid-cols-1 gap-4 w-full justify-evenly">
+					<div class="text-white mb-12 text-center text-lg sm:text-xl md:text-2xl lg:text-3xl">
+						Frequently Asked Questions
+					</div>
+					<div class="outline outline-white hover:bg-gray-700 rounded-lg pl-4 pb-2">
+						<p class="text-2xl mt-4 font-extrabold">What is Liminal?</p>
+						<div class="text-lg">
+							<p>
+								Liminal is a software application designed to help <span class="font-bold">students</span> and <span class="font-bold">managers</span> organize their research and become more efficient
+							</p>
+								<ul class="list-disc list-inside">
+									<li>Stop wasting time trying to organize your data; let us do that</li>
+									<li>Easily combine data across multiple experiments for analysis</li>
+									<li>Keep all relevant data in one spot for all your experiments</li>
+									<li>Neatly keep track of all your lab activities</li>
+								</ul>
+							</div>
+					</div>
+					<!-- Who is liminal for -->
+					<div class="outline outline-white hover:bg-gray-700 rounded-lg pl-4 pb-2">
+						<p class="text-2xl mt-4 font-extrabold">Who is Liminal for?</p>
+						<div class="text-lg">
+							<p>
+								Liminal is for <span class="font-bold">everyone</span> involved in conducting research in an academic lab
+							</p>
+							<ul class="list-disc list-inside">
+								<li>Undergraduate students</li>
+								<li>Graduate students</li>
+								<li>Postdocs</li>
+								<li>Staff/Managers</li>
+								<li>Principal investigators</li>
+							</ul>
+						</div>
+					</div>
+					<!-- The Liminal Advantage -->
+					<div class="outline outline-white hover:bg-gray-700 rounded-lg pl-4 pb-2">
+						<p class="text-2xl mt-4 font-extrabold">What the Liminal Advantage?</p>
+						<div class="text-lg">
+							<p>
+								Connecting and organizing all parts of the lab in one app leads to higher scientific output
+							</p>
+							<ul class="list-disc list-inside">
+								<li>Accumulate your insights on Liminal and get more out of each experiment</li>
+								<li>All your experimental data and lab activity is accessible at your fingertips</li>
+								<li>Eliminate having to change software platforms and stick with Liminal from experimental design to manuscript writing</li>
+								<li>Reduce time for lab recording and focus on building your knowledgebase</li>
+							</ul>
+						</div>
+					</div>
+					<!-- Try Liminal -->
+					<div class="outline outline-white hover:bg-gray-700 rounded-lg pl-4 pb-2">
+						<p class="text-2xl mt-4 font-extrabold">How can I try Liminal?</p>
+						<div class="text-lg">
+							<p>
+								I want this product!
+							</p>
+							<ul class="list-disc list-inside">
+								<li>Fill out this <a class="text-blue-600 hover:underline" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd2gtATL3ifoL3cg_IBaxFpP96MhLZY2uy9zVTxOUwRiPcXwQ/viewform?usp=sf_link">Google Form</a> if you are interested in joining out waitlist</li>
+								<li>Book a <a target="_blank" href="https://calendar.app.google/fAwGmDCeccJbcwKQ7" class="text-blue-600 hover:underline">short meeting</a> to personally chat with one of our founders</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				</div>
+			<div class="pixel-divider my-16"></div>
+				<div class="text-white text-2xl mt-8 mb-16 text-center">
+					<div class="mb-16">
+						<p class="text-lg sm:text-xl md:text-2xl lg:text-3xl">Interested in supporting or chatting?</p>
+					</div>
+					<p class="outline outline-white rounded-lg text-blue-600 p-4 mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+						<center class="text-white text-2xl">Email 
+							<a 
+							class="transition-all duration-100 transform hover:-translate-y-1 cursor-pointer hover:shadow-2xl hover:bg-purple-300 hover:underline text-blue-600 rounded p-2"
+							href="mailto:support@liminalbios.com" >support@liminalbios.com</a>
+					</p>
+					<p class="text-center outline outline-white rounded-lg text-white p-4 mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+						Book a meeting with a founder
+							<a
+							target="_blank"
+							class="text-blue transition-all duration-100 transform hover:-translate-y-1 cursor-pointer hover:shadow-2xl hover:bg-purple-300 hover:underline text-blue-600 rounded p-2"
+							href="https://calendar.app.google/fAwGmDCeccJbcwKQ7" >GoogleMeet</a>
+					</p>
+			
+				</div>
+		</div>
+	</div>
+</div>
+
 
 <Modal bind:open={whatDoesLiminal} autoclose outsideclose>
 	<div slot="header">
@@ -140,58 +190,6 @@
 	  </div>
 	  <div slot="footer">
 		<button on:click={() => (whatDoesLiminal = !whatDoesLiminal)} class="btn btn-primary bg-purple-300 rounded-lg py-2 px-4 outline">
-		  Close
-		</button>
-	  </div>
-</Modal>
-
-<Modal bind:open={whatIsDifferent} autoclose outsideclose>
-	<div slot="header">
-		<h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-		  How is Liminal different?
-		</h3>
-	  </div>
-	  <div class="text-xl">
-			<ul class="list-disc list-inside">
-				<li>We are solely committed to the needs of academic scientists.</li>
-				<li>
-					Liminal is not just a vessel to hold research data. We account for all the
-					major aspects of the lab to provide <span class="font-bold">lab state</span>
-					associated with any data or activity at a specific timepoint.
-					We are the most comprehensive platform on the market.
-				</li>
-				<li>Your Liminal app will be able to communicate with every other lab on Liminal.</li>
-				<li>
-					Our price will be a flat, accessible subscription fee that gives you access
-					to everything.
-				</li>
-				<li>
-					We are committed to being transparent to our community, providing anyone access
-					to the full details of Liminal.
-				</li>
-			</ul>
-	  </div>
-	  <div slot="footer">
-		<button on:click={() => (whatIsDifferent = !whatIsDifferent)} class="btn btn-primary bg-purple-300 rounded-lg py-2 px-4 outline">
-		  Close
-		</button>
-	  </div>
-</Modal>
-
-<Modal bind:open={canITry} autoclose outsideclose>
-	<div slot="header">
-		<h3 class="text-xl font-semibold text-black dark:text-white">
-		  How can I try Liminal?
-		</h3>
-	  </div>
-	  <div class="text-xl">
-			<ul class="list-disc list-inside">
-				<li>Fill out this <a class="text-blue-500 underline" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd2gtATL3ifoL3cg_IBaxFpP96MhLZY2uy9zVTxOUwRiPcXwQ/viewform?usp=sf_link">Google Form</a> if you are interested in joining out waitlist</li>
-				<li>Email support@liminalbios.com</li>
-			</ul>
-	  </div>
-	  <div slot="footer">
-		<button on:click={() => (canITry = !canITry)} class="btn btn-primary bg-purple-300 rounded-lg py-2 px-4 outline">
 		  Close
 		</button>
 	  </div>
