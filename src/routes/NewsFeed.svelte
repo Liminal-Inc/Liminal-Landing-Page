@@ -16,13 +16,13 @@
     <h3 class="text-white">June 23, 2024</h3>
     <h3 class="text-purple-300 font-bold">[Blog Post]</h3>
     <p class="mb-4 text-base font-normal timeline-header text-gray-500 dark:text-gray-400">Why Lab Notebooks Are Failing</p>
-    <Button href="news/labnotebooks" color="alternative">Full Post<ArrowRightOutline class="ms-2 w-5 h-5" /></Button>
+    <Button href="blog/labnotebooks" color="alternative">Full Post<ArrowRightOutline class="ms-2 w-5 h-5" /></Button>
   </TimelineItem>
     <TimelineItem >
         <h3 class="text-white">June 10, 2024</h3>
         <h3 class="text-purple-300 font-bold">[Blog Post]</h3>
         <p class="mb-4 text-base font-normal timeline-header text-gray-500 dark:text-gray-400">Are Labs Good at Generating Knowledge?</p>
-        <Button href="news/labknowledge" color="alternative">Full Post<ArrowRightOutline class="ms-2 w-5 h-5" /></Button>
+        <Button href="blog/labknowledge" color="alternative">Full Post<ArrowRightOutline class="ms-2 w-5 h-5" /></Button>
     </TimelineItem>
     {#if view === "comprehensive"}
       <TimelineItem >
@@ -34,20 +34,20 @@
           <h3 class="text-white">May 27, 2024</h3>
           <h3 class="text-yellow-300 font-bold">[Major Feature]</h3>
           <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Paper database and reviews added</p>
-          <Button href="news/generaltools" color="alternative">More information<ArrowRightOutline class="ms-2 w-5 h-5" /></Button>
+          <Button href="blog/generaltools" color="alternative">More information<ArrowRightOutline class="ms-2 w-5 h-5" /></Button>
         </TimelineItem> -->
     {/if}
     <TimelineItem >
         <h3 class="text-white">May 15, 2024</h3>
         <h3 class="text-purple-300 font-bold">[Blog Post]</h3>
         <p class="mb-4 text-base font-normal timeline-header text-gray-500 dark:text-gray-400">General Life Science Software Toolset</p>
-        <Button href="news/generaltools" color="alternative">Full Post<ArrowRightOutline class="ms-2 w-5 h-5" /></Button>
+        <Button href="blog/generaltools" color="alternative">Full Post<ArrowRightOutline class="ms-2 w-5 h-5" /></Button>
     </TimelineItem>
     <TimelineItem >
         <h3 class="text-white">April 22, 2024</h3>
         <h3 class="text-purple-300 font-bold">[Blog Post]</h3>
         <p class="mb-4 text-base font-normal timeline-header text-gray-500 dark:text-gray-400">Lab State vs. Metadata</p>
-        <Button href="news/labstate" color="alternative">Full Post<ArrowRightOutline class="ms-2 w-5 h-5" /></Button>
+        <Button href="blog/labstate" color="alternative">Full Post<ArrowRightOutline class="ms-2 w-5 h-5" /></Button>
     </TimelineItem>
     {#if view === "comprehensive"}
       <TimelineItem >

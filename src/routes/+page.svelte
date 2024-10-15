@@ -154,7 +154,7 @@
 						<p class="text-lg sm:text-xl md:text-2xl lg:text-3xl">Interested in supporting or chatting?</p>
 					</div>
 					<p class="outline outline-white rounded-lg text-blue-600 p-4 mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-						<center class="text-white text-2xl">Email 
+						Email 
 							<a 
 							class="transition-all duration-100 transform hover:-translate-y-1 cursor-pointer hover:shadow-2xl hover:bg-purple-300 hover:underline text-blue-600 rounded p-2"
 							href="mailto:support@liminalbios.com" >support@liminalbios.com</a>
