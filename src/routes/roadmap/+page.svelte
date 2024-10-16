@@ -22,8 +22,10 @@
         </div>
         <div>
             <ul class="list-disc pl-4">
+                <li>Public-facing content for anyone to see</li>
                 <li>Cloud-based community hub for file analysis plugins</li>
                 <li>Cloud-based community hub for instrument integration plugins</li>
+                <li>Public feed on datanetwork.app to see high-level data</li>
                 <li>Connect with other labs/Liminal users</li>
             </ul>
         </div>
