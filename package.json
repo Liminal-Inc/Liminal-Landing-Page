@@ -193,6 +193,7 @@
     "postcss-scss": "^4.0.9",
     "postcss-selector-parser": "^6.0.15",
     "posthog-js": "^1.170.1",
+    "posthog-node": "^4.2.1",
     "prelude-ls": "^1.2.1",
     "punycode": "^2.3.1",
     "queue-microtask": "^1.2.3",

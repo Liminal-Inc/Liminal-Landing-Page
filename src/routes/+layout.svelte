@@ -3,24 +3,17 @@
 	import './styles.css';
 	import '../global.css';
 
-	import posthog from 'posthog-js'
 	import Footer from '$lib/Footer.svelte';
 	import LiminalNavbar from '$lib/Navbar.svelte';
-	import { browser } from '$app/environment';
 
-	export const load = async () => {
+	import posthog from 'posthog-js'
+	import { browser } from '$app/environment';
+	import { beforeNavigate, afterNavigate } from '$app/navigation';
 
 	if (browser) {
-	posthog.init(
-		'phc_FyDjEI9Bp8bMiqSUuu8Gq3FkjX53kituR55BSrktz8d',
-		{ 
-		api_host: 'https://us.i.posthog.com',
-		person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
-		}
-		)
+		beforeNavigate(() => posthog.capture('$pageleave'));
+		afterNavigate(() => posthog.capture('$pageview'));
 	}
-	return
-	};
 </script>
 
 <div class="app">
