@@ -1,12 +1,14 @@
 <script>
 	import '../app.postcss';
-	import { browser } from '$app/environment';
-	import { page } from '$app/stores';
-	import LiminalNavbar from '$lib/Navbar.svelte';
-	import { webVitals } from '$lib/vitals';
-	import Footer from '$lib/Footer.svelte';
 	import './styles.css';
 	import '../global.css';
+
+	import posthog from 'posthog-js'
+	import Footer from '$lib/Footer.svelte';
+	import LiminalNavbar from '$lib/Navbar.svelte';
+	import { browser } from '$app/environment';
+	import { page } from '$app/stores';
+	import { webVitals } from '$lib/vitals';
 
 	/** @type {import('./$types').LayoutServerData} */
 	export let data;
@@ -18,6 +20,20 @@
 			analyticsId: data.analyticsId
 		});
 	}
+
+	export const load = async () => {
+
+	if (browser) {
+	posthog.init(
+		'phc_FyDjEI9Bp8bMiqSUuu8Gq3FkjX53kituR55BSrktz8d',
+		{ 
+		api_host: 'https://us.i.posthog.com',
+		person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+		}
+		)
+	}
+	return
+	};
 </script>
 
 <div class="app">
