@@ -6,14 +6,15 @@
     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
       <div>
         <p>Email :  support@liminalbios.com</p>
+        <a href="https://www.linkedin.com/company/liminaldatanetwork/" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:text-white">LinkedIn</a>
         <!-- <p>Locale: Asheville, NC</p>
         <p>Locale: Lafayette, IN</p>
         <p>Locale: Mariposa, CA</p> -->
       </div>
       <div class="flex space-x-4 pr-12">
         <!-- <a href="https://github.com/ddeemerpurdue/" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:text-white">GitHub</a> -->
-        <a href="https://www.linkedin.com/company/liminaldatanetwork/" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:text-white">LinkedIn</a>
         <!-- <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:text-white">Twitter</a> -->
+        <a href="https://posthog.com?utm_source=badge" title="Built with PostHog analytics + more" target="_blank"><img src="https://d1hovhsvet4m1p.cloudfront.net/badges/posthog-badge-transparent-bg-black-text.svg" /></a>
       </div>
     </div>
   </footer>
