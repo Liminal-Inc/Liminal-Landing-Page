@@ -46,3 +46,11 @@
 </div>
 
 <div class="pixel-divider my-16"></div>
+
+<div class="text-purple-300 center text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4 p-2 outline outline-white rounded-lg hover:bg-purple-300">
+    <a href="https://forms.gle/2cPEeDfENETKDNQg9" class="hover:underline hover:cursor-pointer hover:text-white">
+        <p>
+            Tell us what price you think is fair
+        </p>
+    </a>
+</div>

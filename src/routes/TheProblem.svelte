@@ -31,23 +31,23 @@
         </div>
         <div class="p-4 text-lg sm:text-md md:text-lg lg:text-lg">
             <div class="grid grid-cols-1 gap-4 p-4 mb-2 mt-2 text-center">
-                <div class="outline outline-white rounded-lg bg-black hover:bg-gray-700 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl">
-                    <p>We stress over <span class="text-blue-600">good</span> results and aren't rewarded for <span class="text-green-500">effort</span></p>
+                <div class="border-y-2 bg-black  p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl">
+                    <p>We stress over good results and aren't rewarded for effort</p>
                 </div>
-                <div class="outline outline-white rounded-lg bg-black hover:bg-gray-700 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl">
+                <div class="border-y-2 bg-black  p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl">
                     <p>Thousands of disconnected files, notes, and things to remember. Staying on top of all your responsibilities is hard</p>
                 </div>
-                <div class="outline outline-white rounded-lg bg-black hover:bg-gray-700 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl">
+                <div class="border-y-2 bg-black  p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl">
                     <p>&lt; 1% of labs have a comprehensive system to keep track of essential lab activity</p>
                 </div>
-                <div class="outline outline-white rounded-lg bg-black hover:bg-gray-700 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl">
+                <div class="border-y-2 bg-black  p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl">
                     <p class="mt-2 mb-2">~$25-28 billion is wasted each year in research funds.</p>
                     <span class="flex items-center">
                         <i class="mr-2 fas fa-arrow-down text-red-500"></i> waste & 
                         <i class="mr-2 fas fa-arrow-up text-green-500 ml-2"></i> researcher salary
                       </span>
                 </div>
-                <div class="outline outline-white rounded-lg bg-black hover:bg-gray-700 p-4 flex flex-col items-center justify-center shadow-lg">
+                <div class="border-y-2 bg-black  p-4 flex flex-col items-center justify-center shadow-lg">
                     <p class="mt-2 mb-2">65-80% of research is not reproducible</p>
                 </div>
             </div>

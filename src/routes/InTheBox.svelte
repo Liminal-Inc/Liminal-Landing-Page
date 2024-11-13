@@ -11,6 +11,8 @@
 		PenSolid, UserSolid
 	} from 'flowbite-svelte-icons';
 
+    export let showMore = true;
+
     let notebook = false;
     let findings = false;
     let samples = false;
@@ -24,28 +26,28 @@
 <div class="text-white rounded-lg">
     <div>
         <center>
-            <div class="mb-8">
+            <!-- <div class="mb-2">
                 <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl">				
                     What's in the box?
                 </p>
-            </div>
+            </div> -->
             <div class="p-4">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 p-4 text-white text-lg sm:text-md md:text-lg lg:text-lg">
                     <button on:click={() => (notebook = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
                         <NewspapperSolid size="xl"/>
                         <div class="mt-2 mb-2">Lab Notebook</div>
                     </button>
-                    <button on:click={() => (findings = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
-                        <DatabaseSolid size="xl"/>
-                        <div class="mt-2 mb-2">Experimental Results</div>
+                    <button on:click={() => (inventory = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                        <FolderArrowRightOutline size="xl"/>
+                        <div class="mt-2 mb-2">Inventory</div>
                     </button>
                     <button on:click={() => (samples = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
                         <CirclePlusSolid size="xl"/>
                         <div class="mt-2 mb-2">Sample Management</div>
                     </button>
-                    <button on:click={() => (inventory = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
-                        <FolderArrowRightOutline size="xl"/>
-                        <div class="mt-2 mb-2">Inventory</div>
+                    <button on:click={() => (findings = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                        <DatabaseSolid size="xl"/>
+                        <div class="mt-2 mb-2">Experimental Results</div>
                     </button>
                     <button on:click={() => (tasks = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
                         <ClipboardCheckSolid/>
@@ -57,7 +59,7 @@
                     </button>
                     <button on:click={() => (knowledge = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
                         <BookOpenSolid size="xl"/>
-                        <div class="mt-2 mb-2">Knowledge</div>
+                        <div class="mt-2 mb-2">Institutional Knowledge</div>
                     </button>
                     <button on:click={() => (social = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
                         <UserSolid size="xl"/>
@@ -65,24 +67,18 @@
                     </button>
                 </div>
             </div>
-            
-            <div class="text-lg sm:text-xl md:text-2xl lg:text-2xl">
-                <p class="font-extrabold">
-                    Plus!
-                </p>
-                <ul>
-                    <li>Activity Feed</li>
-                    <li>Badges, Levels, Streaks</li>
-                    <li>Custom toolkits</li>
-                    <li>Reports & Summaries</li>
-                    <li class="text-blue-600 mt-2">
-                        <a href="/roadmap">
-                            <i class="fas fa-star text-yellow-400"></i>
-                            View our roadmap
-                            <i class="fas fa-star text-yellow-400"></i>
-                        </a>
-                    </li>
-            </div>
+            {#if showMore}
+                <div class="text-lg sm:text-xl md:text-2xl lg:text-2xl font-extrabold">
+                    <p>Plus! Activity Feed, Badges, Levels, Streaks, Custom Toolkits, Reports & Summaries</p>
+                    <p class="text-blue-600 mt-2">
+                    <a href="/roadmap">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        View our roadmap
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </a>
+                    </p>
+                </div>
+            {/if}
         </center>
 
     </div>

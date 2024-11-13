@@ -9,10 +9,12 @@
 	let whatDoesLiminal = false;
 
 	import videoUrl from '$lib/videos/demo_2.mp4'
+	import processorUrl from '$lib/videos/file_processing_stacking.mp4'
 	// let raw_url = "https://drive.google.com/file/d/152c9auQFIoIoQhENT_n3zl_gCtwsBIw9/view?usp=drive_link"
 	// let link_url = "https://drive.google.com/uc?export=download&id=FILE_ID"
 
 	import posterUrl from '$lib/images/demo-screenshot.jpg'
+	import processorPosterUrl from '$lib/images/processing-screenshot.png'
 </script>
 
 <svelte:head>
@@ -23,31 +25,70 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 <section>
-	
+
 <div class="grid grid-cols-5 gap-1 justify-evenly">
-	<div class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2">
-		<!-- <p class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold">Liminal</p> -->
-		
-		<p class="mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-			Organize all your research in one place
-		</p>
-		
-		<p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-			Better lab records, deeper insights, less work for students and PIs
-		</p>
+  <div class="col-span-5 flex flex-col md:flex-row justify-start items-center mt-4 text-center text-white p-4 sm:p-2">
+    <!-- Left column for the larger text -->
+    <div class="md:w-1/2 text-left md:text-right md:pr-4">
+      <p class="text-purple-300 text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold">
+        The Everything App for Academic Scientists
+      </p>
+    </div>
+    <!-- Right column for the other paragraphs -->
+    <div class="md:w-1/2 flex flex-col justify-start items-start text-left md:text-left md:pl-4">
+      <p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+        Organize all your research in one place
+      </p>
+      <p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+        Better lab records, deeper insights, less work for <span class="font-bold text-purple-300">students</span> and <span class="font-bold text-purple-300">PIs</span>
+      </p>
+	  <p class="w-full outline outline-white rounded-lg text-purple-300 hover:cursor-pointer hover:bg-purple-300 hover:text-white
+			  hover:underline p-4 transition-all duration-100 transform hover:-translate-y-1
+			  mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+		<a
+			class="block"
+			target="_blank"
+			href="https://docs.google.com/forms/d/e/1FAIpQLSd2gtATL3ifoL3cg_IBaxFpP96MhLZY2uy9zVTxOUwRiPcXwQ/viewform?usp=sf_link">
+			Request Access to Liminal
+		</a>
+	</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="grid grid-cols-5 gap-2 w-full">
+	<div class="justify-between bg-black col-span-5 w-full">
+		<InTheBox/>
 	</div>
 </div>
+
+
 <!-- Major divider -->
 <div class="pixel-divider my-16"></div>
 <div class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2">
+	<p class="text-white mt-2 mb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+		Connect Everything
+	</p>
 	<Video class="w-full h-auto" controls poster={posterUrl}>
 		<source src={videoUrl} type="video/mp4" />
 		Video not supported
 	</Video>
+	<div class="pixel-divider my-16" id="liminal-features"></div>
+	<p class="text-white mt-2 mb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+		Automate tedius file manipulation and combination
+	</p>
+	<Video class="w-full h-auto" controls poster={processorPosterUrl}>
+		<source src={processorUrl} type="video/mp4" />
+		Video not supported
+	</Video>
+	<div class="pixel-divider my-16" id="liminal-features"></div>
 	<p class="text-white mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl">
 		<i class="fas fa-star text-yellow-400"></i> We are looking for early adopters! <i class="fas fa-star text-yellow-400"></i>
 	</p>
-	<p class="w-full outline outline-white rounded-lg text-blue-600 hover:bg-purple-300 hover:underline p-4 transition-all duration-100 transform hover:-translate-y-1 cursor-pointer mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+	<p class="w-full outline outline-white rounded-lg text-purple-300 hover:cursor-pointer hover:bg-purple-300 hover:text-white
+			  hover:underline p-4 transition-all duration-100 transform hover:-translate-y-1
+			  mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
 		<a
 			class="block"
 			target="_blank"
@@ -55,7 +96,9 @@
 			Get early access to Liminal
 		</a>
 	</p>
-	<p class="w-full outline outline-white rounded-lg text-blue-600 hover:bg-purple-300 hover:underline p-4 transition-all duration-100 transform hover:-translate-y-1 cursor-pointer mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+	<p class="w-full outline outline-white rounded-lg text-purple-300 hover:bg-purple-300 hover:underline hover:text-white
+	          p-4 transition-all duration-100 transform hover:-translate-y-1
+			  mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
 		<a
 			class="block"
 			target="_blank"
@@ -79,8 +122,8 @@
 	<!-- Right side -->
 	<div class="justify-between bg-black col-span-5 w-full">
 		<div>
-			<InTheBox/>
-			<div class="pixel-divider my-16"></div>
+			<!-- <InTheBox/>
+			<div class="pixel-divider my-16"></div> -->
 			<TheProblem/>
 			<div class="pixel-divider my-16"></div>
 			<div class="flex rounded-lg w-full m-2 p-2 text-white">
@@ -88,26 +131,42 @@
 					<div class="text-white mb-12 text-center text-lg sm:text-xl md:text-2xl lg:text-3xl">
 						Frequently Asked Questions
 					</div>
-					<div class="outline outline-white hover:bg-gray-700 rounded-lg pl-4 pb-2">
+					<div class="border-y-2 pl-4 pr-4 pb-2">
 						<p class="text-2xl mt-4 font-extrabold">What is Liminal?</p>
 						<div class="text-lg">
 							<p>
-								Liminal is a software application designed to help <span class="font-bold">students</span> and <span class="font-bold">managers</span> organize their research and become more efficient
+								Liminal is a software application designed to help <span class="text-purple-300">academic scientists</span> organize and connect all parts of their research to become more efficient scientists
 							</p>
 								<ul class="list-disc list-inside">
 									<li>Stop wasting time trying to organize your data; let us do that</li>
+									<li>Eliminate tedius and repetitive work</li>
 									<li>Easily combine data across multiple experiments for analysis</li>
 									<li>Keep all relevant data in one spot for all your experiments</li>
 									<li>Neatly keep track of all your lab activities</li>
 								</ul>
 							</div>
 					</div>
+					<!-- Security -->
+					<div class="border-y-2 pl-4 pr-4 pb-2">
+						<p class="text-2xl mt-4 font-extrabold">Is the data secure and who owns it?</p>
+						<div class="text-lg">
+							<p>
+								You own your data and it is stored on secure cloud storage. We are moving towards allowing you to choose your own storage provider, as well as compute provider.
+							</p>
+								<ul class="list-disc list-inside">
+									<li>Export 100% of your data at any time</li>
+									<li>Connect to University-owned storage</li>
+									<li>Connect to University-owned compute power</li>
+									<li>Login/authenticate with University login</li>
+								</ul>
+							</div>
+					</div>
 					<!-- Who is liminal for -->
-					<div class="outline outline-white hover:bg-gray-700 rounded-lg pl-4 pb-2">
+					<div class="border-y-2 pl-4 pb-2">
 						<p class="text-2xl mt-4 font-extrabold">Who is Liminal for?</p>
 						<div class="text-lg">
 							<p>
-								Liminal is for <span class="font-bold">everyone</span> involved in conducting research in an academic lab
+								Liminal is for <span class="text-purple-300">everyone</span> involved in conducting research in an academic lab
 							</p>
 							<ul class="list-disc list-inside">
 								<li>Undergraduate students</li>
@@ -119,7 +178,7 @@
 						</div>
 					</div>
 					<!-- The Liminal Advantage -->
-					<div class="outline outline-white hover:bg-gray-700 rounded-lg pl-4 pb-2">
+					<div class="border-y-2 pl-4 pb-2">
 						<p class="text-2xl mt-4 font-extrabold">What the Liminal Advantage?</p>
 						<div class="text-lg">
 							<p>
@@ -134,15 +193,12 @@
 						</div>
 					</div>
 					<!-- Try Liminal -->
-					<div class="outline outline-white hover:bg-gray-700 rounded-lg pl-4 pb-2">
+					<div class="border-y-2 pl-4 pb-2">
 						<p class="text-2xl mt-4 font-extrabold">How can I try Liminal?</p>
 						<div class="text-lg">
-							<p>
-								I want this product!
-							</p>
 							<ul class="list-disc list-inside">
-								<li>Fill out this <a class="text-blue-600 hover:underline" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd2gtATL3ifoL3cg_IBaxFpP96MhLZY2uy9zVTxOUwRiPcXwQ/viewform?usp=sf_link">Google Form</a> if you are interested in joining out waitlist</li>
-								<li>Book a <a target="_blank" href="https://calendar.app.google/fAwGmDCeccJbcwKQ7" class="text-blue-600 hover:underline">short meeting</a> to personally chat with one of our founders</li>
+								<li>Fill out this <a class="text-purple-300 hover:underline" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd2gtATL3ifoL3cg_IBaxFpP96MhLZY2uy9zVTxOUwRiPcXwQ/viewform?usp=sf_link">Google Form</a> if you are interested in joining our waitlist</li>
+								<li>Book a <a target="_blank" href="https://calendar.app.google/fAwGmDCeccJbcwKQ7" class="text-purple-300 hover:underline">short meeting</a> to personally chat with one of our founders</li>
 							</ul>
 						</div>
 					</div>
@@ -153,17 +209,17 @@
 					<div class="mb-16">
 						<p class="text-lg sm:text-xl md:text-2xl lg:text-3xl">Interested in supporting or chatting?</p>
 					</div>
-					<p class="outline outline-white rounded-lg text-blue-600 p-4 mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+					<p class="border-y-2 text-white p-4 mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
 						Email 
 							<a 
-							class="transition-all duration-100 transform hover:-translate-y-1 cursor-pointer hover:shadow-2xl hover:bg-purple-300 hover:underline text-blue-600 rounded p-2"
+							class="text-purple-300 transition-all duration-100 transform hover:-translate-y-1 cursor-pointer hover:shadow-2xl hover:bg-purple-300 hover:text-white hover:underline rounded p-2"
 							href="mailto:support@liminalbios.com" >support@liminalbios.com</a>
 					</p>
-					<p class="text-center outline outline-white rounded-lg text-white p-4 mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+					<p class="text-center border-y-2 text-white p-4 mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
 						Book a meeting with a founder
 							<a
 							target="_blank"
-							class="text-blue transition-all duration-100 transform hover:-translate-y-1 cursor-pointer hover:shadow-2xl hover:bg-purple-300 hover:underline text-blue-600 rounded p-2"
+							class="text-blue transition-all duration-100 transform hover:-translate-y-1 cursor-pointer hover:shadow-2xl hover:bg-purple-300 hover:underline text-purple-300 hover:text-white rounded p-2"
 							href="https://calendar.app.google/fAwGmDCeccJbcwKQ7" >GoogleMeet</a>
 					</p>
 			

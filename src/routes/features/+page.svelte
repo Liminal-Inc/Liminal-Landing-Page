@@ -5,6 +5,7 @@
 	import inventoryscreenshot from '$lib/images/InventoryScreenShot.png';
 	import missionscreenshot from '$lib/images/MissionScreenshot.png';
 	import papersscreenshot from '$lib/images/Papersscreenshot.png';
+	import InTheBox from '../InTheBox.svelte';
 	import {
 		BookOpenSolid,
 		CirclePlusSolid,
@@ -50,110 +51,67 @@
 	};
 </script>
 
+<h1 class="text-white mt-16 text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4">Pillars of Liminal</h1>
+<InTheBox showMore={false}/>
+
 <div class="text-white">
-	<div>
-		<p class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mt-4">Features</p>
+	<div class="pixel-divider my-8" />
+	<div class="p-2">
+		<p class="mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl mb-2">Data Storage</p>
+		<div class="text-lg">
+			<p class="mb-2">
+				Right now, all Liminal data is stored on secure cloud storage. We are working on allowing you to choose your
+				own storage provider. Users will be able to "plug in" their own storage provider, such as the cloud storage providers your
+				University already supports or a University compute cluster.
+			</p>
+			<p>
+				For example, at Purdue University, where the first labs are using Liminal, we are working to plug in to the Purdue Research Computing
+				storage system. This will allow researchers to use their existing storage and not have to worry about moving data around.
+				This makes Liminal cheaper and simpler for customers, as you don't need to worry about data costs.
+			</p>
+		</div>
 	</div>
 	<div class="pixel-divider my-8" />
 	<div class="p-2">
-		<p class="mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl mb-2">Lab Notebook</p>
-		<p class="text-lg">My text for the lab notebook</p>
+		<p class="mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl mb-2">Compute Power</p>
+		<p class="text-lg">
+			Right now, all Liminal computing is done on a cloud server. This is going to change soon, as we are working on allowing
+			our users to "plug in" the compute source (much like the data storage source). This will allow users to use their existing compute
+			resources, such as a University compute cluster or cloud computing resources.
+		</p>
 	</div>
 	<div class="pixel-divider my-8" />
 	<div class="p-2">
-		<p class="mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl mb-2">Lab Notebook</p>
-		<p class="text-lg">My text for the lab notebook</p>
+		<p class="mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl mb-2">Login and Authentication</p>
+		<p class="text-lg">
+			We are working on allowing users to use their existing University login credentials to access Liminal. This will make it easier
+			for users to get started with Liminal, as they won't have to remember another password. This will also make it easier for
+			University IT departments to manage Liminal access. Alternatively, users can login with another authorization method, such as
+			a Google account or even a separate Liminal account.
+		</p>
 	</div>
 	<div class="pixel-divider my-8" />
 	<div class="p-2">
-		<p class="mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl mb-2">Lab Notebook</p>
-		<p class="text-lg">My text for the lab notebook</p>
-	</div>
-	<div class="pixel-divider my-8" />
-	<div class="p-2">
-		<p class="mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl mb-2">Lab Notebook</p>
-		<p class="text-lg">My text for the lab notebook</p>
+		<p class="mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl mb-2">Data Provenance & Reproducibility</p>
+		<div class="text-lg">
+			<p class="mb-2">
+				Liminal is made up of various "entities" or "objects", each representing a different part of your lab. Liminal
+				is all about connecting these entities together, so you can see how everything in your lab is connected. The notebook
+				is the hub for making these connections via references all relevant objects related to your work.
+			</p>
+			<!-- <p class="mb-2">
+				For example, a notebook that references a separate User automatically connects the experiment to both users. The notebook
+				may also mention a Protocol, piece of Equipment, and some Samples. If another user calibrated the Equipment, that calibration
+				event is connected to your notebook entry, which is connected to everything else you reference. Heck, someone may mop the floor
+				and track the tasks, and that can be connected to your notebook entry since it happened in the same lab space at a similar time.
+			</p>
+			<p>
+				These connections allow the scientist to see the exact context of the lab during any of their experiments or tasks. This creates
+				a source of "lab state" that replaces superficial metadata associated with an experiment. A user connecting data to their notebook
+				entry can see the exact state of the lab at that time, including the state of the equipment, the samples, the users, and the tasks.
+			</p> -->
+		</div>
 	</div>
 	<div class="pixel-divider my-8" />
 </div>
 
-<div class="text-white rounded-lg">
-	<div>
-		<center>
-			<div class="m-2">
-				<p class="text-lg sm:text-xl md:text-2xl lg:text-3xl">What's in the box?</p>
-			</div>
-			<div class="p-4">
-				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 p-4 text-white">
-					<button
-						on:click={() => (notebook = true)}
-						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-					>
-						<NewspapperSolid size="xl" />
-						<div class="mt-2 mb-2 text-xl">Lab Notebook</div>
-					</button>
-					<button
-						on:click={() => (findings = true)}
-						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-					>
-						<DatabaseSolid size="xl" />
-						<div class="mt-2 mb-2 text-lg">Experimental Results</div>
-					</button>
-					<button
-						on:click={() => (samples = true)}
-						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-					>
-						<CirclePlusSolid size="xl" />
-						<div class="mt-2 mb-2 text-lg">Sample Management</div>
-					</button>
-					<button
-						on:click={() => (inventory = true)}
-						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-					>
-						<FolderArrowRightOutline size="xl" />
-						<div class="mt-2 mb-2 text-lg">Inventory</div>
-					</button>
-					<button
-						on:click={() => (tasks = true)}
-						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-					>
-						<ClipboardCheckSolid />
-						<div class="mt-2 mb-2 text-lg">Task Manager</div>
-					</button>
-					<button
-						on:click={() => (papers = true)}
-						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-					>
-						<PenSolid size="xl" />
-						<div class="mt-2 mb-2 text-lg">Paper and Reviews</div>
-					</button>
-					<button
-						on:click={() => (knowledge = true)}
-						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-					>
-						<BookOpenSolid size="xl" />
-						<div class="mt-2 mb-2 text-lg">Knowledge</div>
-					</button>
-					<button
-						on:click={() => (social = true)}
-						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-					>
-						<UserSolid size="xl" />
-						<div class="mt-2 mb-2 text-lg">Social Hub</div>
-					</button>
-				</div>
-			</div>
-
-			<div class="text-2xl">
-				<p class="font-extrabold">Plus!</p>
-				<ul>
-					<li>Activity Feed</li>
-					<li>Badges, Levels, Streaks</li>
-					<li>Custom toolkits</li>
-					<li>Reports & Summaries</li>
-					<li>And more!</li>
-				</ul>
-			</div>
-		</center>
-	</div>
-</div>

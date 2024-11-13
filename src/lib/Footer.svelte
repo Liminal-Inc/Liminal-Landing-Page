@@ -6,7 +6,9 @@
     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
       <div>
         <p>Email :  support@liminalbios.com</p>
-        <a href="https://www.linkedin.com/company/liminaldatanetwork/" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:text-white">LinkedIn</a>
+        <a href="https://www.linkedin.com/company/liminaldatanetwork/" target="_blank" rel="noopener noreferrer" class="mt-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/LinkedIn_icon_circle.svg" alt="LinkedIn" class="h-8 w-8" />
+        </a>
         <!-- <p>Locale: Asheville, NC</p>
         <p>Locale: Lafayette, IN</p>
         <p>Locale: Mariposa, CA</p> -->
