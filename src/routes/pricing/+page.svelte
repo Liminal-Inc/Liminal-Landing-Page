@@ -3,7 +3,13 @@
 <div class="text-white mt-16 text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4">
     Pricing
 </div>
-<div class="grid grid-cols-4 w-full sm:grid-cols-1 md:grid-cols-2 gap-2 justify-evenly text-white text-lg">
+<div class="text-white">
+    <p>
+        We're in the process of determining the best pricing model for Liminal. We want to make sure that we are providing
+        the best value for our users. We are currently considering a subscription model, but we are open to other ideas.
+    </p>
+</div>
+<!-- <div class="grid grid-cols-4 w-full sm:grid-cols-1 md:grid-cols-2 gap-2 justify-evenly text-white text-lg">
     <div class="outline outline-white p-2 col-span-1 flex flex-col justify-between">
         <div class="mb-2">
             Single User <br>
@@ -43,14 +49,15 @@
             </div>
         </a>
     </div>
-</div>
+</div> -->
 
-<div class="pixel-divider my-16"></div>
+<!-- <div class="pixel-divider my-16"></div> -->
 
-<div class="text-purple-300 center text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4 p-2 outline outline-white rounded-lg hover:bg-purple-300">
-    <a href="https://forms.gle/2cPEeDfENETKDNQg9" class="hover:underline hover:cursor-pointer hover:text-white">
+<div class="text-purple-300 center text-lg sm:text-xl md:text-2xl lg:text-3xl mt-8 mb-4 p-2 outline outline-white rounded-lg hover:bg-purple-300">
+    <a href="https://forms.gle/6pQuvLGGE8s8FiPe9" class="hover:underline hover:cursor-pointer hover:text-white">
         <p>
             Tell us what price you think is fair
         </p>
     </a>
 </div>
+<div class="pixel-divider my-8"></div>
