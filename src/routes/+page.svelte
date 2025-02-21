@@ -3,6 +3,7 @@
 	import NewsFeed from './NewsFeed.svelte';
 	import InTheBox from './InTheBox.svelte';
 	import TheProblem from './TheProblem.svelte';
+	import ThreeTiers from './ThreeTiers.svelte';
 	import { Modal, Video } from 'flowbite-svelte';
 	import { BookOpenSolid } from 'flowbite-svelte-icons';
 
@@ -15,6 +16,15 @@
 
 	import posterUrl from '$lib/images/demo-screenshot.jpg'
 	import processorPosterUrl from '$lib/images/processing-screenshot.png'
+
+	let targetSection;
+	let collabSection;
+    
+    function scrollToSection() {
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    }
 </script>
 
 <svelte:head>
@@ -31,16 +41,19 @@
     <!-- Left column for the larger text -->
     <div class="md:w-1/2 text-left md:text-right md:pr-4">
       <p class="text-purple-300 text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold">
-        The Everything App for Academic Scientists
+        AI-Powered Research Platform for Academics
       </p>
     </div>
     <!-- Right column for the other paragraphs -->
     <div class="md:w-1/2 flex flex-col justify-start items-start text-left md:text-left md:pl-4">
       <p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-        Organize all your research in one place
+        All your research in one place
       </p>
-      <p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-        Better lab records, deeper insights, less work for <span class="font-bold text-purple-300">students</span> and <span class="font-bold text-purple-300">PIs</span>
+	  <p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+        Ai-assistant learning from your work and helping generate insights
+      </p>
+	  <p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+        Write your papers & grants faster
       </p>
 	  <p class="w-full outline outline-white rounded-lg text-purple-300 hover:cursor-pointer hover:bg-purple-300 hover:text-white
 			  hover:underline p-4 transition-all duration-100 transform hover:-translate-y-1
@@ -56,12 +69,28 @@
   </div>
 </div>
 
-
-<div class="grid grid-cols-5 gap-2 w-full">
-	<div class="justify-between bg-black col-span-5 w-full">
-		<InTheBox/>
+<section>
+	<div class="pixel-divider my-16"></div>
+	<div class="w-full">
+		<ThreeTiers on:scrollToTarget={scrollToSection}/>
 	</div>
-</div>
+</section>
+
+
+<section class="w-full">
+	<div class="pixel-divider my-16"></div>
+	<p class="text-2xl text-white italic">
+		As funding agency budgets tighten and institutional overheads are capped, academic researchers must embrace new strategies to 
+		stay ahead, becoming more competitive than ever to secure the grants that drive their work forward.
+	</p>
+</section>
+
+<section bind:this={targetSection} class="w-full">
+	<div class="pixel-divider my-16"></div>
+	<div class="justify-between bg-black col-span-5 w-full">
+		<InTheBox showMore={true}/>
+	</div>
+</section>
 
 
 <!-- Major divider -->

@@ -1,0 +1,53 @@
+<script lang="ts">
+	import { goto } from "$app/navigation";
+
+    let collab = false
+
+    import { createEventDispatcher } from "svelte";
+    
+    const dispatch = createEventDispatcher();
+</script>
+
+<div class="text-white rounded-lg">
+    <div class="mb-4 text-center">
+        <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl">				
+            3 Tiers of Liminal
+        </p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4 p-4 text-white text-lg sm:text-md md:text-lg lg:text-lg">
+        <div class="outline outline-purple-300 rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+            <button on:click={() => dispatch("scrollToTarget")} >
+                <div class="mt-2 mb-2 text-2xl text-purple-300">Liminal Research</div>
+                <div class="mb-2">Elevate your research by centralizing all your lab data and empowering a custom AI assistant to streamline your work and enhance your productivity.</div>
+                <hr>
+                <div class="mt-2">
+                    <a
+                        class="block underline hover:bg-purple-600 rounded-lg"
+                        target="_blank"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSd2gtATL3ifoL3cg_IBaxFpP96MhLZY2uy9zVTxOUwRiPcXwQ/viewform?usp=sf_link">
+                        Sign up now
+                    </a>
+                </div>
+            </button>
+        </div>
+        <div class="outline outline-green-300 rounded-lg bg-black hover:bg-green-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+            <button on:click={() => goto("/features#collabSection")} >
+                <div class="mt-2 mb-2 text-2xl text-green-300">Liminal Collab</div>
+                <div class="mb-2">Effortlessly connect with new collaborators to build the ideal team and target the best grant opportunities.</div>
+                <hr>
+                <div class="mt-2">(Coming Soon for Free)</div>
+            </button>
+        </div>
+        <div class="outline outline-blue-400 rounded-lg bg-black hover:bg-blue-400 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+            <button on:click={() => goto("/features#grantSection")} >
+                <div class="mt-2 mb-2 text-2xl text-blue-400">Grant Helper</div>
+                <div class="mb-2">
+                    Spend 8-40 hours less per grant application by leveraging AI to streamline the proposal process.
+                </div>
+                <hr>
+                <div class="mt-2">(Coming Soon)</div>
+            </button>
+        </div>
+        
+    </div>
+</div>

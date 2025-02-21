@@ -9,55 +9,37 @@
         the best value for our users. We are currently considering a subscription model, but we are open to other ideas.
     </p>
 </div>
-<!-- <div class="grid grid-cols-4 w-full sm:grid-cols-1 md:grid-cols-2 gap-2 justify-evenly text-white text-lg">
-    <div class="outline outline-white p-2 col-span-1 flex flex-col justify-between">
-        <div class="mb-2">
-            Single User <br>
-            <span class="text-green-500">$25.00 / month</span> or <span class="text-green-500">$300.00 / year</span>
-        </div>
-        <div>
-            This is designed to be a single user account. It is perfect for the individual researcher or small lab. If your lab
-            is not committed to using Liminal but you are interested, this subscription is to empower you to get all the benefits.
-            As you'll see on our roadmap, you will eventually be able to connect your Liminal account with friends, creating
-            your own groups to do research with!
-        </div>
-        <a
-            class="text-blue-500 hover:bg-gray-700 text-lg sm:text-xl md:text-2xl lg:text-3xl"
-            target="_blank"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfK451kwxkJHMYzIg3pJkVa7j2PZH2R85xoGOrjm_OWY61kOA/viewform?usp=sf_link">
-        <div class="mt-2">
-                Sign me up!
-            </div>
-        </a>
-    </div>
-    <div class="outline outline-white p-2 col-span-1 flex flex-col justify-between">
-        <div class="mb-2">
-            Lab Group <br>
-            <span class="text-green-500">$420.00 / month</span> or <span class="text-green-500">$5,000.00 / year</span>
-        </div>
-        <div>
-            Designed for a cohesive lab experience with all the benefits of Liminal. This is for a lab group of up to 50 people.
-            Share lab notebooks, keep track of lab work, and monitor large trends and progress. Build your labs total knowledge
-            and value with a community of researchers.
-        </div>
-        <a
-            class="text-blue-500 hover:bg-gray-700 text-lg sm:text-xl md:text-2xl lg:text-3xl"
-            target="_blank"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfK451kwxkJHMYzIg3pJkVa7j2PZH2R85xoGOrjm_OWY61kOA/viewform?usp=sf_link">
-        <div class="mt-2">
-                Sign me up!
-            </div>
-        </a>
-    </div>
-</div> -->
 
-<!-- <div class="pixel-divider my-16"></div> -->
+<div class="pixel-divider my-8"></div>
+
+<div class="text-white rounded-lg">
+    <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4 p-4 text-white text-lg sm:text-md md:text-lg lg:text-lg">
+        <div class="outline outline-purple-300 rounded-lg bg-black p-4 flex flex-col items-center justify-center shadow-lg ">
+                <div class="mt-2 mb-2">Full Research Platform</div>
+                <div>
+                    $?? / year / lab
+                </div>
+                <div>
+                    Price pending (per lab)
+                </div>
+        </div>
+        <div class="outline outline-green-300 rounded-lg bg-black p-4 flex flex-col items-center justify-center shadow-lg ">
+                <div class="mt-2 mb-2">Liminal Collab</div>
+                <div>$0 / year / person</div>
+                <div>Free for anyone!</div>
+        </div>
+        <div class="outline outline-blue-400 rounded-lg bg-black p-4 flex flex-col items-center justify-center shadow-lg ">
+                <div class="mt-2 mb-2">Grant Helper</div>
+                <div>$1200 / year / lab</div>
+                <div>Institution price varies</div>
+        </div>
+    </div>
+</div>
 
 <div class="text-purple-300 center text-lg sm:text-xl md:text-2xl lg:text-3xl mt-8 mb-4 p-2 outline outline-white rounded-lg hover:bg-purple-300">
-    <a href="https://forms.gle/6pQuvLGGE8s8FiPe9" class="hover:underline hover:cursor-pointer hover:text-white">
-        <p>
+    <a href="https://forms.gle/6pQuvLGGE8s8FiPe9" class="hover:underline hover:cursor-pointer hover:text-white" target="_blank">
+        <p class="text-center">
             Tell us what price you think is fair
         </p>
     </a>
 </div>
-<div class="pixel-divider my-8"></div>

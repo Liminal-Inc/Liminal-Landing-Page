@@ -19,13 +19,11 @@
         </NavBrand>
         <NavHamburger />
         <NavUl {activeUrl} {activeClass} {nonActiveClass}>
-          <NavLi class={activeUrl === '/features/' ? activeClass : nonActiveClass} href="/features">Features/Tech</NavLi>
-          <NavLi class={activeUrl === '/pricing/' ? activeClass : nonActiveClass} href="/pricing">Pricing</NavLi>
-          <!-- <NavLi class={activeUrl === '/research/' ? activeClass : nonActiveClass} href="/research">Research</NavLi> -->
+          <NavLi class={activeUrl === '/features/' ? activeClass : nonActiveClass} href="/features">Features</NavLi>
           <NavLi class={activeUrl === '/roadmap/' ? activeClass : nonActiveClass} href="/roadmap">Roadmap</NavLi>
           <NavLi class={activeUrl === '/blog/' ? activeClass : nonActiveClass} href="/blog">Blog</NavLi>
+          <NavLi class={activeUrl === '/pricing/' ? activeClass : nonActiveClass} href="/pricing">Pricing</NavLi>
           <NavLi class={activeUrl === '/team/' ? activeClass : nonActiveClass} href="/team">About</NavLi>
-          <!-- <NavLi class={activeUrl === '/details/' ? activeClass : nonActiveClass} href="/details">Details</NavLi> -->
         </NavUl>
       </NavContainer>
     </Navbar>

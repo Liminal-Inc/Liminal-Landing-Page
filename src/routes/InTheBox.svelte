@@ -2,9 +2,11 @@
     import { Modal } from 'flowbite-svelte';
     import notebookscreenshot from '$lib/images/NotebookScreenshot.png'
     import findingscreenshot from '$lib/images/FindingsScreenshot.png'
+    import knowledgescreenshot from '$lib/images/KnowledgeScreenshot.png'
     import inventoryscreenshot from '$lib/images/InventoryScreenShot.png'
     import missionscreenshot from '$lib/images/MissionScreenshot.png'
     import papersscreenshot from '$lib/images/Papersscreenshot.png'
+    import socialsscreenshot from '$lib/images/SocialsScreenshot.png'
 	import { 
 		BookOpenSolid, CirclePlusSolid, ClipboardCheckSolid, DatabaseSolid,
 		FaceGrinSolid, FileCirclePlusSolid, FolderArrowRightOutline, NewspapperSolid,
@@ -25,62 +27,65 @@
 
 <div class="text-white rounded-lg">
     <div>
-        <center>
-            <!-- <div class="mb-2">
-                <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl">				
-                    What's in the box?
-                </p>
-            </div> -->
-            <div class="p-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 p-4 text-white text-lg sm:text-md md:text-lg lg:text-lg">
-                    <button on:click={() => (notebook = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
-                        <NewspapperSolid size="xl"/>
-                        <div class="mt-2 mb-2">Lab Notebook</div>
-                    </button>
-                    <button on:click={() => (inventory = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
-                        <FolderArrowRightOutline size="xl"/>
-                        <div class="mt-2 mb-2">Inventory</div>
-                    </button>
-                    <button on:click={() => (samples = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
-                        <CirclePlusSolid size="xl"/>
-                        <div class="mt-2 mb-2">Sample Management</div>
-                    </button>
-                    <button on:click={() => (findings = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
-                        <DatabaseSolid size="xl"/>
-                        <div class="mt-2 mb-2">Experimental Results</div>
-                    </button>
-                    <button on:click={() => (tasks = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
-                        <ClipboardCheckSolid/>
-                        <div class="mt-2 mb-2">Task Manager</div>
-                    </button>
-                    <button on:click={() => (papers = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
-                        <PenSolid size="xl"/>
-                        <div class="mt-2 mb-2">Paper and Reviews</div>
-                    </button>
-                    <button on:click={() => (knowledge = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
-                        <BookOpenSolid size="xl"/>
-                        <div class="mt-2 mb-2">Institutional Knowledge</div>
-                    </button>
-                    <button on:click={() => (social = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
-                        <UserSolid size="xl"/>
-                        <div class="mt-2 mb-2">Social Hub</div>
-                    </button>
-                </div>
-            </div>
+        <div class="mb-2 text-lg sm:text-xl md:text-2xl lg:text-3xl">
             {#if showMore}
-                <div class="text-lg sm:text-xl md:text-2xl lg:text-2xl font-extrabold">
-                    <p>Plus! Activity Feed, Badges, Levels, Streaks, Custom Toolkits, Reports & Summaries</p>
-                    <p class="text-blue-600 mt-2">
-                    <a href="/roadmap">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        View our roadmap
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </a>
-                    </p>
-                </div>
+                <p class="text-center text-purple-300">				
+                    Liminal Research Core Features
+                </p>
+            {:else}
+                <p class="ml-8 text-purple-300">
+                    Liminal Research
+                </p>
             {/if}
-        </center>
-
+        </div>
+        <div class="p-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 p-4 text-white text-lg sm:text-md md:text-lg lg:text-lg">
+                <button on:click={() => (notebook = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                    <NewspapperSolid size="xl"/>
+                    <div class="mt-2 mb-2">Lab Notebook</div>
+                </button>
+                <button on:click={() => (inventory = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                    <FolderArrowRightOutline size="xl"/>
+                    <div class="mt-2 mb-2">Inventory</div>
+                </button>
+                <button on:click={() => (samples = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                    <CirclePlusSolid size="xl"/>
+                    <div class="mt-2 mb-2">Sample Management</div>
+                </button>
+                <button on:click={() => (findings = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                    <DatabaseSolid size="xl"/>
+                    <div class="mt-2 mb-2">Experimental Results</div>
+                </button>
+                <button on:click={() => (tasks = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                    <ClipboardCheckSolid/>
+                    <div class="mt-2 mb-2">Task Manager</div>
+                </button>
+                <button on:click={() => (papers = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                    <PenSolid size="xl"/>
+                    <div class="mt-2 mb-2">Paper and Reviews</div>
+                </button>
+                <button on:click={() => (knowledge = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                    <BookOpenSolid size="xl"/>
+                    <div class="mt-2 mb-2">Institutional Knowledge</div>
+                </button>
+                <button on:click={() => (social = true)} class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                    <UserSolid size="xl"/>
+                    <div class="mt-2 mb-2">Social Hub</div>
+                </button>
+            </div>
+        </div>
+        {#if showMore}
+            <div class="text-lg sm:text-xl md:text-2xl lg:text-2xl font-extrabold text-center">
+                <p>Plus! Activity Feed, Badges, Levels, Streaks, Custom Toolkits, Reports & Summaries</p>
+                <p class="text-blue-600 mt-2">
+                <a href="/roadmap">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    View our roadmap
+                    <i class="fas fa-star text-yellow-400"></i>
+                </a>
+                </p>
+            </div>
+        {/if}
     </div>
 </div>
 
@@ -93,14 +98,15 @@
 		</h3>
     </div>
     <div class="text-2xl">
-        Somewhere to link all the moving parts of the research process in one location. Not to duplicate or summarize the canonical physical notebook, but a centralized place to connect all the moving parts.
+        Focus on discovery, not organization. Liminal intelligently structures your notes, ensuring your insights are always captured, connected, and ready to build upon.
     </div>
     <div>
         <img src={notebookscreenshot} class="w-42 h-42" alt="Liminal Logo">
     </div>
     <div class="text-lg">
-        Main features:
-        <li>Free note section where you can reference anything in the lab, from Users, Equipment, Data, Missions, or anything else! Customize your notes to your personal needs</li>
+        <li>Every notebook entry you write is analyzed by AI using retrieval-augmented generation (RAG) to contextualize your work with lab data—helping you and future scientists build on it.</li>
+        <li>AI-powered suggestions: Get relevant insights and recommendations for your notebook entry, based on intelligent parsing of lab papers.</li>
+        <li>Reference anything in the lab, from users, equipment, data, or anything else! Customize your notes to your needs.</li>
         <li>Activity graph that shows you everything you reference in your notebook and what it's related to</li>
         <li>Activity log that grows as you add references, providing you the full context of your notebook</li>
         <li>Conclusion section to organize your notebook statuses</li>
@@ -119,16 +125,15 @@
 		</h3>
     </div>
     <div class="text-2xl">
-        The experimental data that the user creates and/or scavenges to be put into the app in secure storage. We call these <span class="font-bold">Findings</span> to not overload the term data or results. Provides a way to compare data across the lab and perform meta-analyses. Findings are consumed via processors that recognize specific file types and organize and summarize the data automatically. Processors can be infinitely extended to account for any file type.
+        Organize and compare your experimental data effortlessly with Liminal's Findings. Automatically processed through custom processors, enabling seamless meta-analysis and collaboration across your lab.
     </div>
     <div>
         <img src={findingscreenshot} class="w-42 h-42" alt="Liminal Logo">
     </div>
     <div class="text-lg">
-        Main features:
-        <li>Drag and drop files to be automatically parsed into a neat table</li>
-        <li>Customizable file parsers, which extract and calculate information from files</li>
-        <li>Search based on any attribute, such as per user or specific parameter</li>
+        <li>Effortlessly drag and drop files for automatic parsing into organized tables</li>
+        <li>Build custom parsers to extract and compute data tailored to your needs</li>
+        <li>Search with precision, filtering by any attribute—whether by user, parameter, or more</li>
     </div>
     <div slot="footer">
         <button on:click={() => (findings = !findings)} class="btn btn-primary bg-purple-300 rounded-lg py-2 px-4 outline">
@@ -144,7 +149,7 @@
 		</h3>
     </div>
     <div class="text-2xl">
-        The objects you are doing the experimentation and observations on.
+        The objects you are doing the experimentation and observations on. Currently, Liminal does not have an intricate sample management system, but it is in the works!
     </div>
     <!-- TODO Add Image -->
     <div slot="footer">
@@ -161,13 +166,12 @@
 		</h3>
     </div>
     <div class="text-2xl">
-        Houses all materials, equipment, and storage vessels used in the lab. Organizes the stuff in your lab and allows you to reference and explore each item throughout its lifespan in the lab. Determine physical location, history, and current status of each thing.
+        Materials, equipment, you name it. Organize the stuff in your lab and determine physical location, history, and current status of everything.
     </div>
     <div>
         <img src={inventoryscreenshot} class="w-42 h-42" alt="Liminal Logo">
     </div>
     <div class="text-lg">
-        Main features:
         <li>Neatly organize all your reagents, equipment, locations, containers, or other types of consumables</li>
         <li>Each item has a confidence score, based on how long it's been since someone has interacted with it</li>
     </div>
@@ -185,16 +189,15 @@
 		</h3>
     </div>
     <div class="text-xl">
-        A place to record the non-experimental actions in the lab, usually chores and maintenance performed on a regular basis. These missions contribute to the lab state, which can be summarized at any point to determine all of the activity that has happened in a certain time frame.
+        Track and manage routine lab activities, ensuring every action is documented and accessible to maintain an up-to-date record of lab operations. Missions capture non-experimental tasks, like chores and maintenance, that shape the lab’s status, offering a comprehensive view of lab activity over time.
     </div>
     <div>
         <img src={missionscreenshot} class="w-42 h-42" alt="Liminal Logo">
     </div>
     <div class="text-lg">
-        Main features:
-        <li>Keep track of all your lab tasks</li>
-        <li>Get alerts when tasks are overdue</li>
-        <li>Get points for completing missions</li>
+        <li>Stay organized by tracking all your lab tasks in one place</li>
+        <li>Receive notifications for overdue tasks, ensuring nothing slips through the cracks</li>
+        <li>Earn rewards and recognition with points for completing tasks</li>
     </div>
     <div slot="footer">
         <button on:click={() => (tasks = !tasks)} class="btn btn-primary bg-purple-300 rounded-lg py-2 px-4 outline">
@@ -210,15 +213,15 @@
 		</h3>
     </div>
     <div class="text-xl">
-        A repository of external documents, usually journal articles, that represents the knowledge of the lab members through research and not experimentation. These are reviewable documents that connect and align the knowledge of each scientist to create higher common ground in background and expertise.
+        Align your lab's collective knowledge. Liminal curates and connects external research, ensuring every member builds on a shared foundation of expertise.
     </div>
     <div>
         <img src={papersscreenshot} class="w-42 h-42" alt="Liminal Logo">
     </div>
     <div class="text-lg">
-        Main features:
-        <li>See the most read papers in the lab</li>
-        <li>Review papers and share with lab mates</li>
+        <li>Every journal article and external document becomes part of an evolving repository, creating a common ground that strengthens collaboration and accelerates discovery.</li>
+        <li>Discover the lab's most influential papers - See which research is shaping your team's work.</li>
+        <li>Review and share insights on key papers to deepen collective understanding.</li>
     </div>
     <div slot="footer">
         <button on:click={() => (papers = !papers)} class="btn btn-primary bg-purple-300 rounded-lg py-2 px-4 outline">
@@ -230,11 +233,18 @@
 <Modal bind:open={knowledge} autoclose outsideclose class="text-black bg-slate-300">
 	<div slot="header">
 		<h3 class="text-xl font-semibold text-black dark:text-white">
-		  Knowledge Management
+		  Institutional Knowledge
 		</h3>
     </div>
     <div class="text-xl">
-        Small pieces of knowledge learned through experience and/or communication that are useful in any aspect of the lab operations. Analogous to a mini notebook entry without needing to formalize methods, results, and discussion. This encompasses the extra bits of information needed to succeed in your lab, such as tips on using equipment, gotchas, ideas, among any number of information you want to share with your fellow labbies.
+        Easily capture quick insights and tips, like virtual sticky notes, to feed into the AI and enrich your lab's collective knowledge. Share bite-sized, informal knowledge—such as equipment tips or helpful reminders—directly with the AI and lab mates, enhancing its understanding and improving lab operations.
+    </div>
+    <div>
+        <img src={knowledgescreenshot} class="w-42 h-42" alt="knowledgescreenshot">
+    </div>
+    <div class="text-lg">
+        <li>Add a note to anything.</li>
+        <li>Make your person AI smarter with extra knowledge.</li>
     </div>
     <div slot="footer">
         <button on:click={() => (knowledge = !knowledge)} class="btn btn-primary bg-purple-300 rounded-lg py-2 px-4 outline">
@@ -250,7 +260,14 @@
 		</h3>
     </div>
     <div class="text-xl">
-        The users that make up the lab and accumulate application activity that can be compared and summarized. Connects the app experience across scientists and provides a means of actionable communication before the research group.
+        Track and visualize the activity of your lab members, enabling easy communication and collaboration across your research team. Aggregate and summarize each user’s contributions to provide insights into team dynamics and streamline communication for more effective research collaboration.
+    </div>
+    <div>
+        <img src={socialsscreenshot} class="w-42 h-42" alt="socialsscreenshot">
+    </div>
+    <div class="text-lg">
+        <li>Help your lab mates out.</li>
+        <li>Check in on each other to make sure everyone is succeeding.</li>
     </div>
     <div slot="footer">
         <button on:click={() => (social = !social)} class="btn btn-primary bg-purple-300 rounded-lg py-2 px-4 outline">
