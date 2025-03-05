@@ -26,11 +26,12 @@
                 <AccordionItem bind:open={items[0]}>
                     <span slot="header" class="text-lg font-bold text-black">Open Positions</span>
                     <ul class="list-disc list-inside">
-                        <li>Full Stack Software Developer</li>
+                        <!-- <li>Full Stack Software Developer</li> -->
                         <!-- <li>Full Stack Software Developer (Senior/Equity)</li> -->
                         <!-- <li>Full Stack Software Developer (Intermediate)</li> -->
-                        <li>Software Development Intern (Junior/Temp)</li>
-                        <li>Bioinformatics Intern (Junior/Temp)</li>
+                        <!-- <li>Software Development Intern (Junior/Temp)</li> -->
+                        <!-- <li>Bioinformatics Intern (Junior/Temp)</li> -->
+                         <li>None right now, but hold tight!</li>
                     </ul>
                 </AccordionItem>
                 <AccordionItem bind:open={items[1]}>

@@ -14,24 +14,30 @@
 
 <div class="text-white rounded-lg">
     <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4 p-4 text-white text-lg sm:text-md md:text-lg lg:text-lg">
-        <div class="outline outline-purple-300 rounded-lg bg-black p-4 flex flex-col items-center justify-center shadow-lg ">
+        <div class="outline outline-purple-300 hover:bg-purple-300 rounded-lg bg-black p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+            <a href="https://forms.gle/rmnYMkiYHqGALxkV9" target="_blank">
                 <div class="mt-2 mb-2">Full Research Platform</div>
                 <div>
                     $?? / year / lab
                 </div>
                 <div>
-                    Price pending (per lab)
+                    Price pending
                 </div>
+            </a>    
         </div>
-        <div class="outline outline-green-300 rounded-lg bg-black p-4 flex flex-col items-center justify-center shadow-lg ">
-                <div class="mt-2 mb-2">Liminal Collab</div>
-                <div>$0 / year / person</div>
-                <div>Free for anyone!</div>
+        <div class="outline outline-green-300 hover:bg-green-300 rounded-lg bg-black p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                <a href="https://forms.gle/tdXLDyxwhAkGd2yR9" target="_blank">
+                    <div class="mt-2 mb-2">Liminal Collab</div>
+                    <div>$0 / year / person</div>
+                    <div>Free for anyone!</div>
+                </a>
         </div>
-        <div class="outline outline-blue-400 rounded-lg bg-black p-4 flex flex-col items-center justify-center shadow-lg ">
+        <div class="outline outline-blue-400 hover:bg-blue-400 rounded-lg bg-black p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+            <a href="https://forms.gle/DattrQUVR9JrYPid8" target="_blank">
                 <div class="mt-2 mb-2">Grant Helper</div>
                 <div>$1200 / year / lab</div>
                 <div>Institution price varies</div>
+            </a>
         </div>
     </div>
 </div>
