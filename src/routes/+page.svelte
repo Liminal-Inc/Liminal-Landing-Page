@@ -6,6 +6,7 @@
 	import ThreeTiers from './ThreeTiers.svelte';
 	import { Modal, Video } from 'flowbite-svelte';
 	import { BookOpenSolid } from 'flowbite-svelte-icons';
+	import SubscribeButton from '$lib/subscribeButton.svelte';
 
 	let whatDoesLiminal = false;
 
@@ -33,6 +34,7 @@
 </svelte:head>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 
 <section>
 
@@ -66,7 +68,10 @@
 		</a>
 	</p>
     </div>
-  </div>
+	</div>
+	<div class="col-span-5 mt-2">
+		<SubscribeButton/>
+	</div>
 </div>
 
 <section>
@@ -255,6 +260,10 @@
 				</div>
 		</div>
 	</div>
+</div>
+
+<div class="w-full mt-2 mb-4">
+	<SubscribeButton/>
 </div>
 
 
