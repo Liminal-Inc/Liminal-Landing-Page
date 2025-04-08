@@ -6,21 +6,26 @@
 	import { onMount } from 'svelte';
 
 	let collabSection;
-	let grantSection;
+	let researchSection;
 
 	onMount(() => {
 		// Wait for Svelte to fully render before scrolling
 		setTimeout(() => {
 			if (window.location.hash === '#collabSection') {
 				collabSection?.scrollIntoView({ behavior: 'smooth' });
-			} else if (window.location.hash === '#grantSection') {
-				grantSection?.scrollIntoView({ behavior: 'smooth' });
+			} else if (window.location.hash === '#researchSection') {
+				researchSection?.scrollIntoView({ behavior: 'smooth' });
 			}
 		}, 100); // Small delay to allow DOM rendering
 	});
 </script>
 
-<div class="mb-2 text-lg sm:text-xl md:text-2xl lg:text-3xl text-purple-300">Liminal Research</div>
+<div
+	class="mb-2 text-lg sm:text-xl md:text-2xl lg:text-3xl text-purple-300"
+	bind:this={researchSection}
+>
+	Liminal Research
+</div>
 
 <section>
 	<InTheBox showMore={false} />
@@ -91,7 +96,8 @@
 <div class="pixel-divider my-16" bind:this={collabSection} />
 
 <LiminalCollab />
+<br />
 
-<div class="pixel-divider my-16" bind:this={grantSection} />
+<!-- <div class="pixel-divider my-16"/> -->
 
 <!-- <GrantHelper/> -->

@@ -30,7 +30,7 @@
 			</button>
 
 			<a
-				class="mt-2 block underline hover:bg-purple-600 rounded-lg px-4 py-3"
+				class="mt-2 block underline hover:bg-green-600 rounded-lg px-4 py-3"
 				target="_blank"
 				href="https://forms.gle/tdXLDyxwhAkGd2yR9"
 			>
@@ -40,7 +40,7 @@
 		<div
 			class="outline outline-purple-300 rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
 		>
-			<button on:click={() => dispatch('scrollToTarget')}>
+			<button on:click={() => goto('/features#researchSection')}>
 				<div class="mt-2 mb-2 text-2xl text-purple-300">Liminal Research</div>
 				<div class="mb-2">
 					Disseminate 50% more research with <span class="underline"
