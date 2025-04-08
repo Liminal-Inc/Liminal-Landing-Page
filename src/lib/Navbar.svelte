@@ -1,29 +1,35 @@
-  <script>
-    import '../app.postcss';
-    import { page } from '$app/stores';
-    import { Navbar, NavBrand, NavHamburger, NavLi, NavUl } from 'flowbite-svelte';
-    import logoURL from '$lib/images/Logo-24Jul2024.png'
+<script>
+	import '../app.postcss';
+	import { page } from '$app/stores';
+	import { Navbar, NavBrand, NavHamburger, NavLi, NavUl } from 'flowbite-svelte';
+	import logoURL from '$lib/images/Logo-24Jul2024.png';
 
+	let activeClass = 'text-white sm:text-sm md:text-md lg:text-lg';
+	let nonActiveClass = 'text-black sm:text-sm md:text-md lg:text-lg';
+	$: activeUrl = $page.url.pathname;
+</script>
 
-    let activeClass = 'text-white sm:text-sm md:text-md lg:text-lg';
-    let nonActiveClass = 'text-black sm:text-sm md:text-md lg:text-lg';
-    $: activeUrl = $page.url.pathname;
-  </script>
-
-
-    <Navbar let:NavContainer class="bg-purple-300">
-      <NavContainer class="px-5 py-2 dark:bg-gray-600">
-        <NavBrand href="/">
-          <img src={logoURL} class="me-3 h-12 sm:h-6 md:h-10 lg:h-12" alt="logo" />
-          <span class="self-center whitespace-nowrap text-2xl font-semibold">Liminal</span>
-        </NavBrand>
-        <NavHamburger />
-        <NavUl {activeUrl} {activeClass} {nonActiveClass}>
-          <NavLi class={activeUrl === '/features/' ? activeClass : nonActiveClass} href="/features">Features</NavLi>
-          <NavLi class={activeUrl === '/roadmap/' ? activeClass : nonActiveClass} href="/roadmap">Roadmap</NavLi>
-          <NavLi class={activeUrl === '/blog/' ? activeClass : nonActiveClass} href="/blog">Blog</NavLi>
-          <NavLi class={activeUrl === '/pricing/' ? activeClass : nonActiveClass} href="/pricing">Pricing</NavLi>
-          <NavLi class={activeUrl === '/team/' ? activeClass : nonActiveClass} href="/team">About</NavLi>
-        </NavUl>
-      </NavContainer>
-    </Navbar>
+<Navbar let:NavContainer class="bg-purple-300">
+	<NavContainer class="px-5 py-2 dark:bg-gray-600">
+		<NavBrand href="/">
+			<img src={logoURL} class="me-3 h-12 sm:h-6 md:h-10 lg:h-12" alt="logo" />
+			<span class="self-center whitespace-nowrap text-2xl font-semibold">Liminal</span>
+		</NavBrand>
+		<NavHamburger />
+		<NavUl {activeUrl} {activeClass} {nonActiveClass}>
+			<NavLi class={activeUrl === '/features/' ? activeClass : nonActiveClass} href="/features"
+				>Features</NavLi
+			>
+			<NavLi class={activeUrl === '/roadmap/' ? activeClass : nonActiveClass} href="/roadmap"
+				>Roadmap</NavLi
+			>
+			<NavLi class={activeUrl === '/blog/' ? activeClass : nonActiveClass} href="/blog">Blog</NavLi>
+			<NavLi class={activeUrl === '/pricing/' ? activeClass : nonActiveClass} href="/pricing"
+				>Pricing</NavLi
+			>
+			<NavLi class={activeUrl === '/about/' ? activeClass : nonActiveClass} href="/about"
+				>About</NavLi
+			>
+		</NavUl>
+	</NavContainer>
+</Navbar>
