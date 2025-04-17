@@ -13,11 +13,16 @@
 		ClipboardCheckSolid,
 		DatabaseSolid,
 		FaceGrinSolid,
-		FileCirclePlusSolid,
+		FaceExplodeSolid,
 		FolderArrowRightOutline,
+		MapPinAltSolid,
 		NewspapperSolid,
 		PenSolid,
-		UserSolid
+		UserSolid,
+		CogOutline,
+		LightbulbSolid,
+		FileChartBarSolid,
+		GlobeOutline
 	} from 'flowbite-svelte-icons';
 
 	export let showMore = true;
@@ -30,93 +35,173 @@
 	let papers = false;
 	let knowledge = false;
 	let social = false;
+	let ai_assistant = false;
+	let ai_notebook = false;
+	let data_structuring = false;
+	let research_suggestions = false;
+	let data_plugins = false;
+	let automatic_contextualization = false;
 </script>
 
-<div class="text-white rounded-lg">
-	<div>
-		<div class="mb-2 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+<!-- <section bind:this={targetSection} class="w-full" id="liminal-features">
+	<div class="pixel-divider my-16" />
+	<div class="justify-between bg-black col-span-5 w-full">
+		<InTheBox showMore={true} />
+	</div>
+</section> -->
+
+<section id="data-capture-features">
+	<div class="text-white rounded-lg">
+		<div>
+			<div class="mb-2 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+				{#if showMore}
+					<p class="text-center text-purple-300">Data Capture Features</p>
+				{:else}
+					<!-- <p class="text-purple-300">Liminal Research</p> -->
+				{/if}
+			</div>
+			<div class="">
+				<div
+					class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 p-4 text-white text-lg sm:text-md md:text-lg lg:text-lg"
+				>
+					<button
+						on:click={() => (notebook = true)}
+						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+					>
+						<NewspapperSolid size="xl" />
+						<div class="mt-2 mb-2">Lab Notebook</div>
+					</button>
+					<button
+						on:click={() => (inventory = true)}
+						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+					>
+						<FolderArrowRightOutline size="xl" />
+						<div class="mt-2 mb-2">Inventory</div>
+					</button>
+					<button
+						on:click={() => (samples = true)}
+						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+					>
+						<CirclePlusSolid size="xl" />
+						<div class="mt-2 mb-2">Sample Management</div>
+					</button>
+					<button
+						on:click={() => (findings = true)}
+						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+					>
+						<DatabaseSolid size="xl" />
+						<div class="mt-2 mb-2">Data Storage</div>
+					</button>
+					<button
+						on:click={() => (tasks = true)}
+						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+					>
+						<ClipboardCheckSolid />
+						<div class="mt-2 mb-2">Task Manager</div>
+					</button>
+					<button
+						on:click={() => (papers = true)}
+						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+					>
+						<PenSolid size="xl" />
+						<div class="mt-2 mb-2">External Resource Storage</div>
+					</button>
+					<button
+						on:click={() => (knowledge = true)}
+						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+					>
+						<BookOpenSolid size="xl" />
+						<div class="mt-2 mb-2">Institutional Knowledge</div>
+					</button>
+					<button
+						on:click={() => (social = true)}
+						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+					>
+						<UserSolid size="xl" />
+						<div class="mt-2 mb-2">Social Hub</div>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<hr class="my-8 outline-white" />
+
+<section id="data-analysis-features">
+	<div class="text-white rounded-lg">
+		<div>
+			<div class="mb-2 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+				{#if showMore}
+					<p class="text-center text-purple-300">Workflow & Analysis Features</p>
+				{:else}
+					<!-- <p class="text-purple-300">Liminal Research</p> -->
+				{/if}
+			</div>
+			<div class="">
+				<div
+					class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 p-4 text-white text-lg sm:text-md md:text-lg lg:text-lg"
+				>
+					<button
+						on:click={() => (ai_assistant = true)}
+						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+					>
+						<FaceExplodeSolid size="xl" />
+						<div class="mt-2 mb-2">Personalized AI Assistant</div>
+					</button>
+					<button
+						on:click={() => (ai_notebook = true)}
+						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+					>
+						<FaceGrinSolid size="xl" />
+						<div class="mt-2 mb-2">AI Notebook Suggestions</div>
+					</button>
+					<button
+						on:click={() => (data_structuring = true)}
+						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+					>
+						<CogOutline size="xl" />
+						<div class="mt-2 mb-2">Automatic Data Structuring</div>
+					</button>
+					<button
+						on:click={() => (research_suggestions = true)}
+						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+					>
+						<LightbulbSolid size="xl" />
+						<div class="mt-2 mb-2">Research Suggestions</div>
+					</button>
+					<button
+						on:click={() => (data_plugins = true)}
+						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+					>
+						<FileChartBarSolid />
+						<div class="mt-2 mb-2">Data Analysis Plugins</div>
+					</button>
+					<button
+						on:click={() => (automatic_contextualization = true)}
+						class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+					>
+						<GlobeOutline size="xl" />
+						<div class="mt-2 mb-2">Automatic Data Contextualization</div>
+					</button>
+				</div>
+			</div>
 			{#if showMore}
-				<p class="text-center text-purple-300">Liminal Research Core Features</p>
-			{:else}
-				<!-- <p class="text-purple-300">Liminal Research</p> -->
+				<div class="text-lg sm:text-xl md:text-2xl lg:text-2xl font-extrabold text-center">
+					<p>Plus! Activity Feed, Badges, Levels, Streaks, Custom Toolkits, Reports & Summaries</p>
+
+					<p class="text-purple-300 mt-2">
+						<a href="/roadmap" class="inline-flex items-center gap-2 hover:underline">
+							<MapPinAltSolid class="w-6 h-6 text-white" />
+							<span>View our roadmap</span>
+							<MapPinAltSolid class="w-6 h-6 text-white" />
+						</a>
+					</p>
+				</div>
 			{/if}
 		</div>
-		<div class="">
-			<div
-				class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 p-4 text-white text-lg sm:text-md md:text-lg lg:text-lg"
-			>
-				<button
-					on:click={() => (notebook = true)}
-					class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-				>
-					<NewspapperSolid size="xl" />
-					<div class="mt-2 mb-2">Lab Notebook</div>
-				</button>
-				<button
-					on:click={() => (inventory = true)}
-					class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-				>
-					<FolderArrowRightOutline size="xl" />
-					<div class="mt-2 mb-2">Inventory</div>
-				</button>
-				<button
-					on:click={() => (samples = true)}
-					class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-				>
-					<CirclePlusSolid size="xl" />
-					<div class="mt-2 mb-2">Sample Management</div>
-				</button>
-				<button
-					on:click={() => (findings = true)}
-					class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-				>
-					<DatabaseSolid size="xl" />
-					<div class="mt-2 mb-2">Experimental Results</div>
-				</button>
-				<button
-					on:click={() => (tasks = true)}
-					class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-				>
-					<ClipboardCheckSolid />
-					<div class="mt-2 mb-2">Task Manager</div>
-				</button>
-				<button
-					on:click={() => (papers = true)}
-					class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-				>
-					<PenSolid size="xl" />
-					<div class="mt-2 mb-2">Paper and Reviews</div>
-				</button>
-				<button
-					on:click={() => (knowledge = true)}
-					class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-				>
-					<BookOpenSolid size="xl" />
-					<div class="mt-2 mb-2">Institutional Knowledge</div>
-				</button>
-				<button
-					on:click={() => (social = true)}
-					class="outline outline-white rounded-lg bg-black hover:bg-purple-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-				>
-					<UserSolid size="xl" />
-					<div class="mt-2 mb-2">Social Hub</div>
-				</button>
-			</div>
-		</div>
-		{#if showMore}
-			<div class="text-lg sm:text-xl md:text-2xl lg:text-2xl font-extrabold text-center">
-				<p>Plus! Activity Feed, Badges, Levels, Streaks, Custom Toolkits, Reports & Summaries</p>
-				<p class="text-purple-300 mt-2">
-					<a href="/roadmap">
-						<i class="fas fa-star text-yellow-400" />
-						View our roadmap
-						<i class="fas fa-star text-yellow-400" />
-					</a>
-				</p>
-			</div>
-		{/if}
 	</div>
-</div>
+</section>
 
 <Modal bind:open={notebook} autoclose outsideclose class="text-black bg-slate-300">
 	<div slot="header">
@@ -346,6 +431,188 @@
 	<div slot="footer">
 		<button
 			on:click={() => (social = !social)}
+			class="btn btn-primary bg-purple-300 rounded-lg py-2 px-4 outline"
+		>
+			Close
+		</button>
+	</div>
+</Modal>
+
+<!-- Workflow -->
+<Modal bind:open={ai_assistant} autoclose outsideclose class="text-black bg-slate-300">
+	<div slot="header">
+		<h3 class="text-xl font-semibold text-black dark:text-white">AI Assistant</h3>
+	</div>
+	<div class="text-xl">
+		All activity in your lab is tracked and recorded. This includes all the data you add to Liminal,
+		inventory items, papers you read, etc. All this activity is used to teach your AI assistant
+		about you and your lab so it can be more helpful than a generic, online LLM.
+	</div>
+	<div class="text-xl">
+		<!-- <img src={socialsscreenshot} class="w-42 h-42" alt="socialsscreenshot" /> -->
+		We consider this 'Lab Culture AI', which is a custom AI that learns from your lab's unique knowledge
+		and practices. It can help you with everything from troubleshooting experiments, training new scientists,
+		to creating more publications and sharing more research.
+	</div>
+	<div class="text-lg">
+		<li>Get lab-specific answers</li>
+		<li>AI gets smarter as your lab progresses</li>
+	</div>
+	<div slot="footer">
+		<button
+			on:click={() => (ai_assistant = !ai_assistant)}
+			class="btn btn-primary bg-purple-300 rounded-lg py-2 px-4 outline"
+		>
+			Close
+		</button>
+	</div>
+</Modal>
+
+<Modal bind:open={ai_notebook} autoclose outsideclose class="text-black bg-slate-300">
+	<div slot="header">
+		<h3 class="text-xl font-semibold text-black dark:text-white">Notebook Suggestions</h3>
+	</div>
+	<div class="text-xl">
+		Write your notebook as normal, and then click to discover relevant information from your lab.
+		Liminal will suggest relevant information from your lab, including papers, data, and other
+		notebook entries.
+	</div>
+	<div class="text-xl">
+		<!-- <img src={socialsscreenshot} class="w-42 h-42" alt="socialsscreenshot" /> -->
+		This also allows you to see what other people are doing in the lab, and how it relates to your work.
+		Or, the AI works like an online LLM, where you can ask it questions and it'll provide outside knowledge
+		based on previous training.
+	</div>
+	<!-- <div class="text-lg">
+		<li>Get lab-specific answers</li>
+		<li>AI gets smarter as your lab progresses</li>
+	</div> -->
+	<div slot="footer">
+		<button
+			on:click={() => (ai_notebook = !ai_notebook)}
+			class="btn btn-primary bg-purple-300 rounded-lg py-2 px-4 outline"
+		>
+			Close
+		</button>
+	</div>
+</Modal>
+
+<Modal bind:open={data_structuring} autoclose outsideclose class="text-black bg-slate-300">
+	<div slot="header">
+		<h3 class="text-xl font-semibold text-black dark:text-white">Data Structuring</h3>
+	</div>
+	<div class="text-xl">
+		Parse unstructured data, including previous research, and turn it into structured, referencable
+		data. Structuring the data also connects it to other relevant work done in the lab, creating the
+		ultimate metadata and data provenance attached to all work.
+	</div>
+	<div class="text-xl">
+		<!-- <img src={socialsscreenshot} class="w-42 h-42" alt="socialsscreenshot" /> -->
+		<!-- This also allows you to see what other people are doing in the lab, and how it relates to your work.
+		Or, the AI works like an online LLM, where you can ask it questions and it'll provide outside knowledge
+		based on previous training. -->
+	</div>
+	<!-- <div class="text-lg">
+		<li>Get lab-specific answers</li>
+		<li>AI gets smarter as your lab progresses</li>
+	</div> -->
+	<div slot="footer">
+		<button
+			on:click={() => (data_structuring = !data_structuring)}
+			class="btn btn-primary bg-purple-300 rounded-lg py-2 px-4 outline"
+		>
+			Close
+		</button>
+	</div>
+</Modal>
+
+<Modal bind:open={research_suggestions} autoclose outsideclose class="text-black bg-slate-300">
+	<div slot="header">
+		<h3 class="text-xl font-semibold text-black dark:text-white">Research Suggestions</h3>
+	</div>
+	<div class="text-xl">
+		Liminal goes through old data and creates research suggestion based on the data you already
+		have. This is essentially recycling through your old data to allow you to continuously publish
+		and disseminate a steady flow of research, regardless of whether you have funding for new
+		experiments.
+	</div>
+	<div class="text-xl">
+		<!-- <img src={socialsscreenshot} class="w-42 h-42" alt="socialsscreenshot" /> -->
+		<!-- This also allows you to see what other people are doing in the lab, and how it relates to your work.
+		Or, the AI works like an online LLM, where you can ask it questions and it'll provide outside knowledge
+		based on previous training. -->
+	</div>
+	<!-- <div class="text-lg">
+		<li>Get lab-specific answers</li>
+		<li>AI gets smarter as your lab progresses</li>
+	</div> -->
+	<div slot="footer">
+		<button
+			on:click={() => (research_suggestions = !research_suggestions)}
+			class="btn btn-primary bg-purple-300 rounded-lg py-2 px-4 outline"
+		>
+			Close
+		</button>
+	</div>
+</Modal>
+
+<Modal bind:open={data_plugins} autoclose outsideclose class="text-black bg-slate-300">
+	<div slot="header">
+		<h3 class="text-xl font-semibold text-black dark:text-white">Analysis Plugins</h3>
+	</div>
+	<div class="text-xl">
+		Connect your current streams of data, including lab equipment and databases, to Liminal. This
+		allows Liminal to pull in data from your current systems and then parse it into structured data
+		and reports. This also makes data more 'stackable', meaning you can easily combine data from
+		various lab members and equipment to create new data sets.
+	</div>
+	<div class="text-xl">
+		<!-- <img src={socialsscreenshot} class="w-42 h-42" alt="socialsscreenshot" /> -->
+		<!-- This also allows you to see what other people are doing in the lab, and how it relates to your work.
+		Or, the AI works like an online LLM, where you can ask it questions and it'll provide outside knowledge
+		based on previous training. -->
+	</div>
+	<!-- <div class="text-lg">
+		<li>Get lab-specific answers</li>
+		<li>AI gets smarter as your lab progresses</li>
+	</div> -->
+	<div slot="footer">
+		<button
+			on:click={() => (data_plugins = !data_plugins)}
+			class="btn btn-primary bg-purple-300 rounded-lg py-2 px-4 outline"
+		>
+			Close
+		</button>
+	</div>
+</Modal>
+
+<Modal
+	bind:open={automatic_contextualization}
+	autoclose
+	outsideclose
+	class="text-black bg-slate-300"
+>
+	<div slot="header">
+		<h3 class="text-xl font-semibold text-black dark:text-white">Data Context</h3>
+	</div>
+	<div class="text-xl">
+		All activity recorded in Liminal is automatically connected to everything in the app. This
+		essentially means an endless stream of metadata, as you capture the lab state whenever new
+		activity is recorded.
+	</div>
+	<div class="text-xl">
+		For example, if Jane enters a notebook entry at 11:34am and John did the sweeping task at
+		11:29am, Liminal will automatically connect the two events based on time. For troubleshooting
+		purposes, the AI will know sweeping was done at the same time as PCR and be able to provide
+		advice for next time.
+	</div>
+	<!-- <div class="text-lg">
+		<li>Get lab-specific answers</li>
+		<li>AI gets smarter as your lab progresses</li>
+	</div> -->
+	<div slot="footer">
+		<button
+			on:click={() => (automatic_contextualization = !automatic_contextualization)}
 			class="btn btn-primary bg-purple-300 rounded-lg py-2 px-4 outline"
 		>
 			Close

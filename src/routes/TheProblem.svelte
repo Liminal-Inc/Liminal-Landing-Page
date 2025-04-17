@@ -1,20 +1,4 @@
 <script lang="ts">
-	import { Modal } from 'flowbite-svelte';
-	import notebookscreenshot from '$lib/images/NotebookScreenshot.png';
-	import findingscreenshot from '$lib/images/FindingsScreenshot.png';
-	import inventoryscreenshot from '$lib/images/InventoryScreenShot.png';
-	import missionscreenshot from '$lib/images/MissionScreenshot.png';
-	import papersscreenshot from '$lib/images/Papersscreenshot.png';
-	import { ArrowUpSolid, ArrowDownToBracketSolid } from 'flowbite-svelte-icons';
-
-	let notebook = false;
-	let findings = false;
-	let samples = false;
-	let inventory = false;
-	let tasks = false;
-	let papers = false;
-	let knowledge = false;
-	let social = false;
 </script>
 
 <link
@@ -52,16 +36,10 @@
 				<div
 					class="border-y-2 bg-black p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl"
 				>
-					<p class="mt-2 mb-2">
-						Professors get evaluated based on many things - but actually,
-						<span class="text-green-500">$ and papers</span>
-					</p>
+					<p class="mt-2 mb-2">If my funding runs out, I won't be able to continue my research</p>
 				</div>
 				<div class="border-y-2 bg-black p-4 flex flex-col items-center justify-center shadow-lg">
-					<p class="mt-2 mb-2">
-						If my lab got audited, <span class="text-red-500">it would be a mess.</span>
-						But it's a chance I'm willing to take
-					</p>
+					<p class="mt-2 mb-2">If my lab got audited, it would be a mess.</p>
 				</div>
 			</div>
 		</div>

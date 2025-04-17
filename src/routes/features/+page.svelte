@@ -28,10 +28,30 @@
 </div>
 
 <section>
-	<InTheBox showMore={false} />
+	<InTheBox showMore={true} />
 </section>
 
+<hr class="my-8 outline-white" />
+
 <div class="text-white space-y-12 mt-8">
+	<section class="">
+		<h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 underline">AI</h2>
+		<p class="text-lg leading-relaxed">
+			For now, we are using the latest LLM model from OpenAI. We use retrieval-augmented generation
+			(RAG) to ensure that the AI is always up to date with the latest information from your lab.
+			This allows the AI to provide accurate and relevant responses based on the most recent data
+			from your lab.
+		</p>
+		<p class="text-lg leading-relaxed mt-4">
+			Every time you add a new object to Liminal, the AI is updated with that information. For
+			example, if you add a new sample, the AI will know about it and be able to answer questions
+			about it. Say you add a knowledge note to your agarose powder that "users must secure the lid
+			tightly to prevent drying out."" The AI will remember this and be able to answer questions
+			about it in the future. This can even turn into an alert if another user references Agarose in
+			their own notebook entry!
+		</p>
+	</section>
+
 	<section class="">
 		<h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 underline">
 			Data Storage

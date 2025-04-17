@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 
-	let collab = false;
-
 	import { createEventDispatcher } from 'svelte';
 
 	const dispatch = createEventDispatcher();
@@ -10,7 +8,7 @@
 
 <div class="text-white rounded-lg">
 	<div class="mb-4 text-center">
-		<p class="text-lg sm:text-xl md:text-2xl lg:text-3xl">2 Tiers of Liminal</p>
+		<p class="text-lg sm:text-xl md:text-2xl lg:text-3xl">2 Separate Software Platforms</p>
 	</div>
 	<div
 		class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 p-4 text-white text-lg sm:text-md md:text-lg lg:text-lg"
@@ -21,10 +19,12 @@
 			<button on:click={() => goto('/features#collabSection')}>
 				<div class="mt-2 mb-2 text-2xl text-green-300">Liminal Collab</div>
 				<div class="mb-2">
-					<p>
+					<!-- <p>
 						2x your grant opportunities by making your expertise discoverable to new collaborators.
+					</p> -->
+					<p>
+						Social platform exclusively for researchers who are actively looking for collaborators.
 					</p>
-					<!-- <p>Find resources you need to stay competitive.</p> -->
 				</div>
 				<hr />
 			</button>
@@ -42,10 +42,13 @@
 		>
 			<button on:click={() => goto('/features#researchSection')}>
 				<div class="mt-2 mb-2 text-2xl text-purple-300">Liminal Research</div>
-				<div class="mb-2">
+				<!-- <div class="mb-2">
 					Disseminate 50% more research with <span class="underline"
 						>no extra money or experiments</span
 					> by training your custom AI assistant to capture, structure, and share your lab work.
+				</div> -->
+				<div>
+					Research platform that records and learns from all the research and activity in your lab.
 				</div>
 				<hr />
 			</button>

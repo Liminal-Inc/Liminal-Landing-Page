@@ -4,18 +4,15 @@
 	import InTheBox from './InTheBox.svelte';
 	import TheProblem from './TheProblem.svelte';
 	import ThreeTiers from './ThreeTiers.svelte';
-	import { Modal, Video } from 'flowbite-svelte';
-	import { BookOpenSolid } from 'flowbite-svelte-icons';
+	import { Table, Video } from 'flowbite-svelte';
 	import SubscribeButton from '$lib/subscribeButton.svelte';
 
 	let whatDoesLiminal = false;
 
 	import videoUrl from '$lib/videos/demo_2.mp4';
-	import processorUrl from '$lib/videos/file_processing_stacking.mp4';
 	import collabURL from '$lib/videos/Liminal-Collab-Minimal.mp4';
 
 	import posterUrl from '$lib/images/demo-screenshot.jpg';
-	import processorPosterUrl from '$lib/images/processing-screenshot.png';
 	import collabPostUrl from '$lib/images/CollabScreenshot.png';
 
 	let targetSection;
@@ -53,9 +50,15 @@
 		</div>
 		<!-- Right column for the other paragraphs -->
 		<div class="md:w-1/2 flex flex-col justify-start items-start text-left md:text-left md:pl-4">
-			<p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">2x your research output</p>
-			<p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">Spend less grant money</p>
-			<p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">Train new scientists faster</p>
+			<p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+				Poor documentation and lab turnover are brutal for labs.
+			</p>
+			<p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+				Learn from & leverage all the activity going on in your lab
+				<span>without</span> you having to micromanage.
+			</p>
+			<!-- <p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">Spend less grant money</p> -->
+			<!-- <p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">Train new scientists faster</p> -->
 			<p
 				class="w-full outline outline-white rounded-lg text-purple-300 hover:cursor-pointer hover:bg-purple-300 hover:text-white
 			  hover:underline p-4 transition-all duration-100 transform hover:-translate-y-1
@@ -66,13 +69,10 @@
 					target="_blank"
 					href="https://docs.google.com/forms/d/e/1FAIpQLSd2gtATL3ifoL3cg_IBaxFpP96MhLZY2uy9zVTxOUwRiPcXwQ/viewform?usp=sf_link"
 				>
-					Request Access to Liminal
+					I need Liminal today
 				</a>
 			</p>
 		</div>
-	</div>
-	<div class="col-span-5 mt-2">
-		<SubscribeButton />
 	</div>
 </div>
 
@@ -85,20 +85,41 @@
 
 <section class="w-full">
 	<div class="pixel-divider my-16" />
-	<p class="text-2xl text-white">
-		<span class="text-red-500">~85%</span> of research in academia is considered
-		<span class="text-red-500 hover:underline"
-			><a
-				href="https://blogs.bmj.com/bmj/2016/01/14/paul-glasziou-and-iain-chalmers-is-85-of-health-research-really-wasted/"
-				target="_blank">wasted</a
-			></span
-		>
+	<p class="text-2xl text-white mb-4">
+		Labs in academia are losing an enormous portion of their research each year due to:
 	</p>
-	<p class="text-2xl text-white">
-		Capture valuable, <span class="text-green-300">usable science</span> from
-		<span class="text-green-300">every experiment</span> done in your lab with Liminal
+	<Table class="text-white border border-white w-full text-lg sm:text-xl md:text-2xl">
+		<thead class="bg-transparent border-b border-white">
+			<tr>
+				<th class="px-4 py-2 border-r border-white">Event</th>
+				<th class="px-4 py-2">Research Lost</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="border-b border-white">
+				<td class="px-4 py-2 border-r border-white">Poor documentation</td>
+				<td class="px-4 py-2">20-25%</td>
+			</tr>
+			<tr class="border-b border-white">
+				<td class="px-4 py-2 border-r border-white">Student/Staff turnover</td>
+				<td class="px-4 py-2">25-35%</td>
+			</tr>
+			<tr class="border-b border-white">
+				<td class="px-4 py-2 border-r border-white">Poorly designed experiments</td>
+				<td class="px-4 py-2">20-25%</td>
+			</tr>
+		</tbody>
+	</Table>
+	<p class="text-2xl text-white mt-4">
+		Liminal is a data capture app designed for academic labs to retain and leverage 100% of all the
+		research they do. Whether you are writing a notebook entry, updating the inventory, or adding a
+		sticky note to that finnicky piece of equipment, Liminal captures it all.
 	</p>
-	<p class="text-2xl text-white">No more wasting time and money on research lost in the wind</p>
+	<p class="text-2xl text-white mt-4">
+		Liminal learns from everything you do, becoming your digital lab manager and expert in what you
+		do. Liminal's AI features offer real-time troubleshooting, personalized learning, organization
+		of all lab work, and smart parsing of old data to suggest new research dissemination options.
+	</p>
 </section>
 
 <div class="pixel-divider my-16" />
@@ -134,7 +155,7 @@
 			target="_blank"
 			href="https://docs.google.com/forms/d/e/1FAIpQLSd2gtATL3ifoL3cg_IBaxFpP96MhLZY2uy9zVTxOUwRiPcXwQ/viewform?usp=sf_link"
 		>
-			Become a Liminal User
+			Join Liminal Research
 		</a>
 	</p>
 	<p
@@ -143,17 +164,10 @@
 			  mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl"
 	>
 		<a class="block" target="_blank" href="https://discord.gg/NHYzApB3jj">
-			Join our Discord community
+			Join Discord Community
 		</a>
 	</p>
 </div>
-
-<section bind:this={targetSection} class="w-full" id="liminal-features">
-	<div class="pixel-divider my-16" />
-	<div class="justify-between bg-black col-span-5 w-full">
-		<InTheBox showMore={true} />
-	</div>
-</section>
 
 <div class="pixel-divider my-16" />
 
