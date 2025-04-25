@@ -64,13 +64,7 @@
 			  hover:underline p-4 transition-all duration-100 transform hover:-translate-y-1
 			  mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl"
 			>
-				<a
-					class="block"
-					target="_blank"
-					href="https://docs.google.com/forms/d/e/1FAIpQLSd2gtATL3ifoL3cg_IBaxFpP96MhLZY2uy9zVTxOUwRiPcXwQ/viewform?usp=sf_link"
-				>
-					I need Liminal today
-				</a>
+				<a class="block" href="/signup"> I need Liminal today </a>
 			</p>
 		</div>
 	</div>
@@ -150,13 +144,7 @@
 			  hover:underline p-4 transition-all duration-100 transform hover:-translate-y-1
 			  mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl"
 	>
-		<a
-			class="block"
-			target="_blank"
-			href="https://docs.google.com/forms/d/e/1FAIpQLSd2gtATL3ifoL3cg_IBaxFpP96MhLZY2uy9zVTxOUwRiPcXwQ/viewform?usp=sf_link"
-		>
-			Join Liminal Research
-		</a>
+		<a class="block" href="/signup"> Join Liminal Research </a>
 	</p>
 	<p
 		class="w-full outline outline-white rounded-lg text-purple-300 hover:bg-purple-300 hover:underline hover:text-white

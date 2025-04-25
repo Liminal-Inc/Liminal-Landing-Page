@@ -52,11 +52,7 @@
 				</div>
 				<hr />
 			</button>
-			<a
-				class="mt-2 block underline hover:bg-purple-600 rounded-lg px-4 py-3"
-				target="_blank"
-				href="https://docs.google.com/forms/d/e/1FAIpQLSd2gtATL3ifoL3cg_IBaxFpP96MhLZY2uy9zVTxOUwRiPcXwQ/viewform?usp=sf_link"
-			>
+			<a class="mt-2 block underline hover:bg-purple-600 rounded-lg px-4 py-3" href="/signup">
 				👽 Sign up now!
 			</a>
 		</div>

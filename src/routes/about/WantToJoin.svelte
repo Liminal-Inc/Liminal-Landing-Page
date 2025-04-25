@@ -18,8 +18,7 @@
 				<a
 					class="text-blue-500 underline"
 					target="_blank"
-					href="https://docs.google.com/forms/d/e/1FAIpQLSc1MCwMkBH8VnWTX3xvfYJ95HQQ5VsGdn2C7zAL0Z9huxLF8Q/viewform?usp=sf_link"
-					>Click Here</a
+					href="https://calendar.app.google/fAwGmDCeccJbcwKQ7">Meet with a Founder</a
 				>
 			</p>
 		</div>
