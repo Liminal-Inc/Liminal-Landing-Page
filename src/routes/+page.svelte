@@ -54,8 +54,7 @@
 				Poor documentation and lab turnover are brutal for labs.
 			</p>
 			<p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-				Learn from & leverage all the activity going on in your lab
-				<span>without</span> you having to micromanage.
+				Capture, Learn, and Leverage everything you do in the lab
 			</p>
 			<!-- <p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">Spend less grant money</p> -->
 			<!-- <p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">Train new scientists faster</p> -->
@@ -70,10 +69,116 @@
 	</div>
 </div>
 
+<!-- I want something with Liminal: Capture all the research and management activity in your lab -->
+<!-- Liminal: Effortlessly Research Capture -->
+<!-- Liminal: Capture More With Less -->
+<!-- Liminal: More Science. Less Overhead. -->
+<!-- Liminal: Capture the full value of your lab. -->
+
+<div class="pixel-divider my-16" />
+
+<section>
+	<div class="col-span-5 mb-4 flex flex-col justify-center items-center text-centerp-4 sm:p-2">
+		<p class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold">
+			More Science. Less Overhead.
+		</p>
+	</div>
+	<div class="text-white">
+		<p class="mb-2 text-2xl sm:text-xl md:text-2xl lg:text-2xl">
+			Liminal is a software app thats helps capture all the research and management activity in your
+			lab
+			<span class="italic">without</span> needing a lab manager.
+		</p>
+		<p class="text-purple-300 text-2xl sm:text-xl md:text-2xl lg:text-2xl">
+			Designed for busy labs
+			<span class="italic">without</span> extra hands or money.
+		</p>
+
+		<Table class="mt-2 text-white border border-white w-full text-lg sm:text-xl md:text-2xl">
+			<tbody>
+				<tr class="border-b border-white font-extrabold">
+					<td class="px-4 py-2 border-r border-white">Concern</td>
+					<td class="px-4 py-2 border-r">Applies to Liminal</td>
+					<td class="px-4 py-2">What you should know</td>
+				</tr>
+				<tr class="border-b border-white">
+					<td class="px-4 py-2 border-r border-white">I need a lab manager to use it</td>
+					<td class="px-4 py-2 border-r text-center">❌</td>
+					<td class="px-4 py-2"
+						>Liminal is built for PI- or student-run labs with no admin overhead.</td
+					>
+				</tr>
+				<tr class="border-b border-white">
+					<td class="px-4 py-2 border-r border-white">I don't have time for a new tool</td>
+					<td class="px-4 py-2 border-r text-center">❌</td>
+					<td class="px-4 py-2"
+						>Initial setup takes under 30 minutes and is primarily student-led.</td
+					>
+				</tr>
+				<tr class="border-b border-white">
+					<td class="px-4 py-2 border-r border-white">It won't work with our past data.</td>
+					<td class="px-4 py-2 border-r text-center">❌</td>
+					<td class="px-4 py-2"
+						>We integrate papers, notes, shell history, and other existing data.</td
+					>
+				</tr>
+				<tr class="border-b border-white">
+					<td class="px-4 py-2 border-r border-white">My lab isn't big enough.</td>
+					<td class="px-4 py-2 border-r text-center">❌</td>
+					<td class="px-4 py-2">Liminal is designed for labs as small as 1 person.</td>
+				</tr>
+			</tbody>
+		</Table>
+	</div>
+</section>
+
 <section>
 	<div class="pixel-divider my-16" />
 	<div class="w-full">
 		<ThreeTiers on:scrollToTarget={scrollToSection} />
+	</div>
+</section>
+
+<section>
+	<div
+		class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2"
+	>
+		<p class="text-purple-300 mt-2 mb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+			Liminal Research
+		</p>
+		<Video class="w-full h-auto" controls poster={posterUrl}>
+			<source src={videoUrl} type="video/mp4" />
+			Video not supported
+		</Video>
+		<div class="pixel-divider my-16" id="liminal-features" />
+		<p class="text-green-300 mt-2 mb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+			Liminal Collab
+		</p>
+		<Video class="w-full h-auto" controls poster={collabPostUrl}>
+			<source src={collabURL} type="video/mp4" />
+			Video not supported
+		</Video>
+		<div class="pixel-divider my-16" id="liminal-features" />
+		<p class="text-white mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+			<i class="fas fa-star text-yellow-400" /> Join Today
+			<i class="fas fa-star text-yellow-400" />
+		</p>
+		<p
+			class="w-full outline outline-white rounded-lg text-purple-300 hover:cursor-pointer hover:bg-purple-300 hover:text-white
+			  hover:underline p-4 transition-all duration-100 transform hover:-translate-y-1
+			  mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl"
+		>
+			<a class="block" href="/signup"> Join Liminal Research </a>
+		</p>
+		<p
+			class="w-full outline outline-white rounded-lg text-purple-300 hover:bg-purple-300 hover:underline hover:text-white
+	          p-4 transition-all duration-100 transform hover:-translate-y-1
+			  mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl"
+		>
+			<a class="block" target="_blank" href="https://discord.gg/NHYzApB3jj">
+				Join Discord Community
+			</a>
+		</p>
 	</div>
 </section>
 
@@ -115,47 +220,6 @@
 		of all lab work, and smart parsing of old data to suggest new research dissemination options.
 	</p>
 </section>
-
-<div class="pixel-divider my-16" />
-
-<div
-	class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2"
->
-	<p class="text-purple-300 mt-2 mb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-		Liminal Research
-	</p>
-	<Video class="w-full h-auto" controls poster={posterUrl}>
-		<source src={videoUrl} type="video/mp4" />
-		Video not supported
-	</Video>
-	<div class="pixel-divider my-16" id="liminal-features" />
-	<p class="text-green-300 mt-2 mb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">Liminal Collab</p>
-	<Video class="w-full h-auto" controls poster={collabPostUrl}>
-		<source src={collabURL} type="video/mp4" />
-		Video not supported
-	</Video>
-	<div class="pixel-divider my-16" id="liminal-features" />
-	<p class="text-white mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-		<i class="fas fa-star text-yellow-400" /> Join Today
-		<i class="fas fa-star text-yellow-400" />
-	</p>
-	<p
-		class="w-full outline outline-white rounded-lg text-purple-300 hover:cursor-pointer hover:bg-purple-300 hover:text-white
-			  hover:underline p-4 transition-all duration-100 transform hover:-translate-y-1
-			  mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl"
-	>
-		<a class="block" href="/signup"> Join Liminal Research </a>
-	</p>
-	<p
-		class="w-full outline outline-white rounded-lg text-purple-300 hover:bg-purple-300 hover:underline hover:text-white
-	          p-4 transition-all duration-100 transform hover:-translate-y-1
-			  mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl"
-	>
-		<a class="block" target="_blank" href="https://discord.gg/NHYzApB3jj">
-			Join Discord Community
-		</a>
-	</p>
-</div>
 
 <div class="pixel-divider my-16" />
 
