@@ -1,4 +1,6 @@
-<script lang="ts"></script>
+
+<script src="https://js.hsforms.net/forms/embed/48817868.js" defer>
+</script>
 
 <section class="min-h-screen bg-black text-white px-4 py-12">
 	<div class="max-w-3xl mx-auto bg-white text-black p-8">
