@@ -11,9 +11,15 @@
 
 	import videoUrl from '$lib/videos/demo_2.mp4';
 	import collabURL from '$lib/videos/Liminal-Collab-Minimal.mp4';
+	import notebooksURL from '$lib/videos/auto-notebooks.mp4'
+	import fileURL from '$lib/videos/file_processing_stacking.mp4'
+
 
 	import posterUrl from '$lib/images/demo-screenshot.jpg';
 	import collabPostUrl from '$lib/images/CollabScreenshot.png';
+	import shellUrl from '$lib/images/Shell-Syncing.jpg'
+	import fileposterURL from '$lib/images/FindingsScreenshot.jpg'
+	import { goto } from '$app/navigation';
 
 	let targetSection;
 	let collabSection;
@@ -22,6 +28,10 @@
 		if (targetSection) {
 			targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 		}
+	}
+
+	function handleClick() {
+		goto('/signup')
 	}
 </script>
 
@@ -67,6 +77,11 @@
 			</p>
 		</div>
 	</div>
+	<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
+		<p>
+			For <span class="text-blue-400">wet</span>, <span class="text-green-400">dry</span>, or <span class="text-purple-300">hybrid</span> life science labs
+		</p>
+	</div>
 </div>
 
 <!-- I want something with Liminal: Capture all the research and management activity in your lab -->
@@ -74,7 +89,81 @@
 <!-- Liminal: Capture More With Less -->
 <!-- Liminal: More Science. Less Overhead. -->
 <!-- Liminal: Capture the full value of your lab. -->
+<div class="pixel-divider my-16" />
+<section>
+	<div
+		class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2"
+	>
+		<p class="mb-2 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
+			1 Subscription to Liminal gets you <span class="text-purple-300">everything</span> for your whole lab:
+		</p>
+		<p class="text-purple-300 mt-2 mb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+			Liminal: Bioinformatics
+		</p>
+		<Video class="w-full h-auto" controls poster={shellUrl}>
+			<source src={notebooksURL} type="video/mp4" />
+			Video not supported
+		</Video>
+	</div>
+	<div
+		class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2"
+	>
+		<p class="text-purple-300 mt-2 mb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+			Liminal: Wet-Lab
+		</p>
+		<Video class="w-full h-auto" controls poster={posterUrl}>
+			<source src={videoUrl} type="video/mp4" />
+			Video not supported
+		</Video>
+	</div>
+	<div
+		class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2"
+	>
+		<p class="text-purple-300 mt-2 mb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+			Liminal: Messy files to plot-ready data
+		</p>
+		<Video class="w-full h-auto" controls poster={fileposterURL}>
+			<source src={fileURL} type="video/mp4" />
+			Video not supported
+		</Video>
+	</div>
+	<div
+		class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2"
+	>
+		<p class="text-purple-300 mt-2 mb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+			Liminal: AI
+		</p>
+		<p>Demos Coming Soon</p>
+		<!-- <Video class="w-full h-auto" controls poster={posterUrl}>
+			<source src={videoUrl} type="video/mp4" />
+			Video not supported
+		</Video> -->
+	</div>
+</section>
 
+
+<div class="pixel-divider my-16" />
+<section>
+	<div class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
+		<p class="mb-2">
+			Designed specifically for the needs of PIs
+		</p>
+		<ul>
+			<li>
+				- Simple onboarding
+			</li>
+			<li>
+				- Low complexity
+			</li>
+			<li>
+				- Student/staff driven adoption
+			</li>
+			<li>
+				- Low cost and no pay per seat
+			</li>
+		</ul>
+	</div>
+</section>
 <div class="pixel-divider my-16" />
 
 <section>
@@ -143,17 +232,33 @@
 	<div
 		class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2"
 	>
-		<p class="text-purple-300 mt-2 mb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-			Liminal Research
-		</p>
-		<Video class="w-full h-auto" controls poster={posterUrl}>
-			<source src={videoUrl} type="video/mp4" />
-			Video not supported
-		</Video>
 		<div class="pixel-divider my-16" id="liminal-features" />
-		<p class="text-green-300 mt-2 mb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-			Liminal Collab
-		</p>
+		<div class="mt-2 mb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+			<p>
+				Looking for collaborators? We also have a free social platform!
+			</p>
+		</div>
+		<div
+			class=" mb-8 outline outline-green-300 rounded-lg bg-black hover:bg-green-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+		>
+			<button on:click={() => goto('/features#collabSection')}>
+				<div class="mt-2 mb-2 text-2xl text-green-300">Liminal Collab</div>
+				<div class="mb-2">
+					<p>
+						Social platform exclusively for researchers who are actively looking for collaborators.
+					</p>
+				</div>
+				<hr />
+			</button>
+
+			<a
+				class="mt-2 block underline hover:bg-green-600 rounded-lg px-4 py-3"
+				target="_blank"
+				href="https://forms.gle/tdXLDyxwhAkGd2yR9"
+			>
+				🚀 Sign up now for free! 🐼
+			</a>
+		</div>
 		<Video class="w-full h-auto" controls poster={collabPostUrl}>
 			<source src={collabURL} type="video/mp4" />
 			Video not supported
@@ -367,6 +472,10 @@
 	<SubscribeButton />
 </div>
 
+<button class="floating-button" on:click={handleClick}>
+	Sign up
+</button>
+
 <style>
 	section {
 		display: flex;
@@ -374,5 +483,25 @@
 		justify-content: center;
 		align-items: center;
 		flex: 0.6;
+	}
+
+	.floating-button {
+		position: fixed;
+		bottom: 1.5rem;
+		right: 1.5rem;
+		background-color: #10cb0c;
+		color: white;
+		padding: 0.75rem 1.25rem;
+		border-radius: 9999px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		cursor: pointer;
+		z-index: 1000;
+		border: none;
+		font-weight: bold;
+		transition: background-color 0.2s;
+	}
+
+	.floating-button:hover {
+		background-color: #1dc411;
 	}
 </style>
