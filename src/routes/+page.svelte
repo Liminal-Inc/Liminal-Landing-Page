@@ -29,10 +29,6 @@
 			targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 		}
 	}
-
-	function handleClick() {
-		goto('/signup')
-	}
 </script>
 
 <svelte:head>
@@ -472,10 +468,6 @@
 	<SubscribeButton />
 </div>
 
-<button class="floating-button" on:click={handleClick}>
-	Sign up
-</button>
-
 <style>
 	section {
 		display: flex;
@@ -483,25 +475,5 @@
 		justify-content: center;
 		align-items: center;
 		flex: 0.6;
-	}
-
-	.floating-button {
-		position: fixed;
-		bottom: 1.5rem;
-		right: 1.5rem;
-		background-color: #10cb0c;
-		color: white;
-		padding: 0.75rem 1.25rem;
-		border-radius: 9999px;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-		cursor: pointer;
-		z-index: 1000;
-		border: none;
-		font-weight: bold;
-		transition: background-color 0.2s;
-	}
-
-	.floating-button:hover {
-		background-color: #1dc411;
 	}
 </style>
