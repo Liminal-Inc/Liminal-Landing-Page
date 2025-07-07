@@ -1,9 +1,8 @@
 <script lang="ts">
-	import InTheBox from '../InTheBox.svelte';
 	import LiminalCollab from './LiminalCollab.svelte';
-	import GrantHelper from './GrantHelper.svelte';
 
 	import { onMount } from 'svelte';
+	import ShellSync from '../ShellSync.svelte';
 
 	let collabSection;
 	let researchSection;
@@ -21,14 +20,14 @@
 </script>
 
 <div
-	class="mb-2 text-lg sm:text-xl md:text-2xl lg:text-3xl text-purple-300"
+	class="mb-2 text-lg sm:text-xl md:text-2xl lg:text-3xl text-white font-extrabold"
 	bind:this={researchSection}
 >
-	Liminal Research
+	Liminal Bioinformatics
 </div>
 
 <section>
-	<InTheBox showMore={true} />
+	<ShellSync showMore={true} />
 </section>
 
 <hr class="my-8 outline-white" />
