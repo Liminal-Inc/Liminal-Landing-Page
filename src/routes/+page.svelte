@@ -1,24 +1,10 @@
 <script lang="ts">
-	import logoURL from '$lib/images/Logo-24Jul2024.png';
-	import NewsFeed from './NewsFeed.svelte';
-	import InTheBox from './InTheBox.svelte';
-	import TheProblem from './TheProblem.svelte';
-	import ThreeTiers from './ThreeTiers.svelte';
 	import { Table, Video } from 'flowbite-svelte';
-	import SubscribeButton from '$lib/subscribeButton.svelte';
 
-	let whatDoesLiminal = false;
-
-	import videoUrl from '$lib/videos/demo_2.mp4';
 	import collabURL from '$lib/videos/Liminal-Collab-Minimal.mp4';
 	import notebooksURL from '$lib/videos/auto-notebooks.mp4';
-	import fileURL from '$lib/videos/file_processing_stacking.mp4';
 	import shellsyncing from '$lib/images/Shell-Syncing.jpg';
-
-	import posterUrl from '$lib/images/demo-screenshot.jpg';
 	import collabPostUrl from '$lib/images/CollabScreenshot.png';
-	import shellUrl from '$lib/images/Shell-Syncing.jpg';
-	import fileposterURL from '$lib/images/FindingsScreenshot.jpg';
 	import { goto } from '$app/navigation';
 
 	let targetSection;
