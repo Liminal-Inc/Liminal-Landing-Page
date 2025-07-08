@@ -9,17 +9,28 @@
 		Our Mission
 	</p>
 	<div class="p-4 text-lg text-white">
-		<p>
-			Empower scientists - students, staff, and faculty - to accumulate as much knowledge and value
-			as possible during their time in the lab. We organize all the moving parts of research so the
-			scientist can spend less time tediously documenting and combining data.
+		<p style="text-indent: 2em">
+			We invest our time towards software solutions that <span class="text-2xl">maximize</span>
+			individual and lab-wide productivity while <span class="text-2xl">minimizing</span> behavioral
+			changes. We specialize in lab grade software at an
+			<span class="text-2xl">affordable price</span> for any size lab, down to the individual
+			scientist. We believe there is no 1-size fits all lab solution and instead of focusing on
+			bulky solutions we provide <span class="text-2xl">targeted solutions</span> that work together
+			for the custom needs of the individual scientist.
 		</p>
-		<p>
-			Liminal believes all research is valuable, and the idea of good versus bad results is a false
-			dichotomy. We want to help acknowledge all the hidden work that goes into research and bring
-			credit to the effort. We aim to make research more connected, reproducible, and easier to
-			disseminate. We are devoted to simplifying the academic lab by providing 1 piece of software
-			to connect the whole research ecosystem.
+		<br />
+		<p style="text-indent: 2em">
+			Liminal aims to empower scientists - students, staff, and faculty - to accumulate as much
+			knowledge and value as possible during their time in the lab. We organize the moving parts of
+			research using advanced software so the scientist can spend less time tediously documenting
+			and combining data.
+		</p>
+		<p style="text-indent: 2em">
+			Liminal believes all research is valuable, and the idea of good versus bad results is a
+			<span class="text-2xl">false dichotomy</span>. We acknowledge all the hidden work that goes
+			into research and understand the <span class="text-2xl">credit</span> the effort deserves. We aim
+			to make research more connected, reproducible, and easier to disseminate. We are devoted to boosting
+			the academic lab by providing simple to use, quick to install, and lab-grade software.
 		</p>
 	</div>
 </div>

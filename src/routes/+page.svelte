@@ -127,6 +127,11 @@
 			<li>- Search and learn from your own/teams bioinformatics work</li>
 			<li>- Be a leader in bioinformatics with 100% FAIR data</li>
 			<li>- Leverage AI through your custom notebook workflow</li>
+			<li>
+				- Write Liminal into your <span class="underline text-green-400"
+					>Data Management Plan!!!</span
+				>
+			</li>
 		</ul>
 	</div>
 </section>
@@ -205,12 +210,13 @@
 	</Table>
 	<p class="text-2xl text-white mt-4">
 		Liminal is a data capture app designed for academic labs to retain and leverage 100% of all the
-		research they do. Whether you are writing a notebook entry, updating the inventory, or adding a
-		sticky note to that finnicky piece of equipment, Liminal's vision is to capture it all.
+		research they do with rigorous standards. Don't lose any more work you do on the shell. Use
+		every keystroke as a tool to teach new scientists and retain knowledge from everyone in your
+		group.
 	</p>
 	<p class="text-2xl text-white mt-4">
-		Liminal learns from everything you do, becoming your digital lab manager and expert in what you
-		do. Liminal's AI features offer personalized learning and organization of your lab work.
+		Whether you are writing a notebook entry, updating the inventory, or adding a sticky note to
+		that finnicky piece of equipment, Liminal's vision is to capture it all.
 	</p>
 </section>
 
@@ -284,7 +290,9 @@
 							<div class="text-lg">
 								<ul class="list-disc list-inside">
 									<li>
-										Click the <span class="text-green-400">green sign Up button</span> in the corner!
+										Click the <a href="/signup" class="text-green-400"
+											>Click Here or the Green Signup Button</a
+										> in the corner!
 									</li>
 									<li>
 										Book a <a

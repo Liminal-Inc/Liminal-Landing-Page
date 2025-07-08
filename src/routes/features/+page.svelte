@@ -34,20 +34,26 @@
 
 <div class="text-white space-y-12 mt-8">
 	<section class="">
+		<h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 underline">
+			Shell Support
+		</h2>
+		<p class="text-lg leading-relaxed">
+			Currently we only support BASH and ZSH. If customer demand requires other shell support we
+			will provide that as necessary.
+		</p>
+	</section>
+
+	<section class="">
 		<h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 underline">AI</h2>
 		<p class="text-lg leading-relaxed">
 			For now, we are using the latest LLM model from OpenAI. We use retrieval-augmented generation
-			(RAG) to ensure that the AI is always up to date with the latest information from your lab.
-			This allows the AI to provide accurate and relevant responses based on the most recent data
-			from your lab.
+			(RAG) and prompt engineering to ensure that the AI is always up to date with the latest
+			information from your lab. This allows the AI to provide accurate and relevant responses based
+			on the most recent data from your lab.
 		</p>
 		<p class="text-lg leading-relaxed mt-4">
-			Every time you add a new object to Liminal, the AI is updated with that information. For
-			example, if you add a new sample, the AI will know about it and be able to answer questions
-			about it. Say you add a knowledge note to your agarose powder that "users must secure the lid
-			tightly to prevent drying out."" The AI will remember this and be able to answer questions
-			about it in the future. This can even turn into an alert if another user references Agarose in
-			their own notebook entry!
+			We are working on allowing local and on-premise LLMs for our users. This ensures no data
+			leakage and the ultimate privacy.
 		</p>
 	</section>
 
@@ -58,26 +64,8 @@
 		<p class="text-lg leading-relaxed">
 			Right now, all Liminal data is stored on secure cloud storage. We are working on allowing you
 			to choose your own storage provider. Users will be able to "plug in" their own storage
-			provider, such as the cloud storage providers your University already supports or a University
-			compute cluster.
-		</p>
-		<p class="text-lg leading-relaxed mt-4">
-			For example, at Purdue University, where the first labs are using Liminal, we are working to
-			integrate with the Purdue Research Computing storage system. This will allow researchers to
-			use their existing storage without worrying about moving data around—making Liminal more
-			affordable and easier to use.
-		</p>
-	</section>
-
-	<section class="">
-		<h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 underline">
-			Compute Power
-		</h2>
-		<p class="text-lg leading-relaxed">
-			Currently, all Liminal computing is handled on a cloud server. However, we are working on
-			allowing users to "plug in" their own compute source, much like data storage. This will enable
-			users to leverage their own compute resources, such as a University compute cluster or
-			cloud-based compute options.
+			provider, such as the cloud storage providers your University already supports or another
+			location of your choice.
 		</p>
 	</section>
 
@@ -86,28 +74,20 @@
 			Login and Authentication
 		</h2>
 		<p class="text-lg leading-relaxed">
-			We are working on allowing users to log in using their existing University credentials. This
-			integration will simplify access, eliminating the need for additional passwords, and make it
-			easier for University IT teams to manage permissions.
-		</p>
-		<p class="text-lg leading-relaxed mt-4">
-			Alternatively, users can log in with a Google account or create a separate Liminal account for
-			authentication.
+			We do not store or use passwords for login. Users login using their email of choice and
+			receive a 1-time login link through their email.
 		</p>
 	</section>
 
 	<section class="">
 		<h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 underline">
-			Data Provenance & Reproducibility
+			Data Provenance & Privacy
 		</h2>
 		<p class="text-lg leading-relaxed">
-			Liminal consists of various "entities" or "objects" representing different parts of your lab.
-			The platform is designed to interconnect these entities, giving you a complete view of how
-			everything in your lab is related.
-		</p>
-		<p class="text-lg leading-relaxed mt-4">
-			The **notebook** serves as the hub for tracking and referencing relevant objects, ensuring
-			data provenance and reproducibility in your research.
+			As a company that is made up of academic scientists, we understand how precious our research
+			data is. We try to uphold the most favorable data provenance and privacy standards, ensuring
+			you always have access and complete ownership of your data. We've been working with several
+			Universities to ensure this is a product compatible for our fellow academic scientists.
 		</p>
 	</section>
 </div>
@@ -116,7 +96,3 @@
 
 <LiminalCollab />
 <br />
-
-<!-- <div class="pixel-divider my-16"/> -->
-
-<!-- <GrantHelper/> -->
