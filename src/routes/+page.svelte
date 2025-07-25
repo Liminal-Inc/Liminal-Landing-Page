@@ -1,11 +1,5 @@
 <script lang="ts">
-	import { Button, Table, Video } from 'flowbite-svelte';
-
-	import whatIsLiminalVideo from '$lib/videos/What-is-Liminal-SS-V1.mp4';
-	import installVideo from '$lib/videos/Liminal-Install.mp4';
-	import powerUserVideo from '$lib/videos/PowerUser-finding-own-work-1080-high.mp4';
-	import piVideo from '$lib/videos/PI-Finding-Data-V1-1080_high.mp4';
-	import liminalSyncPoster from '$lib/images/Liminal-Sync-Poster.jpg';
+	import { Button, Table } from 'flowbite-svelte';
 
 	import { goto } from '$app/navigation';
 
@@ -80,30 +74,28 @@
 	<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
 		<p>Full Walkthrough</p>
 	</div>
-	<div
-		class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2"
-	>
-		<Video
-			class="w-full h-auto"
-			controls
-			poster={liminalSyncPoster}
-			src={whatIsLiminalVideo}
-			type="video/mp4"
-		>
-			Video not supported
-		</Video>
+	<div class="w-full aspect-video">
+		<iframe
+			title="What is Liminal"
+			src="https://drive.google.com/file/d/1C6j0xmrjyPpGvQT76KgmYL3v66Up9Lg_/preview"
+			frameborder="0"
+			allowfullscreen
+			class="w-full h-full"
+		/>
 	</div>
 
 	<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
 		<p>30 second installation</p>
 	</div>
 
-	<div
-		class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2"
-	>
-		<Video class="w-full h-auto" controls src={installVideo} type="video/mp4">
-			Video not supported
-		</Video>
+	<div class="w-full aspect-video">
+		<iframe
+			title="What is Liminal"
+			src="https://drive.google.com/file/d/1xBFsZwu_LeFLp0VT8nsZYzw2owYMsGkA/preview"
+			frameborder="0"
+			allowfullscreen
+			class="w-full h-full"
+		/>
 	</div>
 </section>
 
@@ -135,22 +127,28 @@
 	<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
 		<p>For the PIs...</p>
 	</div>
-	<div
-		class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2"
-	>
-		<Video class="w-full h-auto" controls src={piVideo} type="video/mp4">Video not supported</Video>
+
+	<div class="w-full aspect-video">
+		<iframe
+			title="What is Liminal"
+			src="https://drive.google.com/file/d/18mWLF0lu1NrwJzEI6Vi1ZqGTVXd_ikvJ/preview"
+			frameborder="0"
+			allowfullscreen
+			class="w-full h-full"
+		/>
 	</div>
 
 	<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
 		<p>For the boots-on-ground scientists...</p>
 	</div>
-
-	<div
-		class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2"
-	>
-		<Video class="w-full h-auto" controls src={powerUserVideo} type="video/mp4">
-			Video not supported
-		</Video>
+	<div class="w-full aspect-video">
+		<iframe
+			title="What is Liminal"
+			src="https://drive.google.com/file/d/1oAZXhYbS3wO9Sf9mxEr1Ca_HI91A8Q6T/preview"
+			frameborder="0"
+			allowfullscreen
+			class="w-full h-full"
+		/>
 	</div>
 </section>
 
