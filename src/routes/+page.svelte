@@ -1,16 +1,5 @@
 <script lang="ts">
 	import { Button, Table } from 'flowbite-svelte';
-
-	import { goto } from '$app/navigation';
-
-	let targetSection;
-	let collabSection;
-
-	function scrollToSection() {
-		if (targetSection) {
-			targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-		}
-	}
 </script>
 
 <svelte:head>
@@ -342,42 +331,6 @@
 		</div>
 	</div>
 </section>
-
-<!-- <section>
-	<div
-		class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2"
-	>
-		<div class="pixel-divider my-16" id="liminal-features" />
-		<div class="mt-2 mb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-			<p>Looking for collaborators? We also have a free social platform!</p>
-		</div>
-		<div
-			class=" mb-8 outline outline-green-300 rounded-lg bg-black hover:bg-green-300 p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-		>
-			<button on:click={() => goto('/features#collabSection')}>
-				<div class="mt-2 mb-2 text-2xl text-green-300">Liminal Collab</div>
-				<div class="mb-2">
-					<p>
-						Social platform exclusively for researchers who are actively looking for collaborators.
-					</p>
-				</div>
-				<hr />
-			</button>
-
-			<a
-				class="mt-2 block underline hover:bg-green-600 rounded-lg px-4 py-3"
-				target="_blank"
-				href="https://forms.gle/tdXLDyxwhAkGd2yR9"
-			>
-				🚀 Sign up now for free! 🐼
-			</a>
-		</div>
-		<Video class="w-full h-auto" controls poster={collabPostUrl}>
-			<source src={collabURL} type="video/mp4" />
-			Video not supported
-		</Video>
-	</div>
-</section> -->
 
 <div class="pixel-divider my-16" />
 <div class="text-white text-2xl mt-8 mb-16 text-center">
