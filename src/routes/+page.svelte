@@ -1,10 +1,12 @@
 <script lang="ts">
-	import { Table, Video } from 'flowbite-svelte';
+	import { Button, Table, Video } from 'flowbite-svelte';
 
-	import collabURL from '$lib/videos/Liminal-Collab-Minimal.mp4';
-	import notebooksURL from '$lib/videos/auto-notebooks.mp4';
-	import shellsyncing from '$lib/images/Shell-Syncing.jpg';
-	import collabPostUrl from '$lib/images/CollabScreenshot.png';
+	import whatIsLiminalVideo from '$lib/videos/What-is-Liminal-SS-V1.mp4';
+	import installVideo from '$lib/videos/Liminal-Install.mp4';
+	import powerUserVideo from '$lib/videos/PowerUser-finding-own-work-1080-high.mp4';
+	import piVideo from '$lib/videos/PI-Finding-Data-V1-1080_high.mp4';
+	import liminalSyncPoster from '$lib/images/Liminal-Sync-Poster.jpg';
+
 	import { goto } from '$app/navigation';
 
 	let targetSection;
@@ -30,76 +32,125 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
 />
 
-<div class="grid grid-cols-5 gap-1 justify-evenly">
-	<div
-		class="col-span-5 flex flex-col md:flex-row justify-start items-center mt-4 text-center text-white p-4 sm:p-2"
-	>
-		<!-- Left column for the larger text -->
-		<div class="md:w-1/2 text-left md:text-right md:pr-4">
-			<p class="text-purple-300 text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold">
-				0-Effort Solution to Reproducible & Shareable Bioinformatics
-			</p>
+<section id="headline">
+	<div class="grid grid-cols-5 gap-1 justify-evenly">
+		<div
+			class="col-span-5 flex flex-col md:flex-row justify-start items-center mt-4 text-center text-white p-4 sm:p-2"
+		>
+			<!-- Left column for the larger text -->
+			<div class="md:w-1/2 text-left md:text-right md:pr-4">
+				<p
+					class="text-purple-300 text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold text-center"
+				>
+					⚡️Tap into⚡️ Supercharged Bioinformatics
+					<!-- Activate ⚡️ Supercharged Bioinformatics -->
+				</p>
+			</div>
+			<!-- Right column for the other paragraphs -->
+			<div class="md:w-1/2 flex flex-col justify-start items-start text-left md:text-left md:pl-4">
+				<p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+					Auto-generate your notebook from command-line history
+				</p>
+				<p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+					Install and use in &lt; 5 minutes
+				</p>
+				<Button
+					href="/signup"
+					size="lg"
+					pill
+					class="bg-green-400 hover:bg-green-500 text-white w-full mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl flex flex-col items-center leading-tight"
+				>
+					<div class="text-center">
+						Get Access
+						<div class="text-sm md:text-base text-white/80">No meeting required!</div>
+					</div>
+				</Button>
+			</div>
 		</div>
-		<!-- Right column for the other paragraphs -->
-		<div class="md:w-1/2 flex flex-col justify-start items-start text-left md:text-left md:pl-4">
-			<p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-				Automate your terminal to create your custom lab notebook
-			</p>
-			<p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">Only $20 / user / month</p>
-			<!-- <p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">Spend less grant money</p> -->
-			<!-- <p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">Train new scientists faster</p> -->
-			<p
-				class="w-full outline outline-white rounded-lg text-purple-300 hover:cursor-pointer hover:bg-purple-300 hover:text-white
-			  hover:underline p-4 transition-all duration-100 transform hover:-translate-y-1
-			  mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl"
-			>
-				<a class="block" href="/signup">Get Liminal Today</a>
+		<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
+			<p>
+				Academic pricing, plain and simple: <span class="text-green-400">$20/month</span>
 			</p>
 		</div>
 	</div>
-	<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
-		<p>
-			<span class="text-green-400">Save up to 10 hours a month for $20</span>
-		</p>
-	</div>
-</div>
+</section>
 
 <div class="pixel-divider my-16" />
 <section id="media-section">
+	<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
+		<p>Full Walkthrough</p>
+	</div>
 	<div
 		class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2"
 	>
-		<p class="text-purple-300 mt-2 mb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-			&lt; 5 minute installation & configuration
-		</p>
-		<img class="w-full h-auto" src={shellsyncing} alt="shell-sync preview" />
+		<Video
+			class="w-full h-auto"
+			controls
+			poster={liminalSyncPoster}
+			src={whatIsLiminalVideo}
+			type="video/mp4"
+		>
+			Video not supported
+		</Video>
+	</div>
+
+	<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
+		<p>30 second installation</p>
 	</div>
 
 	<div
 		class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2"
 	>
-		<p class="text-purple-300 mt-2 mb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-			Liminal: How it saves you time
-		</p>
-		<Video class="w-full h-auto" controls>
-			<source src={notebooksURL} type="video/mp4" />
+		<Video class="w-full h-auto" controls src={installVideo} type="video/mp4">
 			Video not supported
 		</Video>
 	</div>
 </section>
 
 <div class="pixel-divider my-16" />
-<section>
+<section id="principles-and-values">
 	<div class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold">
-		<p class="mb-2 text-purple-300 font-extrabold text-center">
+		<div
+			class="text-purple-300 text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold text-center"
+		>
+			<p class="font-extrabold">Perfect record keeping.</p>
+			<p class="font-extrabold">0 effort. 100% recall.</p>
+		</div>
+	</div>
+	<div class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold">
+		<p class="mb-2 text-green-400 font-extrabold text-center">
 			Designed specifically for the needs of academic scientists
 		</p>
 		<ul class="font-normal">
 			<li>- Start using within 5 minutes</li>
-			<li>- 0-effort to use</li>
-			<li>- Affordably priced for grad students to PIs</li>
+			<li>- Integrates with your existing workflow</li>
+			<li>- Affordably priced for scientists of all stages</li>
 			<li>- Lab-grade software: rigorous reproducibility and scientific vigor</li>
 		</ul>
+	</div>
+</section>
+
+<div class="pixel-divider my-16" />
+<section id="media-problems-section">
+	<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
+		<p>For the PIs...</p>
+	</div>
+	<div
+		class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2"
+	>
+		<Video class="w-full h-auto" controls src={piVideo} type="video/mp4">Video not supported</Video>
+	</div>
+
+	<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
+		<p>For the boots-on-ground scientists...</p>
+	</div>
+
+	<div
+		class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2"
+	>
+		<Video class="w-full h-auto" controls src={powerUserVideo} type="video/mp4">
+			Video not supported
+		</Video>
 	</div>
 </section>
 
@@ -114,20 +165,17 @@
 			<li>- Be a leader in bioinformatics with 100% FAIR data</li>
 			<li>- Leverage AI through your custom notebook workflow</li>
 			<li>
-				- Write Liminal into your <span class="underline text-green-400"
-					>Data Management Plan!!!</span
-				>
+				- Write Liminal into your <span class="underline italic">Data Management Plan!</span>
 			</li>
 		</ul>
 	</div>
 </section>
 
 <div class="pixel-divider my-16" />
-
 <section>
 	<div class="col-span-5 mb-4 flex flex-col justify-center items-center text-centerp-4 sm:p-2">
-		<p class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold">
-			More Science. Less Overhead.
+		<p class="text-green-400 text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold">
+			Don't let these concerns get in the way of perfect record keeping.
 		</p>
 	</div>
 	<div class="text-white">
@@ -169,10 +217,10 @@
 
 <section class="w-full">
 	<div class="pixel-divider my-16" />
-	<p class="text-2xl text-white mb-4">
-		Labs in academia are losing an enormous portion of their research each year due to:
+	<p class="text-purple-300 text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold mb-4">
+		Lost & undocumented research is a crisis in academia
 	</p>
-	<Table class="text-white border border-white w-full text-lg sm:text-xl md:text-2xl">
+	<Table class="text-white border border-white w-full text-lg sm:text-xl md:text-2xl mt-2">
 		<thead class="bg-transparent border-b border-white">
 			<tr>
 				<th class="px-4 py-2 border-r border-white">Event</th>
@@ -201,8 +249,8 @@
 		group.
 	</p>
 	<p class="text-2xl text-white mt-4">
-		Whether you are writing a notebook entry, updating the inventory, or adding a sticky note to
-		that finnicky piece of equipment, Liminal's vision is to capture it all.
+		Liminal's vision is to capture all the work you do on your computer so you never need to worry
+		about lab recording standards again.
 	</p>
 </section>
 
@@ -297,7 +345,7 @@
 	</div>
 </section>
 
-<section>
+<!-- <section>
 	<div
 		class="col-span-5 flex flex-col justify-center items-center mt-4 text-center text-white p-4 sm:p-2"
 	>
@@ -331,7 +379,7 @@
 			Video not supported
 		</Video>
 	</div>
-</section>
+</section> -->
 
 <div class="pixel-divider my-16" />
 <div class="text-white text-2xl mt-8 mb-16 text-center">

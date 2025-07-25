@@ -6,7 +6,7 @@
 	import Footer from '$lib/Footer.svelte';
 	import LiminalNavbar from '$lib/Navbar.svelte';
 
-	import posthog from 'posthog-js'
+	import posthog from 'posthog-js';
 	import { browser } from '$app/environment';
 	import { beforeNavigate, afterNavigate, goto } from '$app/navigation';
 
@@ -16,7 +16,7 @@
 	}
 
 	function handleClick() {
-		goto('/signup')
+		goto('/signup');
 	}
 </script>
 
@@ -28,9 +28,7 @@
 	<Footer />
 </div>
 
-<button class="floating-button" on:click={handleClick}>
-	Sign up
-</button>
+<button class="floating-button" on:click={handleClick}> Sign up </button>
 
 <style>
 	.app {
@@ -49,11 +47,11 @@
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
-		.floating-button {
+	.floating-button {
 		position: fixed;
 		bottom: 1.5rem;
 		right: 1.5rem;
-		background-color: #10cb0c;
+		background-color: #4ade80;
 		color: white;
 		padding: 0.75rem 1.25rem;
 		border-radius: 9999px;
