@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Button, Table } from 'flowbite-svelte';
+	// Comment
 </script>
 
 <svelte:head>
