@@ -123,7 +123,7 @@
 		<img src={feedimg} class="w-42 h-42" alt="Liminal Logo" />
 	</div>
 	<div class="text-lg">
-		<li>Share your shell history with a click of a button!</li>
+		<li>Share your shell history with a click of a button</li>
 		<li>Sync as many shells as you'd like to one activity feed</li>
 		<li>Learn from and understand what work your collaborators are doing</li>
 	</div>

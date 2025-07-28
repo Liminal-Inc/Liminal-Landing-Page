@@ -9,7 +9,7 @@
 		Our Mission
 	</p>
 	<div class="p-4 text-lg text-white">
-		<p style="text-indent: 2em">
+		<p style="">
 			We invest our time towards software solutions that <span class="text-2xl">maximize</span>
 			individual and lab-wide productivity while <span class="text-2xl">minimizing</span> behavioral
 			changes. We specialize in lab grade software at an
@@ -19,13 +19,14 @@
 			for the custom needs of the individual scientist.
 		</p>
 		<br />
-		<p style="text-indent: 2em">
+		<p style="">
 			Liminal aims to empower scientists - students, staff, and faculty - to accumulate as much
 			knowledge and value as possible during their time in the lab. We organize the moving parts of
 			research using advanced software so the scientist can spend less time tediously documenting
 			and combining data.
 		</p>
-		<p style="text-indent: 2em">
+		<br />
+		<p style="">
 			Liminal believes all research is valuable, and the idea of good versus bad results is a
 			<span class="text-2xl">false dichotomy</span>. We acknowledge all the hidden work that goes
 			into research and understand the <span class="text-2xl">credit</span> the effort deserves. We aim

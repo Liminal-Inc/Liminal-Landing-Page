@@ -14,13 +14,14 @@
 </svelte:head>
 
 <div class="grid grid-cols-1 w-full sm:grid-cols-1 gap-2 justify-evenly text-black text-lg">
-	<CompanyInfo />
-	<div class="pixel-divider col-span-4 my-10" />
 	<FounderGrid />
 	<div class="pixel-divider col-span-4 my-10" />
 	<ExtendedTeam />
-	<!-- <div class="pixel-divider col-span-2"></div> -->
 	<div class="pixel-divider col-span-4 my-10" />
+	<CompanyInfo />
+	<div class="pixel-divider col-span-4 my-10" />
+
+	<!-- <div class="pixel-divider col-span-4 my-10" /> -->
 	<WantToJoin />
 	<div class="pixel-divider col-span-4 my-10" />
 </div>

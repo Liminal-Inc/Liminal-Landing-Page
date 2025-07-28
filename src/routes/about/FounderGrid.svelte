@@ -1,96 +1,86 @@
 <script>
+	// Optional: import profile photos
+	import daneImg from '$lib/images/dane_deemer_2.jpg';
+	import mavImg from '$lib/images/mav.jpg';
+	import steveImg from '$lib/images/steve_lindemann.jpg';
+
+	const founderData = [
+		{
+			name: 'Dane Deemer',
+			title: 'Chief Executive Officer',
+			bio: 'Lab manager and computational biologist.',
+			img: daneImg,
+			links: [
+				{ label: 'GitHub', url: 'https://github.com/ddeemerpurdue' },
+				{ label: 'LinkedIn', url: 'https://www.linkedin.com/in/dane-deemer-054350100/' }
+			]
+		},
+		{
+			name: 'Maverick Cook',
+			title: 'Chief Technology Officer',
+			bio: 'Software engineer and full-stack developer.',
+			img: mavImg,
+			links: [
+				{ label: 'GitHub', url: 'https://github.com/mavcook' },
+				{ label: 'LinkedIn', url: 'https://www.linkedin.com/in/mavcook/' }
+			]
+		},
+		{
+			name: 'Dr. Stephen Lindemann',
+			title: 'Chief Scientific Officer',
+			bio: 'Professor in Food Science and Biology at Purdue University.',
+			img: steveImg,
+			links: [
+				{ label: 'Lab', url: 'https://ag.purdue.edu/department/foodsci/lindemannlab/' },
+				{ label: 'LinkedIn', url: 'https://www.linkedin.com/in/steve-lindemann-64997320/' }
+			]
+		}
+	];
 </script>
 
 <div class="text-2xl">
-	<!-- Below, nested grid -->
 	<div class="outline outline-gray-600 rounded-lg">
-		<div class="">
-			<p
-				class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold py-4 px-4 text-black text-center bg-purple-300"
-			>
-				Our Founders
-			</p>
-		</div>
-		<!-- Dane -->
-		<div class="text-white">
-			<div class="py-2">
-				<div class="flex-grow">
-					<p class="p-2 text-lg sm:text-xl md:text-2xl lg:text-2xl">
-						<span class="font-bold">Dane Deemer</span>, Chief Executive Officer
-					</p>
-					<hr class="white-line" />
-					<div class="mt-2 mb-2 px-2 text-lg">Lab manager and computational biologist.</div>
-				</div>
-				<hr class="my-2" />
-				<div class="ml-2 text-sm">
-					<a
-						href="https://github.com/ddeemerpurdue"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="text-blue-700 hover:text-white">GitHub</a
-					>
-					<a
-						href="https://www.linkedin.com/in/dane-deemer-054350100/"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="text-blue-700 hover:text-white">LinkedIn</a
-					>
-				</div>
-			</div>
+		<p
+			class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold py-4 px-4 text-black text-center bg-purple-300"
+		>
+			Our Founders
+		</p>
 
-			<!-- Maverick -->
-			<div class="py-2">
-				<div class="flex-grow">
-					<p class="p-2 text-lg sm:text-xl md:text-2xl lg:text-2xl">
-						<span class="font-bold">Maverick Cook</span>, Chief Technology Officer
-					</p>
-					<!-- <p class="px-2 text-md font-bold">Chief Technology Officer</p> -->
-					<hr class="white-line" />
-					<div class="mt-2 mb-2 px-2 text-lg">Software engineer and full-stack developer.</div>
-				</div>
-				<hr class="my-2" />
-				<div class="ml-2 text-sm">
-					<a
-						href="https://github.com/mavcook"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="text-blue-700 hover:text-white">GitHub</a
-					>
-					<a
-						href="https://www.linkedin.com/in/mavcook/"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="text-blue-700 hover:text-white">LinkedIn</a
-					>
-				</div>
-			</div>
-			<!-- Steve -->
-			<div class="py-2">
-				<div class="flex-grow">
-					<p class="p-2 text-lg sm:text-xl md:text-2xl lg:text-2xl">
-						<span class="font-bold">Dr. Stephen Lindemann</span>, Chief Scientific Officer
-					</p>
-					<hr class="white-line" />
-					<div class="mt-2 mb-2 px-2 text-lg">
-						Professor in Food Science and Biology at Purdue University.
+		<!-- Founder block -->
+		{#each founderData as person}
+			<div
+				class="flex flex-col md:flex-row items-center justify-center gap-6 py-6 px-4 border-t border-gray-700 first:border-t-0"
+			>
+				<!-- Left: Image + Title + Links -->
+				<div class="flex flex-col items-center text-center w-full md:w-1/3">
+					{#if person.img}
+						<img
+							src={person.img}
+							alt={person.name}
+							class="w-32 h-32 rounded-full object-cover mb-4"
+						/>
+					{/if}
+					<p class="text-xl font-bold">{person.name}</p>
+					<p class="text-md text-gray-300">{person.title}</p>
+					<div class="mt-2 space-x-4">
+						{#each person.links as link}
+							<a
+								href={link.url}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="text-blue-500 hover:underline"
+							>
+								{link.label}
+							</a>
+						{/each}
 					</div>
 				</div>
-				<hr class="my-2" />
-				<div class="ml-2 text-sm mb-2">
-					<a
-						href="https://ag.purdue.edu/department/foodsci/lindemannlab/"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="text-green-700 hover:text-white">Lab</a
-					>
-					<a
-						href="https://www.linkedin.com/in/steve-lindemann-64997320/"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="text-blue-700 hover:text-white">LinkedIn</a
-					>
+
+				<!-- Right: Bio -->
+				<div class="text-left w-full md:w-2/3 text-lg text-white">
+					{person.bio}
 				</div>
 			</div>
-		</div>
+		{/each}
 	</div>
 </div>
