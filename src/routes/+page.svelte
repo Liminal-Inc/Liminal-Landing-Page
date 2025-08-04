@@ -7,8 +7,15 @@
 	<title>Home</title>
 	<meta
 		name="description"
-		content="Liminalbios Data Network application for academic life science research"
+		content="Liminal automatically turns shell history into structured lab notebook entries. Install in under 5 minutes. No training, affordable, FAIR-compliant."
 	/>
+	<meta property="og:title" content="Liminal - Turn Shell History into Scientific Insight" />
+	<meta
+		property="og:description"
+		content="Save hours documenting bioinformatics work. Liminal converts command-line activity into searchable, FAIR-compliant notebook entries. For labs of all sizes."
+	/>
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://liminalbios.com/" />
 </svelte:head>
 
 <link
@@ -23,21 +30,21 @@
 		>
 			<!-- Left column for the larger text -->
 			<div class="md:w-1/2 text-left md:text-right md:pr-4">
-				<p
+				<h2
 					class="text-purple-300 text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold text-center"
 				>
 					⚡️Tap into⚡️ Supercharged Bioinformatics
 					<!-- Activate ⚡️ Supercharged Bioinformatics -->
-				</p>
+				</h2>
 			</div>
 			<!-- Right column for the other paragraphs -->
 			<div class="md:w-1/2 flex flex-col justify-start items-start text-left md:text-left md:pl-4">
-				<p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-					Auto-generate your notebook from command-line history
-				</p>
-				<p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+				<h1 class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl text-left">
+					Turn Your Command Line into a Scientific Notebook in Seconds
+				</h1>
+				<h2 class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
 					Install and use in &lt; 5 minutes
-				</p>
+				</h2>
 				<Button
 					href="/signup"
 					size="lg"
@@ -52,21 +59,23 @@
 			</div>
 		</div>
 		<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
-			<p>
+			<h2>
 				Academic pricing, plain and simple: <span class="text-green-400">$20/month</span>
-			</p>
+			</h2>
 		</div>
 	</div>
 </section>
 
 <div class="pixel-divider my-16" />
 <section id="media-section">
-	<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
-		<p>Full Walkthrough</p>
+	<div class="mt-2 col-span-5">
+		<h2 class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center mb-2">
+			Full Walkthrough
+		</h2>
 	</div>
 	<div class="w-full aspect-video">
 		<iframe
-			title="What is Liminal"
+			title="Liminal full walkthrough - Convert command-line history to research notebook"
 			src="https://drive.google.com/file/d/1C6j0xmrjyPpGvQT76KgmYL3v66Up9Lg_/preview"
 			frameborder="0"
 			allowfullscreen
@@ -75,12 +84,14 @@
 	</div>
 
 	<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
-		<p>30 second installation</p>
+		<h2 class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center mb-2">
+			30 second installation
+		</h2>
 	</div>
 
 	<div class="w-full aspect-video">
 		<iframe
-			title="What is Liminal"
+			title="Liminal installation takes less than 30 seconds and requires no training"
 			src="https://drive.google.com/file/d/1xBFsZwu_LeFLp0VT8nsZYzw2owYMsGkA/preview"
 			frameborder="0"
 			allowfullscreen
@@ -92,17 +103,25 @@
 <div class="pixel-divider my-16" />
 <section id="principles-and-values">
 	<div class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold">
-		<div
-			class="text-purple-300 text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold text-center"
-		>
-			<p class="font-extrabold">Perfect record keeping.</p>
-			<p class="font-extrabold">0 effort. 100% recall.</p>
+		<div>
+			<h2
+				class="font-extrabold text-purple-300 text-2xl sm:text-2xl md:text-4xl lg:text-6xl text-center mb-4"
+			>
+				Perfect record keeping.
+			</h2>
+			<h2
+				class="font-extrabold text-purple-300 text-2xl sm:text-2xl md:text-4xl lg:text-6xl text-center mb-4"
+			>
+				0 Training. 100% recall.
+			</h2>
 		</div>
 	</div>
 	<div class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold">
-		<p class="mb-2 text-green-400 font-extrabold text-center">
+		<h2
+			class="mb-2 text-green-400 font-extrabold text-center text-lg sm:text-xl md:text-2xl lg:text-3xl"
+		>
 			Designed specifically for the needs of academic scientists
-		</p>
+		</h2>
 		<ul class="font-normal">
 			<li>- Start using within 5 minutes</li>
 			<li>- Integrates with your existing workflow</li>
@@ -115,7 +134,9 @@
 <div class="pixel-divider my-16" />
 <section id="media-problems-section">
 	<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
-		<p>For the PIs...</p>
+		<h2 class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center mb-2">
+			For the PIs...
+		</h2>
 	</div>
 
 	<div class="w-full aspect-video">
@@ -129,7 +150,9 @@
 	</div>
 
 	<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
-		<p>For the boots-on-ground scientists...</p>
+		<h2 class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center mb-2">
+			For the boots-on-ground scientists...
+		</h2>
 	</div>
 	<div class="w-full aspect-video">
 		<iframe
