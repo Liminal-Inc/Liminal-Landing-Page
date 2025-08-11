@@ -18,6 +18,10 @@
 	function handleClick() {
 		goto('/signup');
 	}
+
+	function goToApp() {
+		goto('https://shellsync.liminalbios.com/');
+	}
 </script>
 
 <div class="app">
@@ -28,7 +32,10 @@
 	<Footer />
 </div>
 
-<button class="floating-button" on:click={handleClick}> Sign up </button>
+<button class="floating-button-lower" on:click={handleClick}> Sign up </button>
+<a class="floating-button-higher" target="_blank" href="https://shellsync.liminalbios.com/"
+	>Liminal App</a
+>
 
 <style>
 	.app {
@@ -47,7 +54,7 @@
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
-	.floating-button {
+	.floating-button-lower {
 		position: fixed;
 		bottom: 1.5rem;
 		right: 1.5rem;
@@ -63,7 +70,26 @@
 		transition: background-color 0.2s;
 	}
 
-	.floating-button:hover {
+	.floating-button-higher {
+		position: fixed;
+		bottom: 5rem;
+		right: 1.5rem;
+		background-color: rgb(217, 181, 255);
+		color: white;
+		padding: 0.75rem 1.25rem;
+		border-radius: 9999px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		cursor: pointer;
+		z-index: 1000;
+		border: none;
+		font-weight: bold;
+		transition: background-color 0.2s;
+	}
+
+	.floating-button-higher:hover {
+		background-color: #d70fcd;
+	}
+	.floating-button-lower:hover {
 		background-color: #1dc411;
 	}
 </style>

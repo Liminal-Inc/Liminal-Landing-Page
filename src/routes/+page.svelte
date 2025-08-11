@@ -58,8 +58,8 @@
 				</Button>
 			</div>
 		</div>
-		<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
-			<h2>
+		<div class="mt-2 col-span-5">
+			<h2 class=" text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
 				Academic pricing, plain and simple: <span class="text-green-400">$20/month</span>
 			</h2>
 		</div>
