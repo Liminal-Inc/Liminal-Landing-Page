@@ -38,11 +38,14 @@
     "web-vitals": "^3.5.0"
   },
   "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "description": "The official demo app for SvelteKit, hosted on Vercel.",
   "main": "playwright.config.js",
   "directories": {
-    "test": "tests"
-  },
+  "test": "tests"
+},
   "dependencies": {
     "@supabase/supabase-js": "^2.49.1",
     "abbrev": "^1.1.1",
