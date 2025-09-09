@@ -33,9 +33,12 @@
 				<h2
 					class="text-purple-300 text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold text-center"
 				>
-					⚡️Tap into⚡️ Supercharged Bioinformatics
+					<!-- ⚡️Tap into⚡️ Supercharged Bioinformatics -->
+					 Automated Bioinformatics Notebooks<br>
 					<!-- Activate ⚡️ Supercharged Bioinformatics -->
 				</h2>
+				<br>
+				<h3 class="text-purple-300 text-lg sm:text-lg md:text-2xl lg:text-4xl font-extrabold text-center">0-Effort. 100% Recall.</h3>
 			</div>
 			<!-- Right column for the other paragraphs -->
 			<div class="md:w-1/2 flex flex-col justify-start items-start text-left md:text-left md:pl-4">
@@ -59,6 +62,7 @@
 			</div>
 		</div>
 		<div class="mt-2 col-span-5">
+			<div class="pixel-divider my-16" />
 			<h2 class=" text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
 				Academic pricing, plain and simple: <span class="text-green-400">$20/month</span>
 			</h2>
