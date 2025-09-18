@@ -1,6 +1,12 @@
 <script>
 	import { Button } from 'flowbite-svelte';
 	import BlogTimeline from './BlogTimeline.svelte';
+	import { track } from '@vercel/analytics';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		track('Blog Page Viewed');
+	});
 </script>
 
 <svelte:head>

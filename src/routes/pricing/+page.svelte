@@ -1,4 +1,11 @@
-<script lang="ts"></script>
+<script lang="ts">
+	import { track } from '@vercel/analytics';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		track('Pricing Page Viewed');
+	});
+</script>
 
 <div class="text-white mt-16 text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4">Pricing</div>
 <div class="text-white mb-8 text-lg">
@@ -17,7 +24,7 @@
 		<div
 			class="outline outline-purple-300 hover:bg-purple-300 rounded-lg bg-black p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
 		>
-			<a href="https://forms.gle/rmnYMkiYHqGALxkV9" target="_blank">
+			<a href="https://forms.gle/rmnYMkiYHqGALxkV9" target="_blank" on:click={() => track('Pricing Form Click')}>
 				<div class="mt-2 mb-2 text-purple-300 text-2xl">Liminal Sync</div>
 				<div>$20 / month / user</div>
 				<div>Contact for group pricing deals!</div>

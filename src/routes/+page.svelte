@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Button, Table } from 'flowbite-svelte';
+	import { track } from '@vercel/analytics';
 	// Comment
 </script>
 
@@ -53,6 +54,7 @@
 					size="lg"
 					pill
 					class="bg-green-400 hover:bg-green-500 text-white w-full mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl flex flex-col items-center leading-tight"
+					on:click={() => track('Homepage CTA Click')}
 				>
 					<div class="text-center">
 						Get Access
@@ -339,7 +341,7 @@
 							<div class="text-lg">
 								<ul class="list-disc list-inside">
 									<li>
-										Click the <a href="/signup" class="text-green-400"
+										Click the <a href="/signup" class="text-green-400" on:click={() => track('FAQ Signup Link Click')}
 											>Click Here or the Green Signup Button</a
 										> in the corner!
 									</li>
@@ -347,7 +349,8 @@
 										Book a <a
 											target="_blank"
 											href="https://calendar.app.google/fAwGmDCeccJbcwKQ7"
-											class="text-purple-300 hover:underline">short meeting</a
+											class="text-purple-300 hover:underline"
+											on:click={() => track('FAQ Calendar Link Click')}>short meeting</a
 										> to personally chat with one of our founders
 									</li>
 								</ul>
@@ -369,7 +372,8 @@
 		Email:
 		<a
 			class="text-purple-300 transition-all duration-100 transform hover:-translate-y-1 cursor-pointer hover:shadow-2xl hover:bg-purple-300 hover:text-white hover:underline rounded p-2"
-			href="mailto:support@liminalbios.com">support@liminalbios.com</a
+			href="mailto:support@liminalbios.com"
+			on:click={() => track('Support Email Click')}>support@liminalbios.com</a
 		>
 	</p>
 	<p class="text-center text-white text-lg sm:text-xl md:text-2xl lg:text-3xl">
@@ -377,7 +381,8 @@
 		<a
 			target="_blank"
 			class="text-blue transition-all duration-100 transform hover:-translate-y-1 cursor-pointer hover:shadow-2xl hover:bg-purple-300 hover:underline text-purple-300 hover:text-white rounded p-2"
-			href="https://calendar.app.google/fAwGmDCeccJbcwKQ7">GoogleMeet</a
+			href="https://calendar.app.google/fAwGmDCeccJbcwKQ7"
+			on:click={() => track('Footer Calendar Link Click')}>GoogleMeet</a
 		>
 	</p>
 </div>

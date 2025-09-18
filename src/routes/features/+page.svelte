@@ -1,5 +1,6 @@
 <script lang="ts">
 	import LiminalCollab from './LiminalCollab.svelte';
+	import { track } from '@vercel/analytics';
 
 	import { onMount } from 'svelte';
 	import ShellSync from '../ShellSync.svelte';
@@ -8,6 +9,7 @@
 	let researchSection;
 
 	onMount(() => {
+		track('Features Page Viewed');
 		// Wait for Svelte to fully render before scrolling
 		setTimeout(() => {
 			if (window.location.hash === '#collabSection') {

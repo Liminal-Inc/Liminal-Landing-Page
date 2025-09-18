@@ -1,4 +1,11 @@
-<script lang="ts"></script>
+<script lang="ts">
+	import { track } from '@vercel/analytics';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		track('Roadmap Page Viewed');
+	});
+</script>
 
 <div class="text-white mt-16 text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4 text-center">
 	Roadmap

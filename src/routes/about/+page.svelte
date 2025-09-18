@@ -3,6 +3,12 @@
 	import ExtendedTeam from './ExtendedTeam.svelte';
 	import FounderGrid from './FounderGrid.svelte';
 	import WantToJoin from './WantToJoin.svelte';
+	import { track } from '@vercel/analytics';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		track('About Page Viewed');
+	});
 </script>
 
 <svelte:head>

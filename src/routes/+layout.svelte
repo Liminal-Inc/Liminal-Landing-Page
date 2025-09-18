@@ -10,6 +10,7 @@
 
 	import { dev } from '$app/environment';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+	import { track } from '@vercel/analytics';
 	import { browser } from '$app/environment';
 	import { beforeNavigate, afterNavigate, goto } from '$app/navigation';
 	
@@ -20,7 +21,8 @@
 	
 	injectAnalytics({ mode: dev ? 'development' : 'production' });
 	
-	function handleClick() {
+	function handleSignupClick() {
+		track('Signup Button');
 		goto('/signup');
 	}
 	
@@ -37,7 +39,7 @@
 	<Footer />
 </div>
 
-<button class="floating-button-lower" on:click={handleClick}> Sign up </button>
+<button class="floating-button-lower" on:click={handleSignupClick}> Sign up </button>
 <a class="floating-button-higher" target="_blank" href="https://shellsync.liminalbios.com/"
 	>Liminal App</a
 >
