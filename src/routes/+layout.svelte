@@ -7,18 +7,23 @@
 	import LiminalNavbar from '$lib/Navbar.svelte';
 
 	import posthog from 'posthog-js';
+
+	import { dev } from '$app/environment';
+	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import { browser } from '$app/environment';
 	import { beforeNavigate, afterNavigate, goto } from '$app/navigation';
-
+	
 	if (browser) {
 		beforeNavigate(() => posthog.capture('$pageleave'));
 		afterNavigate(() => posthog.capture('$pageview'));
 	}
-
+	
+	injectAnalytics({ mode: dev ? 'development' : 'production' });
+	
 	function handleClick() {
 		goto('/signup');
 	}
-
+	
 	function goToApp() {
 		goto('https://shellsync.liminalbios.com/');
 	}
