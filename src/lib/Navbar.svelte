@@ -18,18 +18,30 @@
 		</NavBrand>
 		<NavHamburger />
 		<NavUl {activeUrl} {activeClass} {nonActiveClass}>
-			<NavLi class={activeUrl === '/features/' ? activeClass : nonActiveClass} href="/features" on:click={() => track('Nav Features Click')}
-				>Features</NavLi
+			<NavLi
+				class={activeUrl === '/features/' ? activeClass : nonActiveClass}
+				href="/features"
+				on:click={() => track('Nav Features Click')}>Features</NavLi
 			>
-			<NavLi class={activeUrl === '/roadmap/' ? activeClass : nonActiveClass} href="/roadmap" on:click={() => track('Nav Roadmap Click')}
-				>Roadmap</NavLi
+			<NavLi
+				class={activeUrl === '/roadmap/' ? activeClass : nonActiveClass}
+				href="/roadmap"
+				on:click={() => track('Nav Roadmap Click')}>Roadmap</NavLi
 			>
-			<NavLi class={activeUrl === '/blog/' ? activeClass : nonActiveClass} href="/blog" on:click={() => track('Nav Blog Click')}>Blog</NavLi>
-			<NavLi class={activeUrl === '/pricing/' ? activeClass : nonActiveClass} href="/pricing" on:click={() => track('Nav Pricing Click')}
-				>Pricing</NavLi
+			<NavLi
+				class={activeUrl === '/blog/' ? activeClass : nonActiveClass}
+				href="/blog"
+				on:click={() => track('Nav Blog Click')}>Blog</NavLi
 			>
-			<NavLi class={activeUrl === '/about/' ? activeClass : nonActiveClass} href="/about" on:click={() => track('Nav About Click')}
-				>About</NavLi
+			<NavLi
+				class={activeUrl === '/pricing/' ? activeClass : nonActiveClass}
+				href="/pricing"
+				on:click={() => track('Nav Pricing Click')}>Pricing</NavLi
+			>
+			<NavLi
+				class={activeUrl === '/about/' ? activeClass : nonActiveClass}
+				href="/about"
+				on:click={() => track('Nav About Click')}>About</NavLi
 			>
 		</NavUl>
 	</NavContainer>

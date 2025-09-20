@@ -7,8 +7,8 @@ const config = {
 			runtime: 'nodejs20.x'
 		}),
 		paths: {
-			relative: false,
-		},
+			relative: false
+		}
 	}
 };
 

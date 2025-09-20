@@ -19,7 +19,12 @@
 						class="h-8 w-8"
 					/>
 				</a>
-				<a href="https://discord.gg/NHYzApB3jj" target="_blank" rel="noopener noreferrer" on:click={() => track('Footer Discord Click')}>
+				<a
+					href="https://discord.gg/NHYzApB3jj"
+					target="_blank"
+					rel="noopener noreferrer"
+					on:click={() => track('Footer Discord Click')}
+				>
 					<img
 						src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg"
 						alt="Discord"
@@ -37,7 +42,11 @@
 				class="text-blue-700 hover:text-white">Twitter</a
 			> -->
 			<div class="flex flex-col space-y-2">
-				<a href="/signup" class="text-blue-700 hover:text-white" on:click={() => track('Footer Signup Click')}>Sign up</a>
+				<a
+					href="/signup"
+					class="text-blue-700 hover:text-white"
+					on:click={() => track('Footer Signup Click')}>Sign up</a
+				>
 				<a
 					href="/policies"
 					target="_blank"

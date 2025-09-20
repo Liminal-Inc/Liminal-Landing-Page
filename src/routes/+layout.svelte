@@ -13,19 +13,19 @@
 	import { track } from '@vercel/analytics';
 	import { browser } from '$app/environment';
 	import { beforeNavigate, afterNavigate, goto } from '$app/navigation';
-	
+
 	if (browser) {
 		beforeNavigate(() => posthog.capture('$pageleave'));
 		afterNavigate(() => posthog.capture('$pageview'));
 	}
-	
+
 	injectAnalytics({ mode: dev ? 'development' : 'production' });
-	
+
 	function handleSignupClick() {
 		track('Signup Button');
 		goto('/signup');
 	}
-	
+
 	function goToApp() {
 		goto('https://shellsync.liminalbios.com/');
 	}
