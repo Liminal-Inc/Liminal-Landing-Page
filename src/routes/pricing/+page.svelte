@@ -24,7 +24,11 @@
 		<div
 			class="outline outline-purple-300 hover:bg-purple-300 rounded-lg bg-black p-4 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
 		>
-			<a href="https://forms.gle/rmnYMkiYHqGALxkV9" target="_blank" on:click={() => track('Pricing Form Click')}>
+			<a
+				href="https://forms.gle/rmnYMkiYHqGALxkV9"
+				target="_blank"
+				on:click={() => track('Pricing Form Click')}
+			>
 				<div class="mt-2 mb-2 text-purple-300 text-2xl">Liminal Sync</div>
 				<div>$20 / month / user</div>
 				<div>Contact for group pricing deals!</div>
