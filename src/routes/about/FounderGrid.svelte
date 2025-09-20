@@ -8,7 +8,7 @@
 		{
 			name: 'Dane Deemer',
 			title: 'Chief Executive Officer',
-			bio: 'Lab manager and computational biologist.',
+			bio: 'Senior Computational Biologist',
 			img: daneImg,
 			links: [
 				{ label: 'GitHub', url: 'https://github.com/ddeemerpurdue' },
@@ -18,7 +18,7 @@
 		{
 			name: 'Maverick Cook',
 			title: 'Chief Technology Officer',
-			bio: 'Software engineer and full-stack developer.',
+			bio: 'Senior Software Engineer and Full-Stack Developer.',
 			img: mavImg,
 			links: [
 				{ label: 'GitHub', url: 'https://github.com/mavcook' },

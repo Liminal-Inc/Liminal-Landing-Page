@@ -43,11 +43,6 @@
 			> -->
 			<div class="flex flex-col space-y-2">
 				<a
-					href="/signup"
-					class="text-blue-700 hover:text-white"
-					on:click={() => track('Footer Signup Click')}>Sign up</a
-				>
-				<a
 					href="/policies"
 					target="_blank"
 					rel="noopener noreferrer"
@@ -55,15 +50,6 @@
 					on:click={() => track('Footer Privacy Policy Click')}>Privacy Policy</a
 				>
 			</div>
-			<a
-				href="https://posthog.com?utm_source=badge"
-				title="Built with PostHog analytics + more"
-				target="_blank"
-				><img
-					alt="PostHog - Open Source Product Analytics"
-					src="https://d1hovhsvet4m1p.cloudfront.net/badges/posthog-badge-transparent-bg-black-text.svg"
-				/></a
-			>
 		</div>
 	</div>
 </footer>

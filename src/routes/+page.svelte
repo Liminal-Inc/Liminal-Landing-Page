@@ -73,195 +73,268 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
 />
 
-<section id="headline">
-	<div class="grid grid-cols-5 gap-1 justify-evenly">
-		<div
-			class="col-span-5 flex flex-col md:flex-row justify-start items-center mt-4 text-center text-white p-4 sm:p-2"
-		>
-			<!-- Left column for the larger text -->
-			<div class="md:w-1/2 text-left md:text-right md:pr-4">
-				<h2
-					class="text-purple-300 text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold text-center"
-				>
-					<!-- ⚡️Tap into⚡️ Supercharged Bioinformatics -->
-					Automated Bioinformatics Notebooks<br />
-					<!-- Activate ⚡️ Supercharged Bioinformatics -->
-				</h2>
-				<br />
-				<h3
-					class="text-purple-300 text-lg sm:text-lg md:text-2xl lg:text-4xl font-extrabold text-center"
-				>
-					0-Effort. 100% Recall.
-				</h3>
+<section id="hero" class="min-h-screen flex items-center justify-center py-16 px-4">
+	<div class="max-w-4xl mx-auto text-center">
+		<!-- Header content -->
+		<h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-purple-300 mb-6 leading-tight">
+			Automated Bioinformatics Notebooks
+		</h1>
+		<p class="text-xl md:text-2xl lg:text-3xl text-green-400 font-bold mb-6">
+			0-Effort. 100% Recall.
+		</p>
+		<p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto">
+			Turn your command line into a scientific notebook in seconds.
+		</p>
+		<p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+			Install and use in under 5 minutes. No training required.
+		</p>
+
+		<div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+			<Button
+				href="/signup"
+				size="lg"
+				class="bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-4 px-8"
+				on:click={() => track('Homepage Hero CTA Click')}
+			>
+				Get Access Now
+			</Button>
+			<Button
+				href="/features"
+				size="lg"
+				color="alternative"
+				class="text-lg py-4 px-8"
+				on:click={() => track('Homepage Features Click')}
+			>
+				See Features
+			</Button>
+		</div>
+
+		<div class="text-sm text-gray-400 mb-12">
+			✓ 5-minute setup &nbsp;&nbsp; ✓ Zero training &nbsp;&nbsp; ✓ Academic pricing
+		</div>
+
+		<!-- Demo GIF - Centered and larger -->
+		<div class="relative max-w-4xl mx-auto items-center justify-center">
+			<div class="bg-gray-900/50 rounded-xl p-2 border border-purple-500/30 w-3/4 mx-auto">
+				<img
+					src="/videos/realtime-shellsync.gif"
+					alt="Liminal real-time shell sync demonstration"
+					class="w-full rounded-lg shadow-2xl"
+				/>
 			</div>
-			<!-- Right column for the other paragraphs -->
-			<div class="md:w-1/2 flex flex-col justify-start items-start text-left md:text-left md:pl-4">
-				<h1 class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl text-left">
-					Turn Your Command Line into a Scientific Notebook in Seconds
-				</h1>
-				<h2 class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-					Install and use in &lt; 5 minutes
-				</h2>
-				<Button
-					href="/signup"
-					size="lg"
-					pill
-					class="bg-green-400 hover:bg-green-500 text-white w-full mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl flex flex-col items-center leading-tight"
-					on:click={() => track('Homepage CTA Click')}
-				>
-					<div class="text-center">
-						Get Access
-						<div class="text-sm md:text-base text-white/80">No meeting required!</div>
+		</div>
+	</div>
+</section>
+
+<div class="pixel-divider my-8" />
+
+<!-- Problem/Solution Section -->
+<section class="py-16 px-4">
+	<div class="max-w-4xl mx-auto text-center">
+		<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+			No More App Switching. No More Manual Notebook Writing.
+		</h2>
+		<p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+			Stop losing track of your bioinformatics work. Liminal automatically captures every command, every analysis, every insight.
+		</p>
+
+		<!-- Side-by-side GIFs -->
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+			<div class="bg-gray-900/30 rounded-xl p-3 border border-gray-700">
+				<h3 class="text-xl font-bold text-green-400 mb-6 text-center">Real-time Command Capture</h3>
+				<img
+					src="/videos/realtime-shellsync.gif"
+					alt="Real-time shell sync demonstration"
+					class="w-full rounded-lg shadow-lg"
+					style="height: 300px; object-fit: fill;"
+				/>
+			</div>
+			<div class="bg-gray-900/30 rounded-xl p-3 border border-gray-700">
+				<h3 class="text-xl font-bold text-green-400 mb-6 text-center">Instant Notebook Generation</h3>
+				<img
+					src="/videos/realtime-notebook.gif"
+					alt="Real-time notebook generation"
+					class="w-full rounded-lg shadow-lg"
+					style="height: 300px; object-fit: fill; animation-duration: 10s; animation-iteration-count: infinite;"
+				/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="pixel-divider my-8" />
+
+<!-- Pricing Section -->
+<section class="py-16 px-4">
+	<div class="max-w-4xl mx-auto text-center">
+		<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+			Simple Academic Pricing
+		</h2>
+		<div class="bg-gray-900/50 rounded-xl p-8 border border-purple-500/30 mb-8">
+			<div class="text-5xl font-bold text-green-400 mb-4">$20<span class="text-2xl text-gray-400">/month</span></div>
+			<p class="text-xl text-gray-300 mb-6">Unlimited users • Unlimited data • Full features</p>
+
+			<div class="grid md:grid-cols-2 gap-6 text-left mb-8">
+				<div>
+					<h4 class="text-lg font-bold text-green-400 mb-2">💰 Referral Rewards</h4>
+					<p class="text-gray-300">Get $5 credit per referral + 1 FREE month for every 4 people you refer</p>
+				</div>
+				<div>
+					<h4 class="text-lg font-bold text-green-400 mb-2">📅 Annual Savings</h4>
+					<p class="text-gray-300">Save 20% on annual subscriptions</p>
+				</div>
+			</div>
+
+			<Button
+				href="/signup"
+				size="lg"
+				class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 text-lg"
+				on:click={() => track('Homepage Pricing CTA Click')}
+			>
+				Start Your Free Trial
+			</Button>
+		</div>
+	</div>
+</section>
+
+<div class="pixel-divider my-8" />
+
+<!-- Video Demonstrations -->
+<section class="py-16">
+	<div class="text-center mb-12 px-4">
+		<h2 class="text-3xl md:text-4xl font-bold text-white">
+			See Liminal in Action
+		</h2>
+	</div>
+
+	<div class="space-y-20 px-4 w-3/4">
+		<!-- Full Walkthrough -->
+		<div class="text-center">
+			<div class="bg-gray-900/30 rounded-xl p-3 border border-gray-700">
+			<h3 class="text-2xl md:text-3xl font-bold text-green-400 mb-8">Complete Product Walkthrough</h3>
+			<div class="w-full aspect-video rounded-lg overflow-hidden shadow-2xl">
+				<iframe
+					title="Liminal full walkthrough - Convert command-line history to research notebook"
+					src="https://drive.google.com/file/d/1C6j0xmrjyPpGvQT76KgmYL3v66Up9Lg_/preview"
+					frameborder="0"
+					allowfullscreen
+					class="w-full h-full"
+				/>
+			</div>
+			</div>
+		</div>
+
+		<!-- Installation Demo -->
+		<div class="text-center">
+			<div class="bg-gray-900/30 rounded-xl p-3 border border-gray-700">
+			<h3 class="text-2xl md:text-3xl font-bold text-green-400 mb-8">30-Second Installation</h3>
+			<div class="w-full aspect-video rounded-lg overflow-hidden shadow-2xl">
+				<iframe
+					title="Liminal installation takes less than 30 seconds and requires no training"
+					src="https://drive.google.com/file/d/1xBFsZwu_LeFLp0VT8nsZYzw2owYMsGkA/preview"
+					frameborder="0"
+					allowfullscreen
+					class="w-full h-full"
+				/>
+			</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="pixel-divider my-8" />
+
+<!-- Benefits Section -->
+<section class="py-16 px-4">
+	<div class="max-w-6xl mx-auto text-center">
+		<h2 class="text-4xl md:text-5xl font-bold text-purple-300 mb-6">
+			Perfect Record Keeping
+		</h2>
+		<p class="text-2xl md:text-3xl text-green-400 font-bold mb-12">
+			0 Training. 100% Recall.
+		</p>
+
+		<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+			<div class="bg-gray-900/30 rounded-xl p-6 border border-gray-700">
+				<div class="text-3xl mb-4">⚡</div>
+				<h3 class="text-lg font-bold text-green-400 mb-2">5-Minute Setup</h3>
+				<p class="text-gray-300">Start using within 5 minutes. No complex configuration required.</p>
+			</div>
+			<div class="bg-gray-900/30 rounded-xl p-6 border border-gray-700">
+				<div class="text-3xl mb-4">🔄</div>
+				<h3 class="text-lg font-bold text-green-400 mb-2">Workflow Integration</h3>
+				<p class="text-gray-300">Seamlessly integrates with your existing bioinformatics workflow.</p>
+			</div>
+			<div class="bg-gray-900/30 rounded-xl p-6 border border-gray-700">
+				<div class="text-3xl mb-4">💰</div>
+				<h3 class="text-lg font-bold text-green-400 mb-2">Academic Pricing</h3>
+				<p class="text-gray-300">Affordably priced for scientists at all career stages.</p>
+			</div>
+			<div class="bg-gray-900/30 rounded-xl p-6 border border-gray-700">
+				<div class="text-3xl mb-4">🔬</div>
+				<h3 class="text-lg font-bold text-green-400 mb-2">Lab-Grade Software</h3>
+				<p class="text-gray-300">Rigorous reproducibility and scientific rigor built-in.</p>
+			</div>
+		</div>
+
+		<div class="text-center">
+			<h3 class="text-2xl font-bold text-green-400 mb-6">
+				Designed specifically for academic scientists
+			</h3>
+			<Button
+				href="/about"
+				size="lg"
+				color="alternative"
+				on:click={() => track('Homepage About Click')}
+			>
+				Meet Our Team
+			</Button>
+		</div>
+	</div>
+</section>
+
+<!-- Target Audience Videos -->
+<section class="py-16 px-4">
+	<div class="max-w-6xl mx-auto">
+		<h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+			Built for Every Role in Academic Research
+		</h2>
+
+		<div class="grid lg:grid-cols-2 gap-12">
+			<!-- For PIs -->
+			<div class="text-center">
+				<h3 class="text-2xl font-bold text-green-400 mb-6">For Principal Investigators</h3>
+				<div class="bg-gray-900/30 rounded-xl p-4 border border-gray-700 mb-4">
+					<div class="w-full aspect-video rounded-lg overflow-hidden">
+						<iframe
+							title="Liminal for Principal Investigators - Lab management and oversight"
+							src="https://drive.google.com/file/d/18mWLF0lu1NrwJzEI6Vi1ZqGTVXd_ikvJ/preview"
+							frameborder="0"
+							allowfullscreen
+							class="w-full h-full"
+						/>
 					</div>
-				</Button>
-			</div>
-		</div>
-		<div class="mt-2 col-span-5">
-			<div class="pixel-divider my-16" />
-			<h2 class=" text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
-				 No More App Switching. No More Manual Notebook Writing.
-			</h2>
-
-			<!-- Side-by-side GIFs -->
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 max-w-6xl mx-auto">
-				<div class="flex flex-col items-center">
-					<img
-						src="/videos/realtime-shellsync.gif"
-						alt="Real-time shell sync demonstration"
-						class="w-full rounded-lg shadow-lg"
-						style="height: 350px; object-fit: fill;"
-					/>
 				</div>
-				<div class="flex flex-col items-center">
-					<img
-						src="/videos/realtime-notebook.gif"
-						alt="Real-time notebook generation"
-						class="w-full rounded-lg shadow-lg"
-						style="height: 350px; object-fit: fill; animation-duration: 10s; animation-iteration-count: infinite;"
-					/>
-				</div>
+				<p class="text-gray-300">Track lab productivity, ensure reproducibility, and maintain oversight of all computational work in your lab.</p>
 			</div>
 
-			<div class="pixel-divider my-16" />
-			<!-- Pricing incentives section -->
-			<div class="mt-12 text-center">
-				<h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white font-bold mb-6">
-					<span class="text-green-400">$20/month</span> or 1 month <span class="text-green-400">FREE</span> for every 4 people you refer
-				</h3>
-				<div class="text-white text-lg space-y-2">
-					<p>💰 Get <span class="text-green-400">$5 in credits</span> per person you refer</p>
-					<p>📅 Save <span class="text-green-400">20% on annual</span> subscriptions</p>
+			<!-- For Researchers -->
+			<div class="text-center">
+				<h3 class="text-2xl font-bold text-green-400 mb-6">For Researchers & Students</h3>
+				<div class="bg-gray-900/30 rounded-xl p-4 border border-gray-700 mb-4">
+					<div class="w-full aspect-video rounded-lg overflow-hidden">
+						<iframe
+							title="Liminal for researchers and students - Daily workflow automation"
+							src="https://drive.google.com/file/d/1oAZXhYbS3wO9Sf9mxEr1Ca_HI91A8Q6T/preview"
+							frameborder="0"
+							allowfullscreen
+							class="w-full h-full"
+						/>
+					</div>
 				</div>
-				<div class="mt-6">
-					<a
-						href="/signup"
-						class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition duration-200"
-						on:click={() => track('Start Your Plan Today Button Click')}
-					>
-						Start Your Plan Today
-					</a>
-				</div>
+				<p class="text-gray-300">Focus on research, not documentation. Never lose track of your analysis steps or forget how you generated results.</p>
 			</div>
 		</div>
-	</div>
-</section>
-
-<div class="pixel-divider my-16" />
-<section id="media-section">
-	<div class="mt-2 col-span-5">
-		<h2 class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center mb-2">
-			Full Walkthrough
-		</h2>
-	</div>
-	<div class="w-full aspect-video">
-		<iframe
-			title="Liminal full walkthrough - Convert command-line history to research notebook"
-			src="https://drive.google.com/file/d/1C6j0xmrjyPpGvQT76KgmYL3v66Up9Lg_/preview"
-			frameborder="0"
-			allowfullscreen
-			class="w-full h-full"
-		/>
-	</div>
-
-	<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
-		<h2 class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center mb-2">
-			30 second installation
-		</h2>
-	</div>
-
-	<div class="w-full aspect-video">
-		<iframe
-			title="Liminal installation takes less than 30 seconds and requires no training"
-			src="https://drive.google.com/file/d/1xBFsZwu_LeFLp0VT8nsZYzw2owYMsGkA/preview"
-			frameborder="0"
-			allowfullscreen
-			class="w-full h-full"
-		/>
-	</div>
-</section>
-
-<div class="pixel-divider my-16" />
-<section id="principles-and-values">
-	<div class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold">
-		<div>
-			<h2
-				class="font-extrabold text-purple-300 text-2xl sm:text-2xl md:text-4xl lg:text-6xl text-center mb-4"
-			>
-				Perfect record keeping.
-			</h2>
-			<h2
-				class="font-extrabold text-purple-300 text-2xl sm:text-2xl md:text-4xl lg:text-6xl text-center mb-4"
-			>
-				0 Training. 100% recall.
-			</h2>
-		</div>
-	</div>
-	<div class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold">
-		<h2
-			class="mb-2 text-green-400 font-extrabold text-center text-lg sm:text-xl md:text-2xl lg:text-3xl"
-		>
-			Designed specifically for the needs of academic scientists
-		</h2>
-		<ul class="font-normal">
-			<li>- Start using within 5 minutes</li>
-			<li>- Integrates with your existing workflow</li>
-			<li>- Affordably priced for scientists of all stages</li>
-			<li>- Lab-grade software: rigorous reproducibility and scientific vigor</li>
-		</ul>
-	</div>
-</section>
-
-<div class="pixel-divider my-16" />
-<section id="media-problems-section">
-	<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
-		<h2 class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center mb-2">
-			For the PIs...
-		</h2>
-	</div>
-
-	<div class="w-full aspect-video">
-		<iframe
-			title="What is Liminal"
-			src="https://drive.google.com/file/d/18mWLF0lu1NrwJzEI6Vi1ZqGTVXd_ikvJ/preview"
-			frameborder="0"
-			allowfullscreen
-			class="w-full h-full"
-		/>
-	</div>
-
-	<div class="mt-2 col-span-5 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
-		<h2 class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center mb-2">
-			For the boots-on-ground scientists...
-		</h2>
-	</div>
-	<div class="w-full aspect-video">
-		<iframe
-			title="What is Liminal"
-			src="https://drive.google.com/file/d/1oAZXhYbS3wO9Sf9mxEr1Ca_HI91A8Q6T/preview"
-			frameborder="0"
-			allowfullscreen
-			class="w-full h-full"
-		/>
 	</div>
 </section>
 
