@@ -120,7 +120,6 @@ async function handlePaymentSuccess(paymentIntent) {
 
 		console.log(`Updated customer ${liminalCustomerId} status to paid`);
 
-		// TODO: Send welcome email, create auth user, etc.
 	} catch (error) {
 		console.error('Error handling payment success:', error);
 	}

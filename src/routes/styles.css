@@ -150,8 +150,7 @@ button:focus:not(:focus-visible) {
 
 .pixel-divider {
 	width: 100%;
-	height: 10px; /* Adjust the height to your preference */
-	background: linear-gradient(90deg, white 10%, transparent 10%, transparent 90%, white 90%);
-	background-size: 20px 10px; /* This sets the size of each 'pixel' block */
-	background-repeat: repeat;
+	height: 1px;
+	background: white;
+	opacity: 0.8;
 }

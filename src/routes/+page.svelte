@@ -70,8 +70,49 @@
 		<div class="mt-2 col-span-5">
 			<div class="pixel-divider my-16" />
 			<h2 class=" text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
-				Academic pricing, plain and simple: <span class="text-green-400">$20/month</span>
+				 No More App Switching. No More Manual Notebook Writing.
 			</h2>
+
+			<!-- Side-by-side GIFs -->
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 max-w-6xl mx-auto">
+				<div class="flex flex-col items-center">
+					<img
+						src="/src/lib/videos/realtime-shellsync.gif"
+						alt="Real-time shell sync demonstration"
+						class="w-full rounded-lg shadow-lg"
+						style="height: 350px; object-fit: fill;"
+					/>
+				</div>
+				<div class="flex flex-col items-center">
+					<img
+						src="/src/lib/videos/realtime-notebook.gif"
+						alt="Real-time notebook generation"
+						class="w-full rounded-lg shadow-lg"
+						style="height: 350px; object-fit: fill; animation-duration: 10s; animation-iteration-count: infinite;"
+					/>
+				</div>
+			</div>
+
+			<div class="pixel-divider my-16" />
+			<!-- Pricing incentives section -->
+			<div class="mt-12 text-center">
+				<h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white font-bold mb-6">
+					Pay at most <span class="text-green-400">$20/month</span> or get 1 month <span class="text-green-400">FREE</span> for every 4 people you refer
+				</h3>
+				<div class="text-white text-lg space-y-2">
+					<p>💰 Get <span class="text-green-400">$5 in credits</span> per person you refer</p>
+					<p>📅 Save <span class="text-green-400">20% on annual</span> subscriptions</p>
+				</div>
+				<div class="mt-6">
+					<a
+						href="/signup"
+						class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition duration-200"
+						on:click={() => track('Start Your Plan Today Button Click')}
+					>
+						Start Your Plan Today
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
