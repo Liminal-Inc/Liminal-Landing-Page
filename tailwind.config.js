@@ -6,7 +6,11 @@ export default {
 		'./node_modules/flowbite-svelte-icons/**/*.{html,js,svelte,ts}'
 	],
 	theme: {
-		extend: {}
+		extend: {
+			fontFamily: {
+				sans: ['Roboto', 'sans-serif']
+			}
+		}
 	},
 	plugins: []
 };
