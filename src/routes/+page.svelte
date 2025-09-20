@@ -35,11 +35,15 @@
 					class="text-purple-300 text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold text-center"
 				>
 					<!-- ⚡️Tap into⚡️ Supercharged Bioinformatics -->
-					 Automated Bioinformatics Notebooks<br>
+					Automated Bioinformatics Notebooks<br />
 					<!-- Activate ⚡️ Supercharged Bioinformatics -->
 				</h2>
-				<br>
-				<h3 class="text-purple-300 text-lg sm:text-lg md:text-2xl lg:text-4xl font-extrabold text-center">0-Effort. 100% Recall.</h3>
+				<br />
+				<h3
+					class="text-purple-300 text-lg sm:text-lg md:text-2xl lg:text-4xl font-extrabold text-center"
+				>
+					0-Effort. 100% Recall.
+				</h3>
 			</div>
 			<!-- Right column for the other paragraphs -->
 			<div class="md:w-1/2 flex flex-col justify-start items-start text-left md:text-left md:pl-4">
@@ -341,7 +345,10 @@
 							<div class="text-lg">
 								<ul class="list-disc list-inside">
 									<li>
-										Click the <a href="/signup" class="text-green-400" on:click={() => track('FAQ Signup Link Click')}
+										Click the <a
+											href="/signup"
+											class="text-green-400"
+											on:click={() => track('FAQ Signup Link Click')}
 											>Click Here or the Green Signup Button</a
 										> in the corner!
 									</li>

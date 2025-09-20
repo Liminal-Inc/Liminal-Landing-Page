@@ -8,7 +8,7 @@
 
 <div class="text-white rounded-lg">
 	<!-- <div class="mb-4 text-center"> -->
-		<!-- <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl">2 Separate Software Platforms</p> -->
+	<!-- <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl">2 Separate Software Platforms</p> -->
 	<!-- </div> -->
 	<div
 		class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 p-4 text-white text-lg sm:text-md md:text-lg lg:text-lg"
