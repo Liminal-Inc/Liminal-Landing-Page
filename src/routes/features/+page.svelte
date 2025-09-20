@@ -25,7 +25,7 @@
 	class="mb-2 text-lg sm:text-xl md:text-2xl lg:text-3xl text-white font-extrabold"
 	bind:this={researchSection}
 >
-	Liminal Bioinformatics
+	Liminal Sync
 </div>
 
 <section>
@@ -96,5 +96,5 @@
 
 <div class="pixel-divider my-16" bind:this={collabSection} />
 
-<LiminalCollab />
-<br />
+<!-- <LiminalCollab />
+<br /> -->

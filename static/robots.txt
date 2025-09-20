@@ -1,3 +1,21 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://liminalbios.com/sitemap.xml
+
+# Disallow admin areas
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_/
+
+# Allow important pages
+Allow: /signup/
+Allow: /pricing/
+Allow: /features/
+Allow: /about/
+Allow: /blog/
+
+# Crawl delay to be respectful
+Crawl-delay: 1

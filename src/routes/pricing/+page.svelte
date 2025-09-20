@@ -13,7 +13,26 @@
 </script>
 
 <svelte:head>
-	<title>Pricing - Liminal Bioinformatics</title>
+	<title>Pricing - Liminal Bioinformatics | Academic Lab Notebook Software $20/month</title>
+	<meta
+		name="description"
+		content="Simple academic pricing for Liminal bioinformatics notebook software. $20/month for unlimited users. Get 1 month free for every 4 referrals. 20% discount on annual plans."
+	/>
+	<meta name="keywords" content="bioinformatics pricing, academic software pricing, lab notebook cost, scientific software subscription, research tools pricing" />
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://liminalbios.com/pricing/" />
+	<meta property="og:title" content="Affordable Academic Pricing - Liminal Bioinformatics" />
+	<meta property="og:description" content="Simple pricing for academic labs. $20/month for unlimited users. Referral credits and annual discounts available." />
+	<meta property="og:image" content="https://liminalbios.com/pricing-preview.png" />
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Academic Lab Software Pricing - Liminal" />
+	<meta name="twitter:description" content="$20/month for unlimited academic users. Get free months through referrals." />
+
+	<link rel="canonical" href="https://liminalbios.com/pricing/" />
 </svelte:head>
 
 <div class="min-h-screen bg-gray-50 py-12">

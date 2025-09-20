@@ -5,18 +5,67 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Liminal - Automated Bioinformatics Notebooks | Turn Command Line into Scientific Documentation</title>
 	<meta
 		name="description"
-		content="Liminal automatically turns shell history into structured lab notebook entries. Install in under 5 minutes. No training, affordable, FAIR-compliant."
+		content="Liminal automatically converts command-line history into structured lab notebook entries. Install in under 5 minutes. Academic pricing at $20/month. Zero training required, 100% recall."
 	/>
-	<meta property="og:title" content="Liminal - Turn Shell History into Scientific Insight" />
-	<meta
-		property="og:description"
-		content="Save hours documenting bioinformatics work. Liminal converts command-line activity into searchable, FAIR-compliant notebook entries. For labs of all sizes."
-	/>
+	<meta name="keywords" content="bioinformatics, lab notebook, command line, scientific documentation, FAIR data, academic software, research tools, shell history, automated documentation" />
+
+	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://liminalbios.com/" />
+	<meta property="og:title" content="Liminal - Turn Command Line into Scientific Notebook in Seconds" />
+	<meta
+		property="og:description"
+		content="Save hours documenting bioinformatics work. Liminal converts command-line activity into searchable, FAIR-compliant notebook entries. Perfect for academic labs of all sizes."
+	/>
+	<meta property="og:image" content="https://liminalbios.com/og-image.png" />
+	<meta property="og:site_name" content="Liminal Bioinformatics" />
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:url" content="https://liminalbios.com/" />
+	<meta name="twitter:title" content="Liminal - Automated Bioinformatics Notebooks" />
+	<meta name="twitter:description" content="Turn your command line into a scientific notebook in seconds. Zero training, 100% recall. Academic pricing starting at $20/month." />
+	<meta name="twitter:image" content="https://liminalbios.com/og-image.png" />
+
+	<!-- Additional SEO -->
+	<link rel="canonical" href="https://liminalbios.com/" />
+	<meta name="robots" content="index, follow, max-image-preview:large" />
+
+	<!-- Structured Data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "SoftwareApplication",
+		"name": "Liminal",
+		"description": "Automated bioinformatics notebook software that converts command-line history into structured lab notebook entries",
+		"url": "https://liminalbios.com",
+		"applicationCategory": "Scientific Software",
+		"operatingSystem": "Linux, macOS",
+		"offers": {
+			"@type": "Offer",
+			"price": "20",
+			"priceCurrency": "USD",
+			"priceSpecification": {
+				"@type": "UnitPriceSpecification",
+				"price": "20",
+				"priceCurrency": "USD",
+				"billingDuration": "P1M"
+			}
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "Liminal Bioinformatics",
+			"url": "https://liminalbios.com"
+		},
+		"audience": {
+			"@type": "Audience",
+			"audienceType": "Academic Researchers, Bioinformaticians, Scientists"
+		}
+	}
+	</script>
 </svelte:head>
 
 <link
