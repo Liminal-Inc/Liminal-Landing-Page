@@ -68,6 +68,29 @@ export async function POST({ request }) {
 		console.log('Attempting to insert signup data:', signupData);
 
 		try {
+			// Create auth user - try direct creation, handle if already exists
+			const authResponse = await fetch(`${supabaseUrl}/auth/v1/admin/users`, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					apikey: supabaseKey,
+					Authorization: `Bearer ${supabaseKey}`
+				},
+				body: JSON.stringify({
+					email: formData.email,
+					password: 'root',
+					email_confirm: true
+				})
+			});
+
+			if (!authResponse.ok) {
+				const authError = await authResponse.text();
+				console.log('Auth user creation response:', authResponse.status, authError);
+				// Don't fail signup if auth creation fails
+			} else {
+				console.log('Auth user created successfully');
+			}
+
 			const signupResult = await supabaseInsert('web_signups', signupData);
 			console.log('Signup result:', signupResult);
 
@@ -154,7 +177,6 @@ export async function POST({ request }) {
 					errorType: 'validation_error'
 				}, { status: 400 });
 			}
-			
 			// Generic database error
 			return json({ 
 				error: 'Unable to create account. Please try again or contact support if the problem persists.',

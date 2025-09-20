@@ -21,6 +21,7 @@
 
 	let isSubmitting = false;
 	let submitMessage = '';
+	let errorType = '';
 
 	onMount(() => {
 		track('Signup Page Viewed');
@@ -77,14 +78,17 @@
 				
 				// Provide specific messaging for duplicate emails
 				if (result.errorType === 'duplicate_email') {
-					submitMessage = `${result.error} You can also try signing in to access your existing account or contact support@liminalbios.com for assistance.`;
+					submitMessage = result.error;
+					errorType = 'duplicate_email';
 				} else {
 					submitMessage = `Error: ${result.error}`;
+					errorType = result.errorType || 'unknown';
 				}
 			}
 		} catch (error) {
 			track('Signup Form Error', { error: error.message });
 			submitMessage = 'Error submitting form. Please try again or contact support if the problem persists.';
+			errorType = '';
 		} finally {
 			isSubmitting = false;
 		}
@@ -302,6 +306,16 @@
 						: 'bg-red-50 text-red-800 border border-red-200'}"
 				>
 					{submitMessage}
+					{#if errorType === 'duplicate_email'}
+						<div class="mt-3">
+							<a
+								href="/payment?email={encodeURIComponent(formData.email)}"
+								class="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-200"
+							>
+								Go to Payment & Access
+							</a>
+						</div>
+					{/if}
 				</div>
 			{/if}
 		</form>
