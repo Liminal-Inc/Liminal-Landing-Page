@@ -126,7 +126,7 @@
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 max-w-6xl mx-auto">
 				<div class="flex flex-col items-center">
 					<img
-						src="/src/lib/videos/realtime-shellsync.gif"
+						src="/videos/realtime-shellsync.gif"
 						alt="Real-time shell sync demonstration"
 						class="w-full rounded-lg shadow-lg"
 						style="height: 350px; object-fit: fill;"
@@ -134,7 +134,7 @@
 				</div>
 				<div class="flex flex-col items-center">
 					<img
-						src="/src/lib/videos/realtime-notebook.gif"
+						src="/videos/realtime-notebook.gif"
 						alt="Real-time notebook generation"
 						class="w-full rounded-lg shadow-lg"
 						style="height: 350px; object-fit: fill; animation-duration: 10s; animation-iteration-count: infinite;"
