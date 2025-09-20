@@ -70,6 +70,46 @@
 		track('Social Share Clicked', { platform: 'linkedin' });
 		window.open(linkedinUrl, '_blank');
 	}
+
+	let copyMessage = '';
+	let copyTimeout = null;
+
+	function copyReferralCode() {
+		if (navigator.clipboard && window.isSecureContext) {
+			navigator.clipboard.writeText(customerData.referralCode).then(() => {
+				showCopyMessage('Referral code copied!');
+				track('Referral Code Copied', { code: customerData.referralCode });
+			}).catch(() => {
+				fallbackCopy(customerData.referralCode);
+			});
+		} else {
+			fallbackCopy(customerData.referralCode);
+		}
+	}
+
+	function fallbackCopy(text) {
+		const textArea = document.createElement('textarea');
+		textArea.value = text;
+		document.body.appendChild(textArea);
+		textArea.focus();
+		textArea.select();
+		try {
+			document.execCommand('copy');
+			showCopyMessage('Referral code copied!');
+			track('Referral Code Copied', { code: customerData.referralCode });
+		} catch (err) {
+			showCopyMessage('Failed to copy - please select and copy manually');
+		}
+		document.body.removeChild(textArea);
+	}
+
+	function showCopyMessage(message) {
+		copyMessage = message;
+		if (copyTimeout) clearTimeout(copyTimeout);
+		copyTimeout = setTimeout(() => {
+			copyMessage = '';
+		}, 2000);
+	}
 </script>
 
 <svelte:head>
@@ -95,29 +135,16 @@
 				</a>
 			</div>
 		{:else if customerData}
-			<!-- Activate Full Account CTA -->
-			<div
-				class="bg-gradient-to-r from-green-600 to-blue-600 rounded-lg shadow-lg p-6 mb-6 text-center text-white"
-			>
-				<h1 class="text-2xl font-bold mb-2">🚀 Activate Your Full Account Now!</h1>
-				<p class="text-lg mb-4">Your 30-day trial is ready, but unlock everything immediately:</p>
-				<button
-					on:click={goToPayment}
-					class="bg-white text-green-600 px-8 py-3 rounded-md text-lg font-semibold hover:bg-gray-100 transition-colors"
-				>
-					Choose Plan & Activate →
-				</button>
-				<p class="text-sm mt-2 opacity-90">
-					Save up to 20% with annual plans + use your referral credits!
-				</p>
-			</div>
-
 			<!-- Success Content -->
 			<div class="text-center mb-8">
-				<div
-					class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">30-Day Trial Account Created!</h2>
+				<a 
+					href="https://shellsync.liminalbios.com/" 
+					target="_blank"
+					class="inline-flex items-center justify-center bg-green-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-700 transition-colors"
+					on:click={() => track('Trial Account - App Launch Clicked')}
 				>
-					<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<svg class="w-5 h-5 text-white mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path
 							stroke-linecap="round"
 							stroke-linejoin="round"
@@ -125,23 +152,60 @@
 							d="M5 13l4 4L19 7"
 						/>
 					</svg>
-				</div>
-				<h2 class="text-2xl font-bold text-gray-900 mb-2">30-Day Trial Account Created!</h2>
-				<p class="text-lg text-gray-600">
-					Hi {customerData.name}, your trial account is ready to use.
+					Launch Liminal Sync
+				</a>
+			</div>
+
+			<!-- Activate Full Account CTA -->
+			<div
+				class="bg-gradient-to-r from-purple-600 to-green-600 rounded-lg shadow-lg p-6 mb-6 text-center text-white"
+			>
+				<h1 class="text-2xl font-bold mb-2">🚀 Lock in 20% Savings - Upgrade to Annual Now!</h1>
+				<!-- <p class="text-lg mb-4">Your 30-day trial is ready, but unlock everything immediately:</p> -->
+				<button
+					on:click={goToPayment}
+					class="bg-white text-green-600 px-8 py-3 rounded-md text-lg font-semibold hover:bg-gray-100 transition-colors"
+				>
+					Choose Plan to Secure &rightarrow;
+				</button>
+				<p class="text-sm mt-2 opacity-90">
+					Save big by paying in advance!
 				</p>
 			</div>
 
 			<!-- Your Referral Code Section -->
 			<div class="bg-white rounded-lg shadow-lg p-6 mb-6">
-				<h2 class="text-2xl font-semibold text-gray-900 mb-4 text-center">
-					🎉 Your Personal Referral Code
+				<h2 class="text-2xl font-bold text-red-600 mb-4 text-center">
+					🚨 IMPORTANT: Your Money-Making Referral Code 💰
 				</h2>
 
-				<div class="bg-gray-50 rounded-lg p-4 mb-4">
+				<div 
+					class="bg-gray-50 rounded-lg p-4 mb-4 cursor-pointer hover:bg-gray-100 transition-colors border-2 border-dashed border-gray-300 hover:border-green-400 relative"
+					on:click={copyReferralCode}
+					on:keydown={(e) => e.key === 'Enter' && copyReferralCode()}
+					tabindex="0"
+					role="button"
+					aria-label="Click to copy referral code"
+				>
 					<div class="text-center">
-						<p class="text-sm text-gray-600 mb-2">Your referral code:</p>
+						<div class="flex items-center justify-center mb-2">
+							<svg class="w-5 h-5 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+							</svg>
+							<p class="text-sm text-gray-600">Save this referral code</p>
+						</div>
 						<p class="text-2xl font-bold text-green-600 font-mono">{customerData.referralCode}</p>
+						
+						{#if copyMessage}
+							<div class="absolute inset-0 flex items-center justify-center bg-green-100 bg-opacity-90 rounded-lg">
+								<div class="flex items-center text-green-700 font-medium">
+									<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									{copyMessage}
+								</div>
+							</div>
+						{/if}
 					</div>
 				</div>
 
@@ -164,9 +228,21 @@
 					</div>
 				</div>
 
-				<div class="text-center text-sm text-gray-600 mb-4">
-					<p><strong>Share with colleagues and earn $5 credit for each referral!</strong></p>
-					<p>When someone signs up using your code and pays, you both get credit.</p>
+				<div class="text-center mb-4">
+					<div class="bg-green-50 border border-green-200 rounded-lg p-4">
+						<p class="text-lg font-bold text-green-800 mb-2">💰 Earn $5 for Every Purchase!</p>
+						<p class="text-sm text-green-700 mb-1">
+							<strong>Here's how it works:</strong>
+						</p>
+						<ul class="text-sm text-green-700 text-left max-w-md mx-auto space-y-1">
+							<li>✅ Someone signs up using your referral code</li>
+							<li>📋 They choose any plan and complete payment</li>
+							<li>💰 You get $5 credit applied to your account!</li>
+						</ul>
+						<p class="text-xs text-green-600 mt-3">
+							<em>Credits are awarded only when referred users purchase a plan</em>
+						</p>
+					</div>
 				</div>
 
 				<!-- Social Sharing -->

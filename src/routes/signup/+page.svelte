@@ -70,12 +70,21 @@
 				}&name=${customerName}`;
 				window.location.href = successUrl;
 			} else {
-				track('Signup Form Error', { error: result.error });
-				submitMessage = `Error: ${result.error}`;
+				track('Signup Form Error', { 
+					error: result.error, 
+					errorType: result.errorType || 'unknown' 
+				});
+				
+				// Provide specific messaging for duplicate emails
+				if (result.errorType === 'duplicate_email') {
+					submitMessage = `${result.error} You can also try signing in to access your existing account or contact support@liminalbios.com for assistance.`;
+				} else {
+					submitMessage = `Error: ${result.error}`;
+				}
 			}
 		} catch (error) {
 			track('Signup Form Error', { error: error.message });
-			submitMessage = 'Error submitting form. Please try again.';
+			submitMessage = 'Error submitting form. Please try again or contact support if the problem persists.';
 		} finally {
 			isSubmitting = false;
 		}

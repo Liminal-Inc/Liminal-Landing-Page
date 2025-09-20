@@ -130,7 +130,36 @@ export async function POST({ request }) {
 			});
 		} catch (insertError) {
 			console.error('Database insert error:', insertError);
-			return json({ error: insertError.message }, { status: 400 });
+			
+			// Handle duplicate email error specifically
+			if (insertError.message.includes('23505') && insertError.message.includes('web_signups_email_key')) {
+				return json({ 
+					error: 'An account with this email already exists. Please use a different email or contact support if you need help accessing your existing account.',
+					errorType: 'duplicate_email'
+				}, { status: 409 });
+			}
+			
+			// Handle other constraint violations
+			if (insertError.message.includes('23505')) {
+				return json({ 
+					error: 'This information is already registered in our system. Please check your details or contact support.',
+					errorType: 'duplicate_data'
+				}, { status: 409 });
+			}
+			
+			// Handle validation errors
+			if (insertError.message.includes('HTTP 400')) {
+				return json({ 
+					error: 'Invalid information provided. Please check your details and try again.',
+					errorType: 'validation_error'
+				}, { status: 400 });
+			}
+			
+			// Generic database error
+			return json({ 
+				error: 'Unable to create account. Please try again or contact support if the problem persists.',
+				errorType: 'database_error'
+			}, { status: 400 });
 		}
 	} catch (error) {
 		console.error('Server error:', error);
