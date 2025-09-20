@@ -146,7 +146,7 @@
 			<!-- Pricing incentives section -->
 			<div class="mt-12 text-center">
 				<h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white font-bold mb-6">
-					Pay at most <span class="text-green-400">$20/month</span> or get 1 month <span class="text-green-400">FREE</span> for every 4 people you refer
+					<span class="text-green-400">$20/month</span> or 1 month <span class="text-green-400">FREE</span> for every 4 people you refer
 				</h3>
 				<div class="text-white text-lg space-y-2">
 					<p>💰 Get <span class="text-green-400">$5 in credits</span> per person you refer</p>
