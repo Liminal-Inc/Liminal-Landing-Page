@@ -76,6 +76,10 @@
 	<link rel="canonical" href="https://liminalbios.com/roadmap/" />
 </svelte:head>
 
+<div class="w-full bg-amber-500 text-black text-center py-3 px-4 font-semibold text-sm md:text-base">
+	We're exploring new ways to bring value to bioinformatics and high-performance computing. Stay tuned.
+</div>
+
 <div class="min-h-screen bg-black text-white">
 	<!-- Hero Section -->
 	<section class="py-16 px-4">
@@ -88,18 +92,17 @@
 			</p>
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">
 				<Button
-					href="/signup"
 					size="lg"
-					class="bg-green-500 hover:bg-green-600 text-white"
-					on:click={() => track('Roadmap Header CTA Click')}
+					disabled
+					class="bg-gray-600 text-gray-400 cursor-not-allowed line-through opacity-60"
 				>
-					Get Early Access
+					Get Access
 				</Button>
 				<Button
-					href="mailto:support@liminalbios.com"
 					size="lg"
+					disabled
 					color="alternative"
-					on:click={() => track('Roadmap Feedback Click')}
+					class="cursor-not-allowed line-through opacity-60"
 				>
 					Share Feedback
 				</Button>

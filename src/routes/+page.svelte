@@ -73,6 +73,10 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
 />
 
+<div class="w-full bg-amber-500 text-black text-center py-3 px-4 font-semibold text-sm md:text-base">
+	Not currently accepting new users at this time. We are planning new ways to add value to our bioinformatics and compute community. Stay tuned.
+</div>
+
 <section id="hero" class="min-h-screen flex items-center justify-center py-16 px-4">
 	<div class="max-w-4xl mx-auto text-center">
 		<!-- Header content -->
@@ -91,10 +95,9 @@
 
 		<div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
 			<Button
-				href="/signup"
 				size="lg"
-				class="bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-4 px-8"
-				on:click={() => track('Homepage Hero CTA Click')}
+				disabled
+				class="bg-gray-600 text-gray-400 text-lg font-bold py-4 px-8 cursor-not-allowed line-through opacity-60"
 			>
 				Get Access Now
 			</Button>
@@ -162,9 +165,9 @@
 	</div>
 </section>
 
+<!-- Sabbatical: pricing section hidden until accepting new users
 <div class="pixel-divider my-8" />
 
-<!-- Pricing Section -->
 <section class="py-16 px-4">
 	<div class="max-w-4xl mx-auto text-center">
 		<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -198,6 +201,7 @@
 </section>
 
 <div class="pixel-divider my-8" />
+-->
 
 <!-- Video Demonstrations -->
 <section class="py-16">
@@ -508,6 +512,9 @@
 							<div class="text-lg">
 								<ul class="list-disc list-inside">
 									<li>
+										We currently aren't accepting any new users.
+									</li>
+									<!-- <li>
 										Click the <a
 											href="/signup"
 											class="text-green-400"
@@ -522,7 +529,7 @@
 											class="text-purple-300 hover:underline"
 											on:click={() => track('FAQ Calendar Link Click')}>short meeting</a
 										> to personally chat with one of our founders
-									</li>
+									</li> -->
 								</ul>
 							</div>
 						</div>
@@ -546,7 +553,7 @@
 			on:click={() => track('Support Email Click')}>support@liminalbios.com</a
 		>
 	</p>
-	<p class="text-center text-white text-lg sm:text-xl md:text-2xl lg:text-3xl">
+	<!-- <p class="text-center text-white text-lg sm:text-xl md:text-2xl lg:text-3xl">
 		Meet with a founder:
 		<a
 			target="_blank"
@@ -554,7 +561,7 @@
 			href="https://calendar.app.google/fAwGmDCeccJbcwKQ7"
 			on:click={() => track('Footer Calendar Link Click')}>GoogleMeet</a
 		>
-	</p>
+	</p> -->
 </div>
 
 <style>

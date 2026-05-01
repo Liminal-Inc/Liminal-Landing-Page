@@ -41,12 +41,11 @@
 			</p>
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">
 				<Button
-					href="/signup"
 					size="lg"
-					class="bg-green-500 hover:bg-green-600 text-white"
-					on:click={() => track('Blog Header CTA Click')}
+					disabled
+					class="bg-gray-600 text-gray-400 cursor-not-allowed line-through opacity-60"
 				>
-					Start Your Free Trial
+					Get Access
 				</Button>
 				<Button
 					href="https://liminalbios.substack.com"

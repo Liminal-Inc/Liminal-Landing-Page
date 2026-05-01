@@ -33,11 +33,7 @@
 				href="/blog"
 				on:click={() => track('Nav Blog Click')}>Blog</NavLi
 			>
-			<NavLi
-				class={activeUrl === '/pricing/' ? activeClass : nonActiveClass}
-				href="/pricing"
-				on:click={() => track('Nav Pricing Click')}>Pricing</NavLi
-			>
+			<NavLi class="text-gray-500 line-through cursor-not-allowed pointer-events-none">Pricing</NavLi>
 			<NavLi
 				class={activeUrl === '/about/' ? activeClass : nonActiveClass}
 				href="/about"

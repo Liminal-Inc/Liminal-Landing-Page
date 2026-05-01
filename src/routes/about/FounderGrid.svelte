@@ -8,23 +8,23 @@
 		{
 			name: 'Dane Deemer',
 			title: 'Chief Executive Officer',
-			bio: 'Senior Computational Biologist',
+			bio: 'Bioinformatician and full stack developer.',
 			img: daneImg,
 			links: [
 				{ label: 'GitHub', url: 'https://github.com/ddeemerpurdue' },
 				{ label: 'LinkedIn', url: 'https://www.linkedin.com/in/dane-deemer-054350100/' }
 			]
 		},
-		{
-			name: 'Maverick Cook',
-			title: 'Chief Technology Officer',
-			bio: 'Senior Software Engineer and Full-Stack Developer.',
-			img: mavImg,
-			links: [
-				{ label: 'GitHub', url: 'https://github.com/mavcook' },
-				{ label: 'LinkedIn', url: 'https://www.linkedin.com/in/mavcook/' }
-			]
-		},
+		// {
+		// 	name: 'Maverick Cook',
+		// 	title: 'Chief Technology Officer',
+		// 	bio: 'Senior Software Engineer and Full-Stack Developer.',
+		// 	img: mavImg,
+		// 	links: [
+		// 		{ label: 'GitHub', url: 'https://github.com/mavcook' },
+		// 		{ label: 'LinkedIn', url: 'https://www.linkedin.com/in/mavcook/' }
+		// 	]
+		// },
 		{
 			name: 'Dr. Stephen Lindemann',
 			title: 'Chief Scientific Officer',

@@ -39,10 +39,12 @@
 	<Footer />
 </div>
 
+<!-- Sabbatical: hidden until accepting new users
 <button class="floating-button-lower" on:click={handleSignupClick}> Sign up </button>
 <a class="floating-button-higher" target="_blank" href="https://shellsync.liminalbios.com/"
 	>Liminal App</a
 >
+-->
 
 <style>
 	.app {

@@ -47,10 +47,9 @@
 			</p>
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">
 				<Button
-					href="/signup"
 					size="lg"
-					class="bg-green-500 hover:bg-green-600 text-white"
-					on:click={() => track('About Header CTA Click')}
+					disabled
+					class="bg-gray-600 text-gray-400 cursor-not-allowed line-through opacity-60"
 				>
 					Try Liminal Today
 				</Button>
@@ -79,14 +78,14 @@
 	<div class="pixel-divider my-8" />
 
 	<!-- Extended Team -->
-	<section class="py-16 px-4">
+	<!-- <section class="py-16 px-4">
 		<div class="max-w-6xl mx-auto">
 			<h2 class="text-3xl font-bold text-white mb-12 text-center">Extended Team & Advisors</h2>
 			<ExtendedTeam />
 		</div>
-	</section>
+	</section> -->
 
-	<div class="pixel-divider my-8" />
+	<!-- <div class="pixel-divider my-8" /> -->
 
 	<!-- Company Info -->
 	<section class="py-16 px-4">
@@ -95,12 +94,12 @@
 		</div>
 	</section>
 
-	<div class="pixel-divider my-8" />
+	<!-- <div class="pixel-divider my-8" /> -->
 
 	<!-- Join Us -->
-	<section class="py-16 px-4">
+	<!-- <section class="py-16 px-4">
 		<div class="max-w-6xl mx-auto">
 			<WantToJoin />
 		</div>
-	</section>
+	</section> -->
 </div>

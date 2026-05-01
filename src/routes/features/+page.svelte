@@ -93,18 +93,17 @@
 			</p>
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">
 				<Button
-					href="/signup"
 					size="lg"
-					class="bg-green-500 hover:bg-green-600 text-white"
-					on:click={() => track('Features Header CTA Click')}
+					disabled
+					class="bg-gray-600 text-gray-400 cursor-not-allowed line-through opacity-60"
 				>
-					Free Trial
+					Get Access
 				</Button>
 				<Button
-					href="/pricing"
 					size="lg"
+					disabled
 					color="alternative"
-					on:click={() => track('Features Pricing Click')}
+					class="cursor-not-allowed line-through opacity-60"
 				>
 					View Pricing
 				</Button>
@@ -203,12 +202,11 @@
 				Join researchers already using Liminal to automatically capture 100% of their scientific computing work.
 			</p>
 			<Button
-				href="/signup"
 				size="lg"
-				class="bg-purple-500 hover:bg-purple-600 text-white"
-				on:click={() => track('Features Footer CTA Click')}
+				disabled
+				class="bg-gray-600 text-gray-400 cursor-not-allowed line-through opacity-60"
 			>
-				Start Your Free Trial
+				Get Access
 			</Button>
 		</div>
 	</section>
