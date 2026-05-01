@@ -74,7 +74,7 @@
 />
 
 <div class="w-full bg-amber-500 text-black text-center py-3 px-4 font-semibold text-sm md:text-base">
-	Not currently accepting new users at this time. We are planning new ways to add value to our bioinformatics and compute community. Stay tuned.
+	Not currently accepting new users at this time. We are planning new ways to add value to our bioinformatics and compute community. Stay tuned :)
 </div>
 
 <section id="hero" class="min-h-screen flex items-center justify-center py-16 px-4">
